@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | Ad Pollex - Premium Digital Marketing Solutions</title>
+    <title>Our Services | Ad Pollex - Digital Marketing Agency Tanzania</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* ===== ULTRA PREMIUM DESIGN SYSTEM ===== */
         :root {
             --primary: #000000;
             --primary-light: #1a1a1a;
@@ -52,7 +51,6 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* ===== TYPOGRAPHY ===== */
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Space Grotesk', sans-serif;
             font-weight: 700;
@@ -81,25 +79,6 @@
             color: var(--primary);
         }
 
-        h4 {
-            font-size: 1.5rem;
-            color: var(--primary);
-        }
-
-        .display {
-            font-size: 5.5rem;
-            font-weight: 900;
-            line-height: 1;
-            letter-spacing: -0.04em;
-        }
-
-        p {
-            font-size: 1.125rem;
-            line-height: 1.8;
-            color: var(--gray);
-            margin-bottom: 1.5rem;
-        }
-
         .lead {
             font-size: 1.375rem;
             color: var(--primary-light);
@@ -122,56 +101,7 @@
             padding: 0 2rem;
         }
 
-        section {
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* ===== BUTTONS ===== */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1.25rem 2.5rem;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: var(--radius-xl);
-            transition: var(--transition);
-            cursor: pointer;
-            border: none;
-            position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(10px);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .btn-primary {
-            background: var(--accent);
-            color: var(--white);
-            box-shadow: 0 10px 30px rgba(255, 59, 48, 0.3);
-        }
-
-        .btn-primary:hover {
-            background: var(--accent-dark);
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 20px 40px rgba(255, 59, 48, 0.4);
-        }
-
-        .btn-secondary {
-            background: rgba(0, 0, 0, 0.8);
-            color: var(--white);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(0, 0, 0, 0.9);
-            transform: translateY(-5px);
-            border-color: var(--accent);
-        }
-
-        /* ===== HEADER ===== */
+        /* Header */
         header {
             position: fixed;
             top: 0;
@@ -183,12 +113,6 @@
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
             transition: var(--transition);
-        }
-
-        header.scrolled {
-            padding: 1rem 0;
-            background: rgba(255, 255, 255, 0.98);
-            box-shadow: var(--shadow-sm);
         }
 
         .header-container {
@@ -220,37 +144,6 @@
             overflow: hidden;
         }
 
-        .logo-symbol::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-        }
-
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .logo-main {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 800;
-            font-size: 1.5rem;
-            color: var(--primary);
-            letter-spacing: -0.02em;
-        }
-
-        .logo-sub {
-            font-size: 0.75rem;
-            color: var(--accent);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
         .nav-desktop {
             display: flex;
             align-items: center;
@@ -269,43 +162,41 @@
             letter-spacing: 0.05em;
         }
 
-        .nav-desktop a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent);
-            transition: var(--transition);
-        }
-
         .nav-desktop a:hover,
         .nav-desktop a.active {
             color: var(--accent);
         }
 
-        .nav-desktop a:hover::after,
-        .nav-desktop a.active::after {
-            width: 100%;
+        .language-switcher {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-left: 2rem;
         }
 
-        .mobile-menu-btn {
-            display: none;
-            width: 48px;
-            height: 48px;
-            background: var(--primary);
-            border: none;
-            border-radius: 12px;
-            color: var(--white);
-            font-size: 1.25rem;
+        .lang-btn {
+            background: transparent;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            color: var(--primary);
+            padding: 0.5rem 1.25rem;
+            border-radius: var(--radius-xl);
+            font-weight: 600;
             cursor: pointer;
             transition: var(--transition);
+            text-transform: uppercase;
+            font-size: 0.875rem;
         }
 
-        /* ===== SERVICES HERO ===== */
+        .lang-btn:hover, .lang-btn.active {
+            background: var(--accent);
+            color: var(--white);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* Hero */
         .services-hero {
-            min-height: 70vh;
+            min-height: 60vh;
             display: flex;
             align-items: center;
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
@@ -315,1008 +206,206 @@
             overflow: hidden;
         }
 
-        .services-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(255, 59, 48, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(0, 122, 255, 0.1) 0%, transparent 50%);
-        }
-
-        .hero-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.1;
-            z-index: 1;
-        }
-
-        .services-hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-        }
-
         .services-hero h1 {
             font-size: 4rem;
-            margin-bottom: 2rem;
             background: linear-gradient(135deg, var(--white), var(--gold));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
-        .services-hero .lead {
-            font-size: 1.5rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 3rem;
-        }
-
-        .services-nav {
-            display: flex;
-            gap: 1rem;
-            margin-top: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .service-nav-link {
-            padding: 0.75rem 1.5rem;
-            background: rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            border-radius: var(--radius-xl);
-            font-weight: 500;
-            transition: var(--transition);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .service-nav-link:hover,
-        .service-nav-link.active {
-            background: var(--accent);
-            color: var(--white);
-            border-color: var(--accent);
-            transform: translateY(-3px);
-        }
-
-        /* ===== SERVICE DETAIL SECTIONS ===== */
-        .service-detail {
+        /* Services Detail */
+        .services-detail {
             padding: 8rem 0;
-            background: var(--white);
         }
 
-        .service-detail:nth-child(even) {
-            background: var(--off-white);
-        }
-
-        .service-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6rem;
-            align-items: center;
-        }
-
-        .service-content h2 {
-            margin-bottom: 1.5rem;
-        }
-
-        .service-features-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-        }
-
-        .feature-icon {
-            width: 48px;
-            height: 48px;
-            background: rgba(255, 59, 48, 0.1);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent);
-            font-size: 1.25rem;
-            flex-shrink: 0;
-        }
-
-        .feature-content h4 {
-            margin-bottom: 0.5rem;
-        }
-
-        .feature-content p {
-            font-size: 0.9375rem;
-            margin: 0;
-        }
-
-        .service-image {
-            position: relative;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .service-image img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .service-image:hover img {
-            transform: scale(1.05);
-        }
-
-        .service-badge {
-            position: absolute;
-            top: 2rem;
-            right: 2rem;
-            background: var(--accent);
-            color: var(--white);
-            padding: 0.5rem 1.5rem;
-            border-radius: 100px;
-            font-weight: 600;
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        /* ===== PROCESS SECTION ===== */
-        .process-section {
-            padding: 8rem 0;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            color: var(--white);
-        }
-
-        .process-header {
-            text-align: center;
+        .service-category {
             margin-bottom: 6rem;
         }
 
-        .process-header h2 {
-            color: var(--white);
-        }
-
-        .process-header .lead {
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .process-timeline {
-            max-width: 1000px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .process-timeline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .process-step {
-            display: flex;
-            align-items: center;
+        .service-category-header {
+            text-align: center;
             margin-bottom: 4rem;
-            position: relative;
         }
 
-        .process-step:nth-child(odd) {
-            flex-direction: row-reverse;
-        }
-
-        .step-content {
-            flex: 1;
-            padding: 0 4rem;
-        }
-
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background: var(--accent);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            position: relative;
-            z-index: 2;
-            box-shadow: var(--shadow-md);
-        }
-
-        .step-content h3 {
-            color: var(--white);
-            margin-bottom: 1rem;
-        }
-
-        .step-content p {
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        /* ===== PRICING SECTION ===== */
-        .pricing-section {
-            padding: 8rem 0;
-            background: var(--off-white);
-        }
-
-        .pricing-header {
-            text-align: center;
-            margin-bottom: 6rem;
-        }
-
-        .pricing-grid {
+        .service-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 3rem;
         }
 
-        .pricing-card {
-            background: var(--white);
+        .service-detail-card {
+            background: var(--off-white);
             border-radius: var(--radius-lg);
-            padding: 4rem 3rem;
-            text-align: center;
+            padding: 3rem;
             border: 1px solid rgba(0, 0, 0, 0.05);
             transition: var(--transition);
-            position: relative;
         }
 
-        .pricing-card.popular {
-            border: 2px solid var(--accent);
-            transform: translateY(-20px);
+        .service-detail-card:hover {
+            transform: translateY(-10px);
             box-shadow: var(--shadow-lg);
         }
 
-        .popular-badge {
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--accent);
-            color: var(--white);
-            padding: 0.5rem 2rem;
-            border-radius: 100px;
-            font-weight: 600;
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .pricing-card h3 {
-            margin-bottom: 1rem;
-        }
-
-        .price {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 4rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin: 2rem 0;
-            line-height: 1;
-        }
-
-        .price span {
-            font-size: 1rem;
-            color: var(--gray);
-            font-weight: 400;
-        }
-
-        .pricing-features {
-            margin: 3rem 0;
-            list-style: none;
-        }
-
-        .pricing-features li {
-            padding: 1rem 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            color: var(--gray);
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 59, 48, 0.1);
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.75rem;
-        }
-
-        .pricing-features li:last-child {
-            border-bottom: none;
-        }
-
-        .pricing-features li i {
-            color: var(--accent);
-        }
-
-        /* ===== CTA SECTION ===== */
-        .services-cta {
-            padding: 8rem 0;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            color: var(--white);
-            text-align: center;
-        }
-
-        .services-cta-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .services-cta h2 {
-            color: var(--white);
             margin-bottom: 2rem;
+            color: var(--accent);
+            font-size: 2rem;
         }
 
-        .services-cta .lead {
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 3rem;
-        }
-
-        /* ===== FOOTER ===== */
+        /* Footer */
         footer {
             background: var(--primary);
             color: var(--white);
             padding: 6rem 0 3rem;
         }
 
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 4rem;
-            margin-bottom: 4rem;
-        }
-
-        .footer-brand {
-            max-width: 300px;
-        }
-
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            text-decoration: none;
-        }
-
-        .footer-logo .logo-symbol {
-            background: var(--white);
-            color: var(--primary);
-        }
-
-        .footer-logo .logo-main {
-            color: var(--white);
-        }
-
-        .footer-description {
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 2rem;
-        }
-
-        .footer-social {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .footer-social a {
-            width: 44px;
-            height: 44px;
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--white);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-social a:hover {
-            background: var(--accent);
-            transform: translateY(-3px);
-        }
-
-        .footer-links h4 {
-            color: var(--white);
-            margin-bottom: 1.5rem;
-            font-size: 1.125rem;
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.75rem;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            transition: var(--transition);
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent);
-            transform: translateX(5px);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 3rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        .footer-credits {
-            font-size: 0.875rem;
-        }
-
-        .footer-credits .highlight {
-            color: var(--accent);
-            font-weight: 600;
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 1200px) {
-            h1 {
-                font-size: 4rem;
-            }
-            
-            h2 {
-                font-size: 3rem;
-            }
-            
-            .display {
-                font-size: 4.5rem;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .nav-desktop {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            
-            .mobile-nav {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100vh;
-                background: var(--primary);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 2rem;
-                transform: translateX(100%);
-                transition: var(--transition);
-                z-index: 9999;
-            }
-            
-            .mobile-nav.active {
-                transform: translateX(0);
-            }
-            
-            .mobile-nav a {
-                color: var(--white);
-                font-size: 1.5rem;
-                text-decoration: none;
-                text-transform: uppercase;
-                letter-spacing: 0.1em;
-                transition: var(--transition);
-            }
-            
-            .mobile-nav a:hover {
-                color: var(--accent);
-            }
-            
-            .mobile-close {
-                position: absolute;
-                top: 2rem;
-                right: 2rem;
-                background: none;
-                border: none;
-                color: var(--white);
-                font-size: 2rem;
-                cursor: pointer;
-            }
-            
-            .service-container {
-                grid-template-columns: 1fr;
-                gap: 4rem;
-            }
-            
-            .service-image {
-                order: -1;
-            }
-            
-            .process-timeline::before {
-                left: 30px;
-            }
-            
-            .process-step {
-                flex-direction: row !important;
-            }
-            
-            .step-content {
-                margin-left: 100px;
-                padding: 0;
-            }
-        }
-
         @media (max-width: 768px) {
-            .container {
-                padding: 0 1.5rem;
-            }
-            
-            h1 {
-                font-size: 3rem;
-            }
-            
-            h2 {
-                font-size: 2.5rem;
-            }
-            
-            .services-hero h1 {
-                font-size: 3rem;
-            }
-            
-            .service-features-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .pricing-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .pricing-card.popular {
-                transform: none;
-            }
-        }
-
-        @media (max-width: 576px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            
-            h2 {
-                font-size: 2rem;
-            }
-            
-            .services-hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .btn {
-                padding: 1rem 2rem;
-                width: 100%;
-            }
-            
-            .services-nav {
-                flex-direction: column;
-            }
-        }
-
-        /* ===== ANIMATIONS ===== */
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(60px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-slide-up {
-            animation: slideInUp 1s ease-out forwards;
-        }
-
-        .animate-delay-1 {
-            animation-delay: 0.2s;
-        }
-
-        .animate-delay-2 {
-            animation-delay: 0.4s;
-        }
-
-        .animate-delay-3 {
-            animation-delay: 0.6s;
+            h1 { font-size: 3rem; }
+            h2 { font-size: 2.5rem; }
+            .services-hero h1 { font-size: 3rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header id="mainHeader">
         <div class="container header-container">
             <a href="index.html" class="logo">
                 <div class="logo-symbol">AP</div>
                 <div class="logo-text">
                     <div class="logo-main">Ad Pollex</div>
-                    <div class="logo-sub">Digital Marketing Excellence</div>
+                    <div class="logo-sub" data-translate="nav.tagline">Digital Marketing Excellence</div>
                 </div>
             </a>
             
             <nav class="nav-desktop">
-                <a href="index.html">Home</a>
-                <a href="services.html" class="active">Services</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="team.html">Our Team</a>
-                <a href="contact.html">Contact</a>
-                <a href="contact.html" class="btn btn-primary">Get Started →</a>
+                <a href="index.html" data-translate="nav.home">Home</a>
+                <a href="services.html" class="active" data-translate="nav.services">Services</a>
+                <a href="portfolio.html" data-translate="nav.portfolio">Portfolio</a>
+                <a href="team.html" data-translate="nav.team">Our Team</a>
+                <a href="contact.html" data-translate="nav.contact">Contact</a>
+                
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="sw">SW</button>
+                </div>
             </nav>
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
         </div>
     </header>
 
-    <!-- Mobile Navigation -->
-    <nav class="mobile-nav" id="mobileNav">
-        <button class="mobile-close" id="mobileClose">
-            <i class="fas fa-times"></i>
-        </button>
-        <a href="index.html">Home</a>
-        <a href="services.html" class="active">Services</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="team.html">Our Team</a>
-        <a href="contact.html">Contact</a>
-        <a href="contact.html" class="btn btn-primary" style="margin-top: 2rem;">Get Started →</a>
-    </nav>
-
-    <!-- Services Hero -->
     <section class="services-hero">
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-hands-of-a-marketer-moving-chess-pieces-43475-large.mp4" type="video/mp4">
-        </video>
-        
         <div class="container">
-            <div class="services-hero-content animate-slide-up">
-                <div class="eyebrow">Our Expertise</div>
-                <h1>Premium Digital Marketing Services</h1>
-                <p class="lead">We craft data-driven marketing strategies that deliver measurable results. Every service is designed to help your business grow, engage, and convert.</p>
-                
-                <div class="services-nav">
-                    <a href="#digital-marketing" class="service-nav-link active">Digital Marketing</a>
-                    <a href="#social-media" class="service-nav-link">Social Media</a>
-                    <a href="#seo" class="service-nav-link">SEO</a>
-                    <a href="#branding" class="service-nav-link">Branding</a>
-                    <a href="#web-design" class="service-nav-link">Web Design</a>
-                </div>
+            <div class="hero-content">
+                <div class="eyebrow" data-translate="services.eyebrow">Our Expertise</div>
+                <h1 data-translate="services.title">Comprehensive Digital Marketing Solutions</h1>
+                <p class="lead" data-translate="services.heroSubtitle">Transform your business with our data-driven strategies that deliver measurable results and drive sustainable growth.</p>
             </div>
         </div>
     </section>
 
-    <!-- Digital Marketing Service -->
-    <section class="service-detail" id="digital-marketing">
-        <div class="container service-container">
-            <div class="service-content animate-slide-up">
-                <div class="eyebrow">Full-Service Marketing</div>
-                <h2>Digital Marketing Mastery</h2>
-                <p class="lead">Strategic campaigns that increase visibility, generate qualified leads, and drive measurable ROI across all digital channels.</p>
-                
-                <div class="service-features-grid">
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="feature-content">
-                            <h4>Multi-Channel Strategy</h4>
-                            <p>Integrated campaigns across all digital platforms for maximum impact.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="feature-item">
-                        <div class="feature-icon">
+    <section class="services-detail">
+        <div class="container">
+            <!-- Digital Marketing -->
+            <div class="service-category">
+                <div class="service-category-header">
+                    <h2 data-translate="services.digital.title">Digital Marketing</h2>
+                    <p class="lead" data-translate="services.digital.description">End-to-end digital marketing strategies for maximum impact</p>
+                </div>
+                <div class="service-cards">
+                    <div class="service-detail-card">
+                        <div class="service-icon">
                             <i class="fas fa-bullseye"></i>
                         </div>
-                        <div class="feature-content">
-                            <h4>Targeted Advertising</h4>
-                            <p>Precise audience targeting for higher conversion rates.</p>
-                        </div>
+                        <h3 data-translate="services.digital.sub1">Paid Advertising</h3>
+                        <p data-translate="services.digital.desc1">Targeted PPC campaigns across Google, Facebook, Instagram, and LinkedIn to reach your ideal customers and maximize ROI.</p>
                     </div>
-                    
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-analytics"></i>
+                    <div class="service-detail-card">
+                        <div class="service-icon">
+                            <i class="fas fa-envelope-open-text"></i>
                         </div>
-                        <div class="feature-content">
-                            <h4>Performance Analytics</h4>
-                            <p>Real-time tracking and optimization for better ROI.</p>
-                        </div>
+                        <h3 data-translate="services.digital.sub2">Email Marketing</h3>
+                        <p data-translate="services.digital.desc2">Strategic email campaigns that nurture leads, retain customers, and drive conversions with personalized content.</p>
                     </div>
-                    
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-retweet"></i>
+                    <div class="service-detail-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-bar"></i>
                         </div>
-                        <div class="feature-content">
-                            <h4>Conversion Optimization</h4>
-                            <p>A/B testing and optimization to maximize results.</p>
-                        </div>
+                        <h3 data-translate="services.digital.sub3">Analytics & Reporting</h3>
+                        <p data-translate="services.digital.desc3">Comprehensive tracking and data analysis to measure performance and optimize campaigns for better results.</p>
                     </div>
                 </div>
-                
-                <a href="contact.html" class="btn btn-primary">Start Your Campaign →</a>
             </div>
-            
-            <div class="service-image animate-slide-up animate-delay-1">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Digital Marketing">
-                <div class="service-badge">Most Popular</div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Social Media Service -->
-    <section class="service-detail" id="social-media">
-        <div class="container service-container">
-            <div class="service-image animate-slide-up">
-                <img src="https://images.unsplash.com/photo-1551836026-d5c2c3af8f81?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Social Media">
-                <div class="service-badge">High Engagement</div>
-            </div>
-            
-            <div class="service-content animate-slide-up animate-delay-1">
-                <div class="eyebrow">Community Building</div>
-                <h2>Social Media Excellence</h2>
-                <p class="lead">Complete social media strategy, content creation, community management, and performance analytics across all platforms.</p>
-                
-                <div class="service-features-grid">
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-video"></i>
+            <!-- Social Media -->
+            <div class="service-category">
+                <div class="service-category-header">
+                    <h2 data-translate="services.social.title">Social Media Mastery</h2>
+                    <p class="lead" data-translate="services.social.description">Build authentic connections and grow your brand presence</p>
+                </div>
+                <div class="service-cards">
+                    <div class="service-detail-card">
+                        <div class="service-icon">
+                            <i class="fas fa-camera"></i>
                         </div>
-                        <div class="feature-content">
-                            <h4>Content Creation</h4>
-                            <p>High-quality visuals and videos for maximum engagement.</p>
-                        </div>
+                        <h3 data-translate="services.social.sub1">Content Creation</h3>
+                        <p data-translate="services.social.desc1">Eye-catching visuals, compelling copy, and engaging video content tailored for each social platform.</p>
                     </div>
-                    
-                    <div class="feature-item">
-                        <div class="feature-icon">
+                    <div class="service-detail-card">
+                        <div class="service-icon">
                             <i class="fas fa-users"></i>
                         </div>
-                        <div class="feature-content">
-                            <h4>Community Management</h4>
-                            <p>Daily engagement and relationship building with your audience.</p>
-                        </div>
+                        <h3 data-translate="services.social.sub2">Community Management</h3>
+                        <p data-translate="services.social.desc2">Active engagement, conversation management, and brand reputation building across all social channels.</p>
                     </div>
-                    
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-rocket"></i>
+                    <div class="service-detail-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
                         </div>
-                        <div class="feature-content">
-                            <h4>Social Advertising</h4>
-                            <p>Targeted social ads to amplify your reach and results.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-chart-pie"></i>
-                        </div>
-                        <div class="feature-content">
-                            <h4>Analytics & Reporting</h4>
-                            <p>Monthly performance reports with actionable insights.</p>
-                        </div>
+                        <h3 data-translate="services.social.sub3">Social Strategy</h3>
+                        <p data-translate="services.social.desc3">Comprehensive social media strategies aligned with your business goals and target audience.</p>
                     </div>
                 </div>
-                
-                <a href="contact.html" class="btn btn-primary">Boost Your Social →</a>
             </div>
-        </div>
-    </section>
 
-    <!-- SEO Service -->
-    <section class="service-detail" id="seo">
-        <div class="container service-container">
-            <div class="service-content animate-slide-up">
-                <div class="eyebrow">Search Dominance</div>
-                <h2>SEO Optimization</h2>
-                <p class="lead">Comprehensive search engine optimization strategies that improve rankings, drive organic traffic, and increase qualified leads.</p>
-                
-                <div class="service-features-grid">
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <div class="feature-content">
-                            <h4>Technical SEO</h4>
-                            <p>Website optimization for better search engine crawling.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-edit"></i>
-                        </div>
-                        <div class="feature-content">
-                            <h4>Content Strategy</h4>
-                            <p>Keyword-optimized content that ranks and converts.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-link"></i>
-                        </div>
-                        <div class="feature-content">
-                            <h4>Link Building</h4>
-                            <p>High-quality backlinks to boost domain authority.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="feature-content">
-                            <h4>Local SEO</h4>
-                            <p>Optimization for local search results and Google My Business.</p>
-                        </div>
-                    </div>
+            <!-- SEO -->
+            <div class="service-category">
+                <div class="service-category-header">
+                    <h2 data-translate="services.seo.title">SEO Dominance</h2>
+                    <p class="lead" data-translate="services.seo.description">Improve visibility and drive organic growth</p>
                 </div>
-                
-                <a href="contact.html" class="btn btn-primary">Improve Your SEO →</a>
-            </div>
-            
-            <div class="service-image animate-slide-up animate-delay-1">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="SEO">
-                <div class="service-badge">Organic Growth</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section class="process-section">
-        <div class="container">
-            <div class="process-header animate-slide-up">
-                <div class="eyebrow" style="color: var(--gold);">Our Process</div>
-                <h2>How We Deliver <span style="color: var(--gold);">Results</span></h2>
-                <p class="lead">A systematic approach to ensure every project exceeds expectations.</p>
-            </div>
-            
-            <div class="process-timeline">
-                <div class="process-step animate-slide-up">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Discovery & Strategy</h3>
-                        <p>We begin by understanding your business goals, target audience, and competitive landscape to develop a winning strategy.</p>
+                <div class="service-cards">
+                    <div class="service-detail-card">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 data-translate="services.seo.sub1">Technical SEO</h3>
+                        <p data-translate="services.seo.desc1">Website optimization, speed improvement, and technical audits to ensure search engine friendliness.</p>
                     </div>
-                </div>
-                
-                <div class="process-step animate-slide-up animate-delay-1">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Planning & Proposal</h3>
-                        <p>We create a detailed project plan with clear objectives, timelines, and success metrics tailored to your business.</p>
+                    <div class="service-detail-card">
+                        <div class="service-icon">
+                            <i class="fas fa-pen-fancy"></i>
+                        </div>
+                        <h3 data-translate="services.seo.sub2">Content Optimization</h3>
+                        <p data-translate="services.seo.desc2">SEO-optimized content creation and on-page optimization to improve rankings and user experience.</p>
                     </div>
-                </div>
-                
-                <div class="process-step animate-slide-up animate-delay-2">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Execution</h3>
-                        <p>Our expert team implements the strategy with precision, keeping you informed at every stage of the process.</p>
-                    </div>
-                </div>
-                
-                <div class="process-step animate-slide-up animate-delay-3">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3>Optimization & Growth</h3>
-                        <p>We continuously monitor performance, optimize campaigns, and scale success for sustained growth.</p>
+                    <div class="service-detail-card">
+                        <div class="service-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3 data-translate="services.seo.sub3">Local SEO</h3>
+                        <p data-translate="services.seo.desc3">Local business optimization, Google My Business management, and local citation building.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="pricing-section">
-        <div class="container">
-            <div class="pricing-header animate-slide-up">
-                <div class="eyebrow">Transparent Pricing</div>
-                <h2>Choose Your <span style="color: var(--accent);">Growth Plan</span></h2>
-                <p class="lead">Flexible solutions tailored to businesses of all sizes.</p>
-            </div>
-            
-            <div class="pricing-grid">
-                <div class="pricing-card animate-slide-up">
-                    <h3>Starter</h3>
-                    <div class="price">$999<span>/month</span></div>
-                    <p>Perfect for small businesses starting their digital journey.</p>
-                    
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Social Media Management</li>
-                        <li><i class="fas fa-check"></i> Basic SEO Optimization</li>
-                        <li><i class="fas fa-check"></i> Monthly Performance Report</li>
-                        <li><i class="fas fa-check"></i> Email Support</li>
-                    </ul>
-                    
-                    <a href="contact.html" class="btn btn-secondary">Get Started</a>
-                </div>
-                
-                <div class="pricing-card popular animate-slide-up animate-delay-1">
-                    <div class="popular-badge">Most Popular</div>
-                    <h3>Professional</h3>
-                    <div class="price">$2,499<span>/month</span></div>
-                    <p>Complete digital marketing solution for growing businesses.</p>
-                    
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Everything in Starter</li>
-                        <li><i class="fas fa-check"></i> Multi-Channel Campaigns</li>
-                        <li><i class="fas fa-check"></i> Advanced SEO Strategy</li>
-                        <li><i class="fas fa-check"></i> Weekly Performance Reviews</li>
-                        <li><i class="fas fa-check"></i> Priority Support</li>
-                    </ul>
-                    
-                    <a href="contact.html" class="btn btn-primary">Choose Plan</a>
-                </div>
-                
-                <div class="pricing-card animate-slide-up animate-delay-2">
-                    <h3>Enterprise</h3>
-                    <div class="price">Custom</div>
-                    <p>Tailored solutions for large organizations with complex needs.</p>
-                    
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Everything in Professional</li>
-                        <li><i class="fas fa-check"></i> Dedicated Account Manager</li>
-                        <li><i class="fas fa-check"></i> Custom Strategy Development</li>
-                        <li><i class="fas fa-check"></i> 24/7 Premium Support</li>
-                        <li><i class="fas fa-check"></i> Advanced Analytics Dashboard</li>
-                    </ul>
-                    
-                    <a href="contact.html" class="btn btn-secondary">Contact Sales</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="services-cta">
-        <div class="container">
-            <div class="services-cta-content animate-slide-up">
-                <h2>Ready to Transform Your Marketing?</h2>
-                <p class="lead">Join 150+ successful businesses that trust Ad Pollex with their digital growth. Let's create your customized marketing strategy.</p>
-                
-                <div class="btn-group" style="display: flex; gap: 1rem; justify-content: center; margin-top: 3rem;">
-                    <a href="contact.html" class="btn btn-primary">
-                        <i class="fas fa-calendar" style="margin-right: 0.5rem;"></i> Book Consultation
-                    </a>
-                    <a href="tel:+255684320325" class="btn btn-secondary">
-                        <i class="fas fa-phone" style="margin-right: 0.5rem;"></i> Call Now
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-container">
@@ -1327,139 +416,165 @@
                             <div class="logo-main">Ad Pollex</div>
                         </div>
                     </a>
-                    <p class="footer-description">Full-service advertising and digital marketing agency helping businesses grow their online presence since 2016.</p>
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
+                    <p class="footer-description" data-translate="footer.description">Full-service digital marketing agency helping businesses grow their online presence since 2016.</p>
                 </div>
                 
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h4 data-translate="footer.links1.title">Quick Links</h4>
                     <ul>
-                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
-                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
-                        <li><a href="portfolio.html"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
-                        <li><a href="team.html"><i class="fas fa-chevron-right"></i> Our Team</a></li>
-                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                        <li><a href="index.html" data-translate="nav.home">Home</a></li>
+                        <li><a href="services.html" data-translate="nav.services">Services</a></li>
+                        <li><a href="portfolio.html" data-translate="nav.portfolio">Portfolio</a></li>
+                        <li><a href="team.html" data-translate="nav.team">Our Team</a></li>
+                        <li><a href="contact.html" data-translate="nav.contact">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
-                    <h4>Our Services</h4>
+                    <h4 data-translate="footer.contact.title">Contact Info</h4>
                     <ul>
-                        <li><a href="#digital-marketing"><i class="fas fa-chevron-right"></i> Digital Marketing</a></li>
-                        <li><a href="#social-media"><i class="fas fa-chevron-right"></i> Social Media</a></li>
-                        <li><a href="#seo"><i class="fas fa-chevron-right"></i> SEO Optimization</a></li>
-                        <li><a href="#branding"><i class="fas fa-chevron-right"></i> Brand Strategy</a></li>
-                        <li><a href="#web-design"><i class="fas fa-chevron-right"></i> Website Design</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>Contact Info</h4>
-                    <ul>
-                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Dar es Salaam, Tanzania</a></li>
-                        <li><a href="tel:+255684320325"><i class="fas fa-phone"></i> +255 684 320 325</a></li>
-                        <li><a href="mailto:adpollex@gmail.com"><i class="fas fa-envelope"></i> adpollex@gmail.com</a></li>
-                        <li><a href="#"><i class="fas fa-globe"></i> adpollex.com</a></li>
+                        <li><a href="contact.html" data-translate="contact.address.details">Dar es Salaam, Tanzania</a></li>
+                        <li><a href="tel:+255684320325">+255 684 320 325</a></li>
+                        <li><a href="mailto:adpollex@gmail.com">adpollex@gmail.com</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
                 <div class="footer-credits">
-                    <p>&copy; 2023 <span class="highlight">Ad Pollex</span> - Advertising & Digital Marketing Company. All Rights Reserved. | Crafted with <span class="highlight">passion</span> in Dar es Salaam</p>
+                    <p data-translate="footer.copyright">&copy; 2023 Ad Pollex - Digital Marketing Agency. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script>
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('mainHeader');
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
+        // Language System
+        const translations = {
+            en: {
+                // Navigation
+                "nav.home": "Home",
+                "nav.services": "Services",
+                "nav.portfolio": "Portfolio",
+                "nav.team": "Our Team",
+                "nav.contact": "Contact",
+                "nav.tagline": "Digital Marketing Excellence",
+
+                // Services Page
+                "services.eyebrow": "Our Expertise",
+                "services.title": "Comprehensive Digital Marketing Solutions",
+                "services.heroSubtitle": "Transform your business with our data-driven strategies that deliver measurable results and drive sustainable growth.",
+                
+                "services.digital.title": "Digital Marketing",
+                "services.digital.description": "End-to-end digital marketing strategies for maximum impact",
+                "services.digital.sub1": "Paid Advertising",
+                "services.digital.desc1": "Targeted PPC campaigns across Google, Facebook, Instagram, and LinkedIn to reach your ideal customers and maximize ROI.",
+                "services.digital.sub2": "Email Marketing",
+                "services.digital.desc2": "Strategic email campaigns that nurture leads, retain customers, and drive conversions with personalized content.",
+                "services.digital.sub3": "Analytics & Reporting",
+                "services.digital.desc3": "Comprehensive tracking and data analysis to measure performance and optimize campaigns for better results.",
+                
+                "services.social.title": "Social Media Mastery",
+                "services.social.description": "Build authentic connections and grow your brand presence",
+                "services.social.sub1": "Content Creation",
+                "services.social.desc1": "Eye-catching visuals, compelling copy, and engaging video content tailored for each social platform.",
+                "services.social.sub2": "Community Management",
+                "services.social.desc2": "Active engagement, conversation management, and brand reputation building across all social channels.",
+                "services.social.sub3": "Social Strategy",
+                "services.social.desc3": "Comprehensive social media strategies aligned with your business goals and target audience.",
+                
+                "services.seo.title": "SEO Dominance",
+                "services.seo.description": "Improve visibility and drive organic growth",
+                "services.seo.sub1": "Technical SEO",
+                "services.seo.desc1": "Website optimization, speed improvement, and technical audits to ensure search engine friendliness.",
+                "services.seo.sub2": "Content Optimization",
+                "services.seo.desc2": "SEO-optimized content creation and on-page optimization to improve rankings and user experience.",
+                "services.seo.sub3": "Local SEO",
+                "services.seo.desc3": "Local business optimization, Google My Business management, and local citation building.",
+
+                // Footer
+                "footer.description": "Full-service digital marketing agency helping businesses grow their online presence since 2016.",
+                "footer.links1.title": "Quick Links",
+                "footer.contact.title": "Contact Info",
+                "footer.copyright": "© 2023 Ad Pollex - Digital Marketing Agency. All Rights Reserved."
+            },
+            sw: {
+                // Navigation - Kiswahili
+                "nav.home": "Nyumbani",
+                "nav.services": "Huduma",
+                "nav.portfolio": "Portfolio",
+                "nav.team": "Timu Yetu",
+                "nav.contact": "Wasiliana",
+                "nav.tagline": "Ubora wa Uuzaji wa Kidijitali",
+
+                // Huduma
+                "services.eyebrow": "Utaalamu Wetu",
+                "services.title": "Suluhisho Kamili za Uuzaji wa Kidijitali",
+                "services.heroSubtitle": "Badilisha biashara yako kwa mikakati yetu inayotumia data inayotoa matokeo yanayoweza kupimika na kuendesha ukuaji endelevu.",
+                
+                "services.digital.title": "Uuzaji wa Kidijitali",
+                "services.digital.description": "Mikakati ya uuzaji wa kidijitali kutoka mwanzo hadi mwisho kwa athari kubwa zaidi",
+                "services.digital.sub1": "Matangazo ya Kulipwa",
+                "services.digital.desc1": "Kampeni za PPC zilizolengwa katika Google, Facebook, Instagram, na LinkedIn kufikia wateja wako bora na kuongeza mapato.",
+                "services.digital.sub2": "Uuzaji wa Barua Pepe",
+                "services.digital.desc2": "Kampeni za kimkakati za barua pepe zinazolisha wateja wapya, kuwashika wateja, na kuongeza mauzo kwa maudhui ya kibinafsi.",
+                "services.digital.sub3": "Uchambuzi wa Data na Ripoti",
+                "services.digital.desc3": "Ufuatiliaji kamili na uchambuzi wa data kupima utendaji na kuboresha kampeni kwa matokeo bora.",
+                
+                "services.social.title": "Ujuzi wa Mitandao ya Kijamii",
+                "services.social.description": "Jenga uhusiano wa kweli na ukue uwepo wa chapa yako",
+                "services.social.sub1": "Uundaji wa Maudhui",
+                "services.social.desc1": "Picha za kuvutia, nakala ya kuvutia, na maudhui ya video ya kuvutia yaliyobinafsishwa kwa kila jukwaa la kijamii.",
+                "services.social.sub2": "Usimamizi wa Jamii",
+                "services.social.desc2": "Ushiriki hai, usimamizi wa mazungumzo, na ujenzi wa sifa ya chapa katika njia zote za kijamii.",
+                "services.social.sub3": "Mkakati wa Kijamii",
+                "services.social.desc3": "Mikakati kamili ya mitandao ya kijamii inayolingana na malengo yako ya biashara na hadhira yako lengwa.",
+                
+                "services.seo.title": "Ushindi wa SEO",
+                "services.seo.description": "Boresha kuonekana na kuendesha ukuaji wa asili",
+                "services.seo.sub1": "SEO ya Kiufundi",
+                "services.seo.desc1": "Uboreshaji wa tovuti, uboreshaji wa kasi, na ukaguzi wa kiufundi kuhakikisha uwiano wa injini za utafutaji.",
+                "services.seo.sub2": "Uboreshaji wa Maudhui",
+                "services.seo.desc2": "Uundaji wa maudhui yaliyoboreshwa kwa SEO na uboreshaji wa kwenye ukurasa kuboresha nafasi na uzoefu wa mtumiaji.",
+                "services.seo.sub3": "SEO ya Ndani",
+                "services.seo.desc3": "Uboreshaji wa biashara ya ndani, usimamizi wa Google My Business, na ujenzi wa marejeleo ya ndani.",
+
+                // Kijachini
+                "footer.description": "Kampuni kamili ya uuzaji wa kidijitali inayosaidia biashara kukuza uwepo wao mtandaoni tangu 2016.",
+                "footer.links1.title": "Viungo vya Haraka",
+                "footer.contact.title": "Maelezo ya Mawasiliano",
+                "footer.copyright": "© 2023 Ad Pollex - Kampuni ya Uuzaji wa Kidijitali. Haki zote zimehifadhiwa."
             }
-        });
+        };
 
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileNav = document.getElementById('mobileNav');
-        const mobileClose = document.getElementById('mobileClose');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileNav.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-
-        mobileClose.addEventListener('click', () => {
-            mobileNav.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        });
-
-        // Close mobile menu when clicking links
-        mobileNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileNav.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            });
-        });
-
-        // Service navigation
-        const serviceLinks = document.querySelectorAll('.service-nav-link');
-        serviceLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = link.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                
-                // Remove active class from all links
-                serviceLinks.forEach(l => l.classList.remove('active'));
-                // Add active class to clicked link
-                link.classList.add('active');
-                
-                // Scroll to section
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            });
-        });
-
-        // Intersection Observer for animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-slide-up');
+        function updateLanguage(lang) {
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
                 }
             });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        });
 
-        // Observe all animate-slide-up elements
-        document.querySelectorAll('.animate-slide-up').forEach(el => {
-            el.style.opacity = '0';
-            observer.observe(el);
-        });
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
 
-        // Initialize on load
+            localStorage.setItem('preferred-language', lang);
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
-            // Set active nav link
-            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            document.querySelectorAll('nav a').forEach(link => {
-                if (link.getAttribute('href') === currentPage) {
-                    link.classList.add('active');
-                }
+            const savedLang = localStorage.getItem('preferred-language') || 'en';
+            updateLanguage(savedLang);
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const lang = btn.getAttribute('data-lang');
+                    updateLanguage(lang);
+                });
             });
         });
     </script>
