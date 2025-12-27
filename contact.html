@@ -1,1040 +1,1221 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Ad Pollex - Tanzania's leading digital marketing agency. Get in touch for a free consultation on your marketing needs.">
-    
-    <!-- Font Awesome -->
+    <title>Contact Us | Ad Pollex - Digital Marketing Agency Tanzania</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <title>Contact Us | Digital Marketing Agency Tanzania</title>
-    
-    <!-- EMBEDDED CSS FOR CONTACT PAGE -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* ===== INCLUDE ALL HOMEPAGE CSS + ADDITIONAL STYLES ===== */
-        /* (Include all the CSS from homepage above here) */
+        /* ===== PREMIUM CSS FOR CONTACT PAGE ===== */
+        :root {
+            --primary: #1a73e8;
+            --primary-dark: #0d62d9;
+            --secondary: #fbbc04;
+            --secondary-dark: #e6a800;
+            --accent: #34a853;
+            --dark: #202124;
+            --dark-light: #2d2f33;
+            --light: #f8f9fa;
+            --gray: #5f6368;
+            --gray-light: #dadce0;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
+            --border-radius: 12px;
+        }
         
-        /* Additional Contact Page Styles */
-        .contact-info-section {
-            background: var(--bg-light);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-
-        body.dark-mode .contact-info-section {
-            background: #1f2937;
+        
+        html {
+            scroll-behavior: smooth;
         }
-
-        .contact-info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background: #ffffff;
+            overflow-x: hidden;
         }
-
-        .contact-info-card {
-            text-align: center;
-            padding: 40px 30px;
-            background: var(--bg-white);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow);
-            transition: var(--transition);
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.2rem;
         }
-
-        body.dark-mode .contact-info-card {
-            background: #1f2937;
+        
+        h1 {
+            font-size: 3.8rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
         }
-
-        .contact-info-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
+        
+        h2 {
+            font-size: 2.8rem;
+            color: var(--dark);
+            position: relative;
+            padding-bottom: 20px;
+            margin-bottom: 3rem;
         }
-
-        .contact-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            color: white;
-            font-size: 1.5rem;
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 3px;
         }
-
-        .contact-info-card h3 {
-            margin-bottom: 15px;
+        
+        h3 {
+            font-size: 1.9rem;
+            color: var(--dark);
         }
-
-        .contact-info-card p {
-            margin-bottom: 10px;
-            color: var(--text-light);
+        
+        p {
+            margin-bottom: 1.8rem;
+            color: var(--gray);
+            font-size: 1.05rem;
         }
-
-        .contact-link {
+        
+        .container {
+            width: 100%;
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ===== PREMIUM BUTTONS ===== */
+        .btn {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            color: var(--primary-color);
-            font-weight: 500;
-            margin-top: 20px;
-            transition: var(--transition);
-        }
-
-        .contact-link:hover {
-            color: var(--primary-dark);
-            gap: 12px;
-        }
-
-        /* Contact Form */
-        .contact-form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        @media (max-width: 992px) {
-            .contact-form-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .contact-form-content h2 {
-            margin-bottom: 20px;
-            font-size: 2.5rem;
-        }
-
-        .contact-features {
-            margin-top: 30px;
-        }
-
-        .feature {
-            display: flex;
-            align-items: center;
+            justify-content: center;
             gap: 10px;
-            margin-bottom: 15px;
-            color: var(--text-light);
-        }
-
-        .feature i {
-            color: var(--secondary-color);
-        }
-
-        .contact-form-wrapper {
-            background: var(--bg-white);
-            padding: 40px;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow);
-        }
-
-        body.dark-mode .contact-form-wrapper {
-            background: #1f2937;
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        @media (max-width: 768px) {
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: var(--text-dark);
-        }
-
-        body.dark-mode label {
-            color: #e5e7eb;
-        }
-
-        input, textarea, select {
-            width: 100%;
-            padding: 12px 16px;
-            border: 2px solid var(--border-color);
-            border-radius: var(--radius);
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            transition: var(--transition);
-            background: var(--bg-white);
-            color: var(--text-dark);
-        }
-
-        body.dark-mode input,
-        body.dark-mode textarea,
-        body.dark-mode select {
-            background: #374151;
-            border-color: #4b5563;
-            color: #f3f4f6;
-        }
-
-        input:focus, textarea:focus, select:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .char-count {
-            text-align: right;
-            font-size: 0.8rem;
-            color: var(--text-light);
-            margin-top: 5px;
-        }
-
-        .checkbox-group {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .checkbox-group input[type="checkbox"] {
-            width: auto;
-        }
-
-        .btn-block {
-            width: 100%;
-        }
-
-        /* FAQ Section */
-        .faq-section {
-            background: var(--bg-light);
-        }
-
-        body.dark-mode .faq-section {
-            background: #1f2937;
-        }
-
-        .faq-grid {
-            max-width: 800px;
-            margin: 50px auto 0;
-        }
-
-        .faq-item {
-            background: var(--bg-white);
-            border-radius: var(--radius);
-            margin-bottom: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-
-        body.dark-mode .faq-item {
-            background: #1f2937;
-        }
-
-        .faq-question {
-            width: 100%;
-            padding: 20px;
-            text-align: left;
-            background: none;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 16px 38px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
             border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: var(--shadow);
+        }
+        
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+            transition: var(--transition);
+            z-index: -1;
+        }
+        
+        .btn:hover:before {
+            left: 0;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+            color: var(--dark);
+        }
+        
+        .btn-secondary:before {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:before {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        }
+        
+        .btn-outline:hover {
+            color: white;
+        }
+        
+        section {
+            padding: 100px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        
+        .section-header h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        /* ===== PREMIUM HEADER & NAVIGATION ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            padding: 18px 0;
+            transition: var(--transition);
+        }
+        
+        header.scrolled {
+            padding: 12px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
-            font-weight: 500;
-            color: var(--text-dark);
-            cursor: pointer;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.8rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .logo-text span {
+            font-size: 0.9rem;
+            color: var(--gray);
+            font-weight: 400;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            position: relative;
+            padding: 8px 0;
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 3px;
             transition: var(--transition);
         }
-
-        body.dark-mode .faq-question {
-            color: #e5e7eb;
+        
+        nav ul li a:hover {
+            color: var(--primary);
         }
-
-        .faq-question:hover {
-            background: var(--bg-light);
+        
+        nav ul li a:hover:after,
+        nav ul li a.active:after {
+            width: 100%;
         }
-
-        body.dark-mode .faq-question:hover {
-            background: #374151;
+        
+        .mobile-menu-btn {
+            display: none;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
         }
-
+        
+        .mobile-menu-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        /* ===== PAGE HEADER ===== */
+        .page-header {
+            background: linear-gradient(rgba(26, 115, 232, 0.9), rgba(26, 115, 232, 0.85)), 
+                        url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 180px 0 100px;
+            text-align: center;
+            position: relative;
+            margin-top: 86px;
+        }
+        
+        .page-header:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, #ffffff, transparent);
+        }
+        
+        .page-header h1 {
+            color: white;
+            -webkit-text-fill-color: white;
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .page-header p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.95);
+        }
+        
+        /* ===== CONTACT SECTION ===== */
+        .contact-section {
+            padding: 100px 0;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 60px;
+        }
+        
+        .contact-info h3 {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .contact-info i {
+            width: 50px;
+            height: 50px;
+            background: rgba(26, 115, 232, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.3rem;
+        }
+        
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 18px 25px;
+            margin-bottom: 25px;
+            border: 1px solid var(--gray-light);
+            border-radius: var(--border-radius);
+            background: white;
+            color: var(--dark);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
+        }
+        
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: var(--gray);
+        }
+        
+        /* ===== CONTACT CARDS ===== */
+        .contact-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 80px 0;
+        }
+        
+        .contact-card {
+            background: white;
+            padding: 50px 35px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .contact-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, rgba(26, 115, 232, 0.1), rgba(251, 188, 4, 0.1));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+        
+        /* ===== MAP SECTION ===== */
+        .map-section {
+            padding: 0 0 100px;
+        }
+        
+        .map-container {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 500px;
+        }
+        
+        /* ===== FAQ SECTION ===== */
+        .faq-section {
+            background: var(--light);
+            padding: 100px 0;
+            border-radius: var(--border-radius);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: white;
+            margin-bottom: 20px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .faq-question {
+            padding: 25px 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+        
         .faq-question i {
-            transition: transform 0.3s ease;
+            transition: var(--transition);
         }
-
-        .faq-question.active i {
+        
+        .faq-item.active .faq-question i {
             transform: rotate(180deg);
         }
-
+        
         .faq-answer {
+            padding: 0 30px;
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease;
+            transition: var(--transition);
         }
-
-        .faq-answer p {
-            padding: 0 20px 20px;
-            margin: 0;
-            color: var(--text-light);
+        
+        .faq-item.active .faq-answer {
+            padding: 0 30px 30px;
+            max-height: 500px;
         }
-
-        /* Map Section */
-        .map-section {
-            padding: 60px 0;
-        }
-
-        .map-section h2 {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .map-container {
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-        }
-
-        /* Form Validation Styles */
-        input:invalid, textarea:invalid, select:invalid {
-            border-color: #ef4444;
-        }
-
-        input:valid, textarea:valid, select:valid {
-            border-color: var(--secondary-color);
-        }
-
-        .form-success {
-            background: var(--secondary-color);
+        
+        /* ===== PREMIUM FOOTER ===== */
+        footer {
+            background: var(--dark);
             color: white;
-            padding: 15px;
-            border-radius: var(--radius);
-            margin-top: 20px;
+            padding: 80px 0 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-logo h3 {
+            color: white;
+            font-size: 2.2rem;
+        }
+        
+        .footer-logo span {
+            color: var(--secondary);
+        }
+        
+        .footer-links h4 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .footer-links h4:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links ul li a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-links ul li a:hover {
+            color: var(--secondary);
+            transform: translateX(5px);
+        }
+        
+        .footer-links ul li a i {
+            color: var(--secondary);
+            width: 20px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .social-icons a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        
+        .social-icons a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
             text-align: center;
-            display: none;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.95rem;
         }
-
-        .form-success.show {
-            display: block;
-            animation: fadeIn 0.3s ease;
+        
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 3.2rem;
+            }
+            
+            h2 {
+                font-size: 2.4rem;
+            }
+            
+            .page-header h1 {
+                font-size: 3.5rem;
+            }
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .page-header h1 {
+                font-size: 3rem;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .map-container {
+                height: 400px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            nav {
+                position: fixed;
+                top: 86px;
+                left: 0;
+                width: 100%;
+                background: white;
+                box-shadow: var(--shadow-hover);
+                padding: 30px;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                border-radius: 0 0 var(--border-radius) var(--border-radius);
+                z-index: 999;
+            }
+            
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            h1 {
+                font-size: 2.4rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .page-header {
+                margin-top: 86px;
+                padding: 150px 0 80px;
+                background-attachment: scroll;
+            }
+            
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .page-header p {
+                font-size: 1.1rem;
+            }
+            
+            section {
+                padding: 80px 0;
+            }
+            
+            .contact-card {
+                padding: 40px 25px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .map-container {
+                height: 300px;
+            }
+            
+            .contact-form input,
+            .contact-form textarea,
+            .contact-form select {
+                padding: 15px 20px;
+            }
+        }
+        
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+        
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+        
+        .delay-3 {
+            animation-delay: 0.6s;
         }
     </style>
 </head>
-<body class="light-mode">
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="top-bar-content">
-                <div class="contact-info">
-                    <span><i class="fas fa-phone-alt"></i> +255 684 320 325</span>
-                    <span><i class="fas fa-envelope"></i> adpollex@gmail.com</span>
-                    <span><i class="fas fa-map-marker-alt"></i> Mwinyijuma Rd, Kinondoni, Dar es Salaam</span>
-                </div>
-                <div class="top-bar-controls">
-                    <!-- Language Switcher -->
-                    <div class="language-switcher">
-                        <button class="lang-btn active" data-lang="en">
-                            <img src="https://flagcdn.com/w20/gb.png" alt="English"> EN
-                        </button>
-                        <button class="lang-btn" data-lang="sw">
-                            <img src="https://flagcdn.com/w20/tz.png" alt="Swahili"> SW
-                        </button>
-                    </div>
-                    
-                    <!-- Dark Mode Toggle -->
-                    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
-                        <i class="fas fa-moon"></i>
-                        <i class="fas fa-sun" style="display: none;"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Main Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <!-- Logo -->
+<body>
+    <!-- Premium Header -->
+    <header id="mainHeader">
+        <div class="container header-container">
             <a href="index.html" class="logo">
-                <div class="logo-icon">
-                    <i class="fas fa-bullseye"></i>
-                </div>
+                <div class="logo-icon">AP</div>
                 <div class="logo-text">
-                    <h1>Ad <span class="highlight">Pollex</span></h1>
-                    <p class="logo-tagline">Advertising & Digital Marketing</p>
+                    <h1>Ad Pollex</h1>
+                    <span>Digital Marketing Excellence</span>
                 </div>
             </a>
-
-            <!-- Desktop Navigation -->
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                <li><a href="about.html" class="nav-link">About Us</a></li>
-                <li><a href="contact.html" class="nav-link active">Contact</a></li>
-            </ul>
-
-            <!-- CTA Button -->
-            <a href="contact.html" class="btn btn-primary nav-cta">
-                Get Started <i class="fas fa-arrow-right"></i>
-            </a>
-
-            <!-- Mobile Menu Toggle -->
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobileMenu">
-            <div class="mobile-menu-header">
-                <a href="index.html" class="logo">
-                    <h2>Ad <span class="highlight">Pollex</span></h2>
-                </a>
-                <button class="mobile-menu-close" id="mobileMenuClose">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <ul class="mobile-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-            <div class="mobile-cta">
-                <a href="contact.html" class="btn btn-primary">
-                    Get Free Consultation
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Contact Hero -->
-    <section class="page-hero">
+    <!-- Page Header -->
+    <section class="page-header">
         <div class="container">
-            <div class="page-hero-content">
-                <div class="breadcrumb">
-                    <a href="index.html">Home</a>
-                    <i class="fas fa-chevron-right"></i>
-                    <span>Contact</span>
-                </div>
-                <h1>Let's Start Your Digital Success Story</h1>
-                <p>
-                    Ready to grow your business? Get in touch for a free consultation and 
-                    discover how we can help you achieve your marketing goals.
-                </p>
-            </div>
+            <h1 class="fade-in">Get In Touch</h1>
+            <p class="fade-in delay-1">Ready to transform your digital presence? Contact us today for a free consultation and let's discuss how we can help you achieve your business goals.</p>
         </div>
     </section>
 
-    <!-- Contact Information -->
-    <section class="section contact-info-section">
+    <!-- Contact Section -->
+    <section class="contact-section">
         <div class="container">
-            <div class="contact-info-grid">
-                <div class="contact-info-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3>Visit Our Office</h3>
-                    <p>Mwinyijuma Road, Kinondoni</p>
-                    <p>Dar es Salaam, Tanzania</p>
-                    <a href="https://maps.google.com/?q=Mwinyijuma+Road,+Kinondoni,+Dar+es+Salaam" 
-                       class="contact-link" 
-                       target="_blank">
-                        Get Directions <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <div class="contact-info-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone-alt"></i>
-                    </div>
-                    <h3>Call Us</h3>
-                    <p>+255 684 320 325</p>
-                    <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
-                    <a href="tel:+255684320325" class="contact-link">
-                        Call Now <i class="fas fa-phone"></i>
-                    </a>
-                </div>
-                
-                <div class="contact-info-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3>Email Us</h3>
-                    <p>adpollex@gmail.com</p>
-                    <p>We respond within 24 hours</p>
-                    <a href="mailto:adpollex@gmail.com" class="contact-link">
-                        Send Email <i class="fas fa-paper-plane"></i>
-                    </a>
-                </div>
-                
-                <div class="contact-info-card">
-                    <div class="contact-icon">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <h3>WhatsApp Chat</h3>
-                    <p>+255 684 320 325</p>
-                    <p>Quick responses during business hours</p>
-                    <a href="https://wa.me/255684320325" class="contact-link" target="_blank">
-                        Chat Now <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Form -->
-    <section class="section">
-        <div class="container">
-            <div class="contact-form-grid">
-                <div class="contact-form-content">
-                    <h2>Get Your Free Consultation</h2>
-                    <p>
-                        Fill out the form below and one of our experts will contact you within 
-                        24 hours to discuss your marketing needs.
-                    </p>
+            <div class="contact-container">
+                <div class="contact-info fade-in">
+                    <h2>Let's Start a Conversation</h2>
+                    <p>We're here to answer any questions you may have about our services or discuss how we can help grow your business. Reach out to us and we'll respond as soon as possible.</p>
                     
-                    <div class="contact-features">
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>No obligation consultation</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Custom strategy proposal</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Free competitor analysis</span>
-                        </div>
-                    </div>
+                    <h3><i class="fas fa-map-marker-alt"></i> Our Office</h3>
+                    <p>Mwinyijuma Rd, Kinondoni, Dar es Salaam, Tanzania</p>
+                    
+                    <h3><i class="fas fa-phone"></i> Call Us</h3>
+                    <p>+255 684 320 325</p>
+                    
+                    <h3><i class="fas fa-envelope"></i> Email Us</h3>
+                    <p>adpollex@gmail.com</p>
+                    
+                    <h3><i class="fas fa-clock"></i> Business Hours</h3>
+                    <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 1:00 PM<br>Sunday: Closed</p>
                 </div>
                 
-                <div class="contact-form-wrapper">
-                    <form id="contactForm" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Your Name *</label>
-                            <input type="text" id="name" name="name" required 
-                                   placeholder="Enter your full name">
+                <div class="contact-form fade-in delay-1">
+                    <h2>Send Us a Message</h2>
+                    <form id="contactForm">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <input type="text" placeholder="First Name" required>
+                            <input type="text" placeholder="Last Name" required>
                         </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" required 
-                                       placeholder="you@example.com">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="phone">Phone Number *</label>
-                                <input type="tel" id="phone" name="phone" required 
-                                       placeholder="+255 XXX XXX XXX">
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="company">Company Name</label>
-                            <input type="text" id="company" name="company" 
-                                   placeholder="Your company name">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="service">Service Interested In *</label>
-                            <select id="service" name="service" required>
-                                <option value="">Select a service</option>
-                                <option value="digital-marketing">Digital Marketing</option>
-                                <option value="branding">Brand Strategy</option>
-                                <option value="seo">SEO & Website</option>
-                                <option value="social-media">Social Media</option>
-                                <option value="full-service">Full Service Package</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="budget">Monthly Budget (TZS) *</label>
-                            <select id="budget" name="budget" required>
-                                <option value="">Select budget range</option>
-                                <option value="1-2m">1M - 2M TZS</option>
-                                <option value="2-5m">2M - 5M TZS</option>
-                                <option value="5-10m">5M - 10M TZS</option>
-                                <option value="10m+">10M+ TZS</option>
-                                <option value="not-sure">Not Sure</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Your Message *</label>
-                            <textarea id="message" name="message" rows="5" required 
-                                      placeholder="Tell us about your project, goals, and any specific requirements..."
-                                      maxlength="1000"></textarea>
-                            <div class="char-count">0/1000 characters</div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <div class="checkbox-group">
-                                <input type="checkbox" id="newsletter" name="newsletter" checked>
-                                <label for="newsletter">
-                                    Subscribe to our newsletter for marketing tips and updates
-                                </label>
-                            </div>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-block">
-                            Submit Request <i class="fas fa-paper-plane"></i>
-                        </button>
-                        
-                        <div class="form-success" id="formSuccess">
-                            Thank you! We'll contact you within 24 hours.
-                        </div>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="tel" placeholder="Phone Number">
+                        <input type="text" placeholder="Company Name">
+                        <select required>
+                            <option value="">Select Service Interested In</option>
+                            <option value="digital-marketing">Digital Marketing</option>
+                            <option value="social-media">Social Media Management</option>
+                            <option value="seo">SEO Optimization</option>
+                            <option value="branding">Brand Strategy</option>
+                            <option value="web-design">Website Design</option>
+                            <option value="multiple">Multiple Services</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <textarea rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn">Send Message <i class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="section faq-section">
+    <!-- Contact Cards -->
+    <section>
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-subtitle">Find answers to common questions about working with us</p>
-            </div>
-            
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How quickly can you start working on my project?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            Typically, we can start within 1-3 business days after the initial consultation 
-                            and agreement. The exact timeline depends on project complexity and our current workload.
-                        </p>
+            <div class="contact-cards">
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
                     </div>
+                    <h3>Call Us</h3>
+                    <p>Speak directly with our team for immediate assistance or to schedule a consultation.</p>
+                    <a href="tel:+255684320325" class="btn-outline" style="margin-top: 20px;">+255 684 320 325</a>
                 </div>
                 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What is included in the free consultation?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            Our free consultation includes: Analysis of your current marketing, discussion of 
-                            your goals, competitive analysis, and a custom strategy proposal. No obligations.
-                        </p>
+                <div class="contact-card fade-in delay-1">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
                     </div>
+                    <h3>Email Us</h3>
+                    <p>Send us an email with your inquiry and we'll respond within 24 hours.</p>
+                    <a href="mailto:adpollex@gmail.com" class="btn-outline" style="margin-top: 20px;">adpollex@gmail.com</a>
                 </div>
                 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Do you work with businesses outside Tanzania?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>
-                            Yes, we work with businesses across East Africa and internationally. While we 
-                            specialize in the Tanzanian market, we have experience working with clients in 
-                            Kenya, Uganda, Rwanda, and beyond.
-                        </p>
+                <div class="contact-card fade-in delay-2">
+                    <div class="contact-icon">
+                        <i class="fas fa-comments"></i>
                     </div>
+                    <h3>Live Chat</h3>
+                    <p>Chat with us in real-time for quick answers to your questions.</p>
+                    <a href="#" class="btn-outline" style="margin-top: 20px;" id="startChatBtn">Start Chat</a>
+                </div>
+                
+                <div class="contact-card fade-in delay-3">
+                    <div class="contact-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Call</h3>
+                    <p>Schedule a video consultation to discuss your project in detail.</p>
+                    <a href="#" class="btn-outline" style="margin-top: 20px;" id="scheduleCallBtn">Schedule Call</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Map Section -->
-    <section class="section map-section">
+    <section class="map-section">
         <div class="container">
-            <h2>Find Us Here</h2>
-            <div class="map-container">
+            <div class="section-header">
+                <h2>Find Our Office</h2>
+                <p class="section-subtitle">Visit our office in Dar es Salaam for a face-to-face consultation about your digital marketing needs.</p>
+            </div>
+            
+            <div class="map-container fade-in">
+                <!-- Embedded Google Map -->
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.222668421743!2d39.23841517500671!3d-6.771502866406905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4ed2c6e7d8a5%3A0x8d6b7b9c3c9b3c9b!2sKinondoni%2C%20Dar%20es%20Salaam%2C%20Tanzania!5e0!3m2!1sen!2s!4v1621234567890!5m2!1sen!2s" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15858.699920514453!2d39.25882505448829!3d-6.775750560453167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4c3c7c8b4b8b%3A0x9a7c8a9b8a9a9a9a!2sKinondoni%2C%20Dar%20es%20Salaam%2C%20Tanzania!5e0!3m2!1sen!2stz!4v1689876543210!5m2!1sen!2stz" 
                     width="100%" 
-                    height="450" 
+                    height="100%" 
                     style="border:0;" 
                     allowfullscreen="" 
-                    loading="lazy">
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="section cta-section">
+    <!-- FAQ Section -->
+    <section class="faq-section">
         <div class="container">
-            <div class="cta-content">
-                <h2>Still Have Questions?</h2>
-                <p>Don't hesitate to reach out. We're here to help you succeed.</p>
-                <div class="cta-buttons">
-                    <a href="tel:+255684320325" class="btn btn-primary btn-lg">
-                        <i class="fas fa-phone-alt"></i> +255 684 320 325
-                    </a>
-                    <a href="https://wa.me/255684320325" class="btn btn-outline btn-lg" target="_blank">
-                        <i class="fab fa-whatsapp"></i> WhatsApp Chat
-                    </a>
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p class="section-subtitle">Find answers to common questions about working with Ad Pollex.</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>What is your typical response time for new inquiries?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We strive to respond to all new inquiries within 24 hours during business days. For urgent matters, please call us directly at +255 684 320 325 for immediate assistance.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in delay-1">
+                    <div class="faq-question">
+                        <span>Do you offer free consultations?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer a free 30-minute initial consultation to discuss your project requirements, goals, and how we can help you achieve them. This helps us understand your needs and provide you with a tailored proposal.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in delay-2">
+                    <div class="faq-question">
+                        <span>What industries do you specialize in?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We have experience working with clients across various industries including e-commerce, retail, hospitality, tourism, technology, healthcare, education, and professional services. Our strategies are tailored to each industry's unique challenges and opportunities.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in delay-3">
+                    <div class="faq-question">
+                        <span>How do you measure the success of digital marketing campaigns?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We use a variety of metrics depending on your goals, including website traffic, conversion rates, lead generation, ROI, engagement rates, and brand awareness. We provide monthly reports with detailed analytics and insights to track progress and optimize performance.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>What is your pricing structure?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our pricing is customized based on the scope of work, project complexity, and duration. We offer both project-based pricing for one-time projects and monthly retainers for ongoing services. During our consultation, we'll provide you with a detailed proposal outlining costs and deliverables.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- CTA Section -->
+    <section>
         <div class="container">
-            <div class="footer-grid">
-                <!-- Company Info -->
-                <div class="footer-col">
-                    <a href="index.html" class="footer-logo">
-                        <div class="logo-icon">
-                            <i class="fas fa-bullseye"></i>
-                        </div>
-                        <div class="logo-text">
-                            <h3>Ad <span class="highlight">Pollex</span></h3>
-                            <p class="footer-tagline">Advertising & Digital Marketing</p>
-                        </div>
-                    </a>
-                    <p class="footer-description">
-                        Full-service advertising and digital marketing agency in Tanzania, 
-                        helping businesses grow since 2016.
-                    </p>
-                    <div class="social-links">
-                        <a href="https://facebook.com/adpollex" class="social-link" aria-label="Facebook" target="_blank">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://instagram.com/adpollex" class="social-link" aria-label="Instagram" target="_blank">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://linkedin.com/company/adpollex" class="social-link" aria-label="LinkedIn" target="_blank">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://twitter.com/adpollex" class="social-link" aria-label="Twitter" target="_blank">
-                            <i class="fab fa-twitter"></i>
-                        </a>
+            <div class="section-header">
+                <h2>Ready to Get Started?</h2>
+                <p class="section-subtitle">Take the first step toward transforming your digital presence. Contact us today to schedule your free consultation.</p>
+            </div>
+            
+            <div class="text-center fade-in">
+                <a href="tel:+255684320325" class="btn" style="margin-right: 20px;">
+                    <i class="fas fa-phone-alt"></i> Call Now
+                </a>
+                <a href="mailto:adpollex@gmail.com" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i> Email Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <h3>Ad <span>Pollex</span></h3>
+                    <p>Full-service advertising and digital marketing agency helping businesses grow their online presence since 2016.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-
-                <!-- Quick Links -->
-                <div class="footer-col">
+                <div class="footer-links">
                     <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="portfolio.html"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                        <li><a href="team.html"><i class="fas fa-chevron-right"></i> Our Team</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
                     </ul>
                 </div>
-
-                <!-- Services -->
-                <div class="footer-col">
+                <div class="footer-links">
                     <h4>Our Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="services.html#digital-marketing">Digital Marketing</a></li>
-                        <li><a href="services.html#branding">Brand Strategy</a></li>
-                        <li><a href="services.html#seo">SEO & Website</a></li>
-                        <li><a href="services.html#social-media">Social Media</a></li>
+                    <ul>
+                        <li><a href="services.html#digital-marketing"><i class="fas fa-chevron-right"></i> Digital Marketing</a></li>
+                        <li><a href="services.html#social-media"><i class="fas fa-chevron-right"></i> Social Media Management</a></li>
+                        <li><a href="services.html#seo"><i class="fas fa-chevron-right"></i> SEO Optimization</a></li>
+                        <li><a href="services.html#branding"><i class="fas fa-chevron-right"></i> Brand Strategy</a></li>
+                        <li><a href="services.html#web-design"><i class="fas fa-chevron-right"></i> Website Design</a></li>
                     </ul>
                 </div>
-
-                <!-- Contact Info -->
-                <div class="footer-col">
-                    <h4>Contact Us</h4>
-                    <div class="contact-info">
-                        <p>
-                            <i class="fas fa-map-marker-alt"></i>
-                            Mwinyijuma Road, Kinondoni, Dar es Salaam, Tanzania
-                        </p>
-                        <p>
-                            <i class="fas fa-phone-alt"></i>
-                            <a href="tel:+255684320325">+255 684 320 325</a>
-                        </p>
-                        <p>
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:adpollex@gmail.com">adpollex@gmail.com</a>
-                        </p>
-                        <p>
-                            <i class="fas fa-clock"></i>
-                            Mon - Fri: 8:00 AM - 6:00 PM
-                        </p>
-                    </div>
+                <div class="footer-links">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Dar es Salaam, Tanzania</a></li>
+                        <li><a href="tel:+255684320325"><i class="fas fa-phone"></i> +255 684 320 325</a></li>
+                        <li><a href="mailto:adpollex@gmail.com"><i class="fas fa-envelope"></i> adpollex@gmail.com</a></li>
+                        <li><a href="#"><i class="fas fa-globe"></i> adpollex.com</a></li>
+                    </ul>
                 </div>
             </div>
-
-            <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <p>&copy; 2024 Ad Pollex. All rights reserved.</p>
-                    <div class="footer-bottom-links">
-                        <a href="privacy.html">Privacy Policy</a>
-                        <a href="terms.html">Terms of Service</a>
-                        <a href="#">Cookie Policy</a>
-                    </div>
-                </div>
+            <div class="copyright">
+                <p>&copy; 2023 Ad Pollex - Advertising & Digital Marketing Company. All Rights Reserved. | Designed with <i class="fas fa-heart" style="color: #ff4757;"></i> in Dar es Salaam</p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Float -->
-    <a href="https://wa.me/255684320325" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-        <span class="whatsapp-tooltip">Chat with us!</span>
-    </a>
-
-    <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <!-- JavaScript -->
+    <!-- Premium JavaScript -->
     <script>
-        // Include all JavaScript from homepage
-        // Mobile Menu
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const mobileMenuClose = document.getElementById('mobileMenuClose');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        if (mobileMenuToggle) {
-            mobileMenuToggle.addEventListener('click', () => {
-                mobileMenu.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
-        }
-
-        if (mobileMenuClose) {
-            mobileMenuClose.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        }
-
-        // Language Switcher
-        const langButtons = document.querySelectorAll('.lang-btn');
-        langButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                langButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        const mainHeader = document.getElementById('mainHeader');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mainNav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
             });
         });
-
-        // Dark Mode Toggle
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        if (darkModeToggle) {
-            darkModeToggle.addEventListener('click', () => {
-                document.body.classList.toggle('dark-mode');
-                const moonIcon = darkModeToggle.querySelector('.fa-moon');
-                const sunIcon = darkModeToggle.querySelector('.fa-sun');
-                
-                if (document.body.classList.contains('dark-mode')) {
-                    moonIcon.style.display = 'none';
-                    sunIcon.style.display = 'block';
-                    localStorage.setItem('darkMode', 'enabled');
-                } else {
-                    moonIcon.style.display = 'block';
-                    sunIcon.style.display = 'none';
-                    localStorage.setItem('darkMode', 'disabled');
-                }
-            });
-        }
-
-        // Check for saved dark mode preference
-        if (localStorage.getItem('darkMode') === 'enabled') {
-            document.body.classList.add('dark-mode');
-            const moonIcon = document.querySelector('.fa-moon');
-            const sunIcon = document.querySelector('.fa-sun');
-            if (moonIcon) moonIcon.style.display = 'none';
-            if (sunIcon) sunIcon.style.display = 'block';
-        }
-
-        // Back to Top
-        const backToTopBtn = document.getElementById('backToTop');
+        
+        // Header scroll effect
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.add('visible');
+            if (window.scrollY > 100) {
+                mainHeader.classList.add('scrolled');
             } else {
-                backToTopBtn.classList.remove('visible');
+                mainHeader.classList.remove('scrolled');
             }
         });
-
-        if (backToTopBtn) {
-            backToTopBtn.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+        
+        // Contact Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const firstName = this.querySelector('input[type="text"]').value;
+            const email = this.querySelector('input[type="email"]').value;
+            
+            // Show success message
+            Swal.fire({
+                icon: 'success',
+                title: 'Message Sent!',
+                html: `<p>Thank you <strong>${firstName}</strong> for contacting Ad Pollex!</p>
+                       <p>We have received your message and will respond to <strong>${email}</strong> within 24 hours.</p>`,
+                confirmButtonColor: 'var(--primary)',
+                confirmButtonText: 'Great!'
             });
-        }
-
-        // FAQ Functionality
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const icon = question.querySelector('i');
-                
-                // Toggle active class
-                question.classList.toggle('active');
-                
-                // Toggle answer visibility
-                if (answer.style.maxHeight) {
-                    answer.style.maxHeight = null;
-                    icon.style.transform = 'rotate(0deg)';
-                } else {
-                    answer.style.maxHeight = answer.scrollHeight + 'px';
-                    icon.style.transform = 'rotate(180deg)';
+            
+            // Reset form
+            this.reset();
+        });
+        
+        // Chat button functionality
+        document.getElementById('startChatBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            Swal.fire({
+                title: 'Live Chat',
+                html: '<p>Our live chat is available Monday-Friday, 8:00 AM - 6:00 PM.</p><p>Would you like to start a chat now?</p>',
+                icon: 'info',
+                showCancelButton: true,
+                confirmButtonText: 'Start Chat',
+                cancelButtonText: 'Maybe Later',
+                confirmButtonColor: 'var(--primary)'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: 'Chat Started',
+                        text: 'Please wait while we connect you with an agent...',
+                        icon: 'success',
+                        timer: 2000,
+                        showConfirmButton: false
+                    });
                 }
             });
         });
-
-        // Character Counter
-        const messageTextarea = document.getElementById('message');
-        const charCount = document.querySelector('.char-count');
         
-        if (messageTextarea && charCount) {
-            messageTextarea.addEventListener('input', () => {
-                const currentLength = messageTextarea.value.length;
-                const maxLength = messageTextarea.getAttribute('maxlength');
-                charCount.textContent = `${currentLength}/${maxLength} characters`;
-                
-                // Change color if nearing limit
-                if (currentLength > maxLength * 0.9) {
-                    charCount.style.color = '#ef4444';
-                } else if (currentLength > maxLength * 0.75) {
-                    charCount.style.color = '#f59e0b';
-                } else {
-                    charCount.style.color = 'var(--text-light)';
+        // Schedule call button
+        document.getElementById('scheduleCallBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            Swal.fire({
+                title: 'Schedule Video Call',
+                html: '<p>Please provide your preferred date and time for a video consultation:</p><input type="datetime-local" id="callDateTime" class="swal2-input" placeholder="Select date and time">',
+                showCancelButton: true,
+                confirmButtonText: 'Schedule',
+                cancelButtonText: 'Cancel',
+                confirmButtonColor: 'var(--primary)',
+                preConfirm: () => {
+                    const datetime = document.getElementById('callDateTime').value;
+                    if (!datetime) {
+                        Swal.showValidationMessage('Please select a date and time');
+                    }
+                    return { datetime: datetime };
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: 'Call Scheduled!',
+                        html: `<p>Your video consultation has been scheduled for:</p><p><strong>${new Date(result.value.datetime).toLocaleString()}</strong></p><p>We will send a confirmation email with the meeting link.</p>`,
+                        icon: 'success'
+                    });
                 }
             });
-        }
-
-        // Form Submission
-        const contactForm = document.getElementById('contactForm');
-        const formSuccess = document.getElementById('formSuccess');
+        });
         
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
                 
-                // Simple validation
-                const requiredFields = contactForm.querySelectorAll('[required]');
-                let isValid = true;
-                
-                requiredFields.forEach(field => {
-                    if (!field.value.trim()) {
-                        field.style.borderColor = '#ef4444';
-                        isValid = false;
-                    } else {
-                        field.style.borderColor = '';
+                // Close other items
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
                     }
                 });
-                
-                if (!isValid) {
-                    alert('Please fill in all required fields.');
-                    return;
-                }
-                
-                // Show loading state
-                const submitBtn = contactForm.querySelector('button[type="submit"]');
-                const originalText = submitBtn.innerHTML;
-                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-                submitBtn.disabled = true;
-                
-                // Simulate form submission
-                setTimeout(() => {
-                    // Show success message
-                    formSuccess.classList.add('show');
-                    
-                    // Reset form
-                    contactForm.reset();
-                    charCount.textContent = '0/1000 characters';
-                    
-                    // Reset button
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.disabled = false;
-                    
-                    // Hide success message after 5 seconds
-                    setTimeout(() => {
-                        formSuccess.classList.remove('show');
-                    }, 5000);
-                    
-                    // Scroll to success message
-                    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }, 2000);
-            });
-        }
-
-        // Pre-fill form from URL parameters
-        const urlParams = new URLSearchParams(window.location.search);
-        const serviceParam = urlParams.get('service');
-        const packageParam = urlParams.get('package');
-        
-        if (serviceParam) {
-            const serviceSelect = document.getElementById('service');
-            if (serviceSelect) {
-                serviceSelect.value = serviceParam;
-            }
-        }
-        
-        if (packageParam) {
-            const serviceSelect = document.getElementById('service');
-            const budgetSelect = document.getElementById('budget');
-            
-            if (serviceSelect && budgetSelect) {
-                switch(packageParam) {
-                    case 'starter':
-                        serviceSelect.value = 'social-media';
-                        budgetSelect.value = '1-2m';
-                        break;
-                    case 'growth':
-                        serviceSelect.value = 'full-service';
-                        budgetSelect.value = '2-5m';
-                        break;
-                    case 'enterprise':
-                        serviceSelect.value = 'full-service';
-                        budgetSelect.value = '5-10m';
-                        break;
-                }
-            }
-        }
-
-        // Close mobile menu when clicking on links
-        document.querySelectorAll('.mobile-nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
             });
         });
-
-        // Contact Info Cards Animation
-        const contactCards = document.querySelectorAll('.contact-info-card');
+        
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.classList.add('fade-in');
                 }
             });
-        }, { threshold: 0.1 });
-
-        contactCards.forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            observer.observe(card);
+        }, observerOptions);
+        
+        // Observe elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            observer.observe(el);
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return;
+                
+                const targetId = this.getAttribute('href');
+                if (targetId.startsWith('#')) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Initialize animations on load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set active nav link
+            const currentPage = window.location.pathname.split('/').pop();
+            document.querySelectorAll('nav a').forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+            
+            // Add SweetAlert for better alerts
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/sweetalert2@11';
+            document.head.appendChild(script);
         });
     </script>
 </body>
