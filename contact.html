@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Ad Pollex - Get In Touch</title>
+    <title>Contact Us | Ad Pollex - Digital Marketing Agency Tanzania</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
+        /* ===== ULTRA PREMIUM DESIGN SYSTEM ===== */
         :root {
             --primary: #000000;
             --primary-light: #1a1a1a;
@@ -27,6 +28,7 @@
             --radius-sm: 8px;
             --radius-md: 16px;
             --radius-lg: 24px;
+            --radius-xl: 40px;
         }
 
         * {
@@ -35,43 +37,170 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--dark-gray);
-            background: var(--white);
-            line-height: 1.6;
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
         }
 
-        h1, h2, h3, h4 {
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--dark-gray);
+            background: var(--white);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4, h5, h6 {
             font-family: 'Space Grotesk', sans-serif;
             font-weight: 700;
             line-height: 1.1;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
         }
 
         h1 {
-            font-size: 3.5rem;
+            font-size: 4.5rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
             background: linear-gradient(135deg, var(--primary), var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 3.5rem;
+            color: var(--primary);
+        }
+
+        h3 {
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+
+        h4 {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .display {
+            font-size: 5.5rem;
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -0.04em;
+        }
+
+        p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .lead {
+            font-size: 1.375rem;
+            color: var(--primary-light);
+            line-height: 1.6;
+        }
+
+        .eyebrow {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: 1rem;
         }
 
         .container {
+            width: 100%;
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
         }
 
-        /* Header */
+        section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.25rem 2.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--radius-xl);
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+            box-shadow: 0 10px 30px rgba(255, 59, 48, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(255, 59, 48, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(0, 0, 0, 0.8);
+            color: var(--white);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 0, 0, 0.9);
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--white);
+            transform: translateY(-5px);
+        }
+
+        /* ===== HEADER ===== */
         header {
             position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
+            z-index: 1000;
+            padding: 1.5rem 0;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
-            padding: 1.5rem 0;
-            z-index: 1000;
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 1rem 0;
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-sm);
         }
 
         .header-container {
@@ -99,6 +228,39 @@
             font-family: 'Space Grotesk', sans-serif;
             font-weight: 900;
             font-size: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-symbol::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-main {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary);
+            letter-spacing: -0.02em;
+        }
+
+        .logo-sub {
+            font-size: 0.75rem;
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
         }
 
         .nav-desktop {
@@ -111,9 +273,22 @@
             text-decoration: none;
             color: var(--primary);
             font-weight: 500;
+            font-size: 0.9375rem;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: var(--transition);
             text-transform: uppercase;
-            font-size: 0.875rem;
             letter-spacing: 0.05em;
+        }
+
+        .nav-desktop a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
             transition: var(--transition);
         }
 
@@ -122,50 +297,110 @@
             color: var(--accent);
         }
 
-        .language-switcher {
-            display: flex;
-            gap: 0.5rem;
-            margin-left: 2rem;
+        .nav-desktop a:hover::after,
+        .nav-desktop a.active::after {
+            width: 100%;
         }
 
-        .lang-btn {
-            background: transparent;
-            border: 2px solid rgba(0, 0, 0, 0.1);
-            color: var(--primary);
-            padding: 0.5rem 1.25rem;
-            border-radius: 40px;
-            font-weight: 600;
+        .mobile-menu-btn {
+            display: none;
+            width: 48px;
+            height: 48px;
+            background: var(--primary);
+            border: none;
+            border-radius: 12px;
+            color: var(--white);
+            font-size: 1.25rem;
             cursor: pointer;
             transition: var(--transition);
-            text-transform: uppercase;
-            font-size: 0.875rem;
         }
 
-        .lang-btn:hover, .lang-btn.active {
-            background: var(--accent);
-            color: var(--white);
-            border-color: var(--accent);
-        }
-
-        /* Hero */
+        /* ===== CONTACT HERO ===== */
         .contact-hero {
-            min-height: 50vh;
+            min-height: 80vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             color: var(--white);
             padding: 8rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 59, 48, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 122, 255, 0.1) 0%, transparent 50%);
+        }
+
+        .contact-hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .contact-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
         }
 
         .contact-hero h1 {
+            font-size: 4rem;
+            margin-bottom: 2rem;
             background: linear-gradient(135deg, var(--white), var(--gold));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        /* Contact Section */
-        .contact-section {
-            padding: 6rem 0;
+        .contact-hero .lead {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 3rem;
+        }
+
+        .contact-methods {
+            display: flex;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-method-btn {
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-xl);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: var(--transition);
+        }
+
+        .contact-method-btn:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        /* ===== CONTACT GRID ===== */
+        .contact-grid {
+            padding: 8rem 0;
+            background: var(--white);
         }
 
         .contact-container {
@@ -174,32 +409,32 @@
             gap: 6rem;
         }
 
-        .contact-info {
-            padding-right: 2rem;
+        .contact-info h2 {
+            margin-bottom: 1.5rem;
         }
 
-        .contact-methods {
+        .contact-details {
             margin-top: 3rem;
         }
 
-        .contact-method {
+        .contact-detail-item {
             display: flex;
             align-items: flex-start;
             gap: 1.5rem;
             margin-bottom: 2.5rem;
             padding-bottom: 2.5rem;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
 
-        .contact-method:last-child {
+        .contact-detail-item:last-child {
             border-bottom: none;
             margin-bottom: 0;
             padding-bottom: 0;
         }
 
         .contact-icon {
-            width: 60px;
-            height: 60px;
+            width: 56px;
+            height: 56px;
             background: rgba(255, 59, 48, 0.1);
             border-radius: 16px;
             display: flex;
@@ -210,34 +445,76 @@
             flex-shrink: 0;
         }
 
-        .contact-details h4 {
+        .contact-detail-content h4 {
             margin-bottom: 0.5rem;
         }
 
-        .contact-form {
+        .contact-detail-content p {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .contact-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-link:hover {
+            gap: 1rem;
+        }
+
+        /* ===== CONTACT FORM ===== */
+        .contact-form-card {
             background: var(--off-white);
-            padding: 3rem;
             border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-md);
+            padding: 4rem;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-form-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--accent), var(--secondary));
+        }
+
+        .form-header {
+            margin-bottom: 3rem;
+        }
+
+        .form-header h3 {
+            margin-bottom: 1rem;
         }
 
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .form-label {
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
             font-weight: 600;
             color: var(--primary);
-            font-size: 0.875rem;
+            font-size: 0.9375rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
 
         .form-control {
             width: 100%;
-            padding: 1rem 1.5rem;
+            padding: 1.25rem 1.5rem;
             font-size: 1rem;
             border: 1px solid rgba(0, 0, 0, 0.1);
             border-radius: var(--radius-md);
@@ -252,43 +529,56 @@
             box-shadow: 0 0 0 3px rgba(255, 59, 48, 0.1);
         }
 
+        .form-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%238E8E93' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1.5rem center;
+            background-size: 16px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .form-submit {
+            margin-top: 3rem;
+        }
+
         textarea.form-control {
             min-height: 150px;
             resize: vertical;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: var(--accent);
-            color: var(--white);
-            border: none;
-            border-radius: var(--radius-lg);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            cursor: pointer;
-            transition: var(--transition);
-            width: 100%;
-            font-size: 1rem;
-        }
-
-        .btn:hover {
-            background: var(--accent-dark);
-            transform: translateY(-2px);
-        }
-
-        /* Map */
+        /* ===== MAP SECTION ===== */
         .map-section {
-            padding: 4rem 0;
-            background: var(--off-white);
+            padding: 0 0 8rem;
         }
 
         .map-container {
             border-radius: var(--radius-lg);
             overflow: hidden;
-            height: 400px;
+            box-shadow: var(--shadow-lg);
+            height: 500px;
+            position: relative;
+        }
+
+        .map-overlay {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius-md);
             box-shadow: var(--shadow-md);
+            max-width: 300px;
+            z-index: 10;
+        }
+
+        .map-overlay h4 {
+            margin-bottom: 1rem;
         }
 
         .map-placeholder {
@@ -299,50 +589,209 @@
             align-items: center;
             justify-content: center;
             color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 600;
         }
 
-        /* FAQ */
+        /* ===== FAQ SECTION ===== */
         .faq-section {
-            padding: 6rem 0;
+            padding: 8rem 0;
+            background: var(--off-white);
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 6rem;
         }
 
         .faq-grid {
-            display: grid;
-            gap: 1.5rem;
             max-width: 800px;
             margin: 0 auto;
         }
 
         .faq-item {
             background: var(--white);
-            border-radius: var(--radius-md);
-            padding: 2rem;
-            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: var(--radius-lg);
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
         }
 
         .faq-question {
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--primary);
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            background: var(--white);
         }
 
-        /* Footer */
+        .faq-question h4 {
+            margin-bottom: 0;
+            font-size: 1.25rem;
+        }
+
+        .faq-toggle {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 59, 48, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+            background: var(--accent);
+            color: var(--white);
+        }
+
+        .faq-answer {
+            padding: 0 2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 2rem 2rem;
+            max-height: 300px;
+        }
+
+        .faq-answer p {
+            margin-bottom: 0;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .contact-cta {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .contact-cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-cta h2 {
+            color: var(--white);
+            margin-bottom: 2rem;
+        }
+
+        .contact-cta .lead {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 3rem;
+        }
+
+        .cta-stats {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 4rem;
+            padding-top: 4rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cta-stat-item {
+            text-align: center;
+        }
+
+        .cta-stat-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-stat-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* ===== FOOTER ===== */
         footer {
             background: var(--primary);
             color: var(--white);
-            padding: 4rem 0 2rem;
+            padding: 6rem 0 3rem;
         }
 
         .footer-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand {
+            max-width: 300px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            text-decoration: none;
+        }
+
+        .footer-logo .logo-symbol {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        .footer-logo .logo-main {
+            color: var(--white);
+        }
+
+        .footer-description {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 2rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-social a {
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-social a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
         }
 
         .footer-links h4 {
             color: var(--white);
             margin-bottom: 1.5rem;
+            font-size: 1.125rem;
         }
 
         .footer-links ul {
@@ -350,211 +799,558 @@
         }
 
         .footer-links li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
         }
 
         .footer-links a {
             color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         .footer-links a:hover {
             color: var(--accent);
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .footer-credits {
+            font-size: 0.875rem;
+        }
+
+        .footer-credits .highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* ===== MOBILE NAVIGATION ===== */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: var(--primary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            transform: translateX(100%);
+            transition: var(--transition);
+            z-index: 9999;
+        }
+        
+        .mobile-nav.active {
+            transform: translateX(0);
+        }
+        
+        .mobile-nav a {
+            color: var(--white);
+            font-size: 1.5rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: var(--transition);
+        }
+        
+        .mobile-nav a:hover {
+            color: var(--accent);
+        }
+        
+        .mobile-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 4rem;
+            }
+            
+            h2 {
+                font-size: 3rem;
+            }
+            
+            .display {
+                font-size: 4.5rem;
+            }
+            
+            .contact-hero h1 {
+                font-size: 3.5rem;
+            }
         }
 
         @media (max-width: 992px) {
-            .contact-container {
-                grid-template-columns: 1fr;
-                gap: 3rem;
+            .nav-desktop {
+                display: none;
             }
             
-            .contact-info {
-                padding-right: 0;
+            .mobile-menu-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+            
+            .contact-form-card {
+                padding: 3rem;
             }
         }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            .nav-desktop { display: none; }
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.5rem;
+            }
+            
+            .contact-hero h1 {
+                font-size: 3rem;
+            }
+            
+            .contact-methods {
+                flex-direction: column;
+            }
+            
+            .contact-method-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .map-overlay {
+                position: relative;
+                top: 0;
+                left: 0;
+                max-width: 100%;
+                margin: 2rem;
+            }
+            
+            .cta-stats {
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .contact-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .btn {
+                padding: 1rem 2rem;
+                width: 100%;
+            }
+            
+            .contact-form-card {
+                padding: 2rem;
+            }
+            
+            .faq-question {
+                padding: 1.5rem;
+            }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .animate-slide-up {
+            animation: slideInUp 1s ease-out forwards;
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .animate-delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-delay-3 {
+            animation-delay: 0.6s;
         }
     </style>
 </head>
 <body>
-    <header>
+    <!-- Header -->
+    <header id="mainHeader">
         <div class="container header-container">
             <a href="index.html" class="logo">
                 <div class="logo-symbol">AP</div>
                 <div class="logo-text">
                     <div class="logo-main">Ad Pollex</div>
-                    <div class="logo-sub" data-translate="nav.tagline">Digital Marketing Excellence</div>
+                    <div class="logo-sub">Digital Marketing Excellence</div>
                 </div>
             </a>
             
             <nav class="nav-desktop">
-                <a href="index.html" data-translate="nav.home">Home</a>
-                <a href="services.html" data-translate="nav.services">Services</a>
-                <a href="portfolio.html" data-translate="nav.portfolio">Portfolio</a>
-                <a href="team.html" data-translate="nav.team">Our Team</a>
-                <a href="contact.html" class="active" data-translate="nav.contact">Contact</a>
-                
-                <div class="language-switcher">
-                    <button class="lang-btn active" data-lang="en">EN</button>
-                    <button class="lang-btn" data-lang="sw">SW</button>
-                </div>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="team.html">Our Team</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="contact.html" class="btn btn-primary">Get Started →</a>
             </nav>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
 
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <button class="mobile-close" id="mobileClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="team.html">Our Team</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="contact.html" class="btn btn-primary" style="margin-top: 2rem;">Get Started →</a>
+    </nav>
+
+    <!-- Contact Hero -->
     <section class="contact-hero">
+        <video class="contact-hero-video" autoplay muted loop playsinline>
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-business-people-discussing-figures-43726-large.mp4" type="video/mp4">
+        </video>
+        
         <div class="container">
-            <div class="hero-content">
-                <div class="eyebrow" data-translate="contact.eyebrow">Get In Touch</div>
-                <h1 data-translate="contact.title">Let's Start Something Big</h1>
-                <p class="lead" data-translate="contact.subtitle">We're here to answer your questions and discuss how we can help grow your business. Reach out to us today!</p>
+            <div class="contact-hero-content animate-slide-up">
+                <div class="eyebrow">Let's Start Something Great</div>
+                <h1>Ready to <span class="display">Grow</span> Together?</h1>
+                <p class="lead">Partner with Tanzania's leading digital marketing agency. Whether you're a startup or established business, we have the expertise to elevate your brand.</p>
+                
+                <div class="contact-methods animate-delay-1">
+                    <a href="#contact-form" class="contact-method-btn">
+                        <i class="fas fa-comment-dots"></i> Send a Message
+                    </a>
+                    <a href="tel:+255684320325" class="contact-method-btn">
+                        <i class="fas fa-phone"></i> Call +255 684 320 325
+                    </a>
+                    <a href="mailto:adpollex@gmail.com" class="contact-method-btn">
+                        <i class="fas fa-envelope"></i> Email Us
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="contact-section">
+    <!-- Contact Grid -->
+    <section class="contact-grid">
         <div class="container">
             <div class="contact-container">
-                <div class="contact-info">
-                    <h2 data-translate="contact.infoTitle">Connect With Us</h2>
-                    <p data-translate="contact.infoDescription">Whether you're ready to start a project or just want to learn more about our services, we're here to help.</p>
+                <div class="contact-info animate-slide-up">
+                    <div class="eyebrow">Get In Touch</div>
+                    <h2>We're Here to <span style="color: var(--accent);">Help You Succeed</span></h2>
+                    <p>Our team is ready to understand your unique challenges and create tailored solutions that drive real business growth.</p>
                     
-                    <div class="contact-methods">
-                        <div class="contact-method">
+                    <div class="contact-details">
+                        <div class="contact-detail-item">
                             <div class="contact-icon">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
-                            <div class="contact-details">
-                                <h4 data-translate="contact.addressTitle">Our Office</h4>
-                                <p data-translate="contact.address">Mwinyijuma Rd, Kinondoni<br>Dar es Salaam, Tanzania</p>
+                            <div class="contact-detail-content">
+                                <h4>Our Office</h4>
+                                <p>Dar es Salaam, Tanzania</p>
+                                <a href="#map" class="contact-link">View on Map <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                         
-                        <div class="contact-method">
+                        <div class="contact-detail-item">
                             <div class="contact-icon">
                                 <i class="fas fa-phone"></i>
                             </div>
-                            <div class="contact-details">
-                                <h4 data-translate="contact.phoneTitle">Phone Number</h4>
+                            <div class="contact-detail-content">
+                                <h4>Call Us</h4>
                                 <p>+255 684 320 325</p>
-                                <p data-translate="contact.hours">Mon-Fri: 8:00 AM - 6:00 PM</p>
+                                <p>Mon-Fri: 8:00 AM - 6:00 PM</p>
                             </div>
                         </div>
                         
-                        <div class="contact-method">
+                        <div class="contact-detail-item">
                             <div class="contact-icon">
                                 <i class="fas fa-envelope"></i>
                             </div>
-                            <div class="contact-details">
-                                <h4 data-translate="contact.emailTitle">Email Address</h4>
+                            <div class="contact-detail-content">
+                                <h4>Email Us</h4>
                                 <p>adpollex@gmail.com</p>
-                                <p data-translate="contact.response">Typically reply within 4 hours</p>
+                                <p>Typically reply within 4 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="contact-detail-content">
+                                <h4>Social Media</h4>
+                                <p>Connect with us on social platforms</p>
+                                <div class="footer-social" style="margin-top: 1rem;">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="social-links">
-                        <h4 data-translate="contact.socialTitle">Follow Us</h4>
-                        <div class="social-icons">
-                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
                 </div>
                 
-                <div class="contact-form">
-                    <h3 data-translate="contact.formTitle">Send Us a Message</h3>
-                    <p data-translate="contact.formSubtitle">Fill out the form below and we'll get back to you within 24 hours.</p>
-                    
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label class="form-label" for="name" data-translate="contact.formName">Full Name</label>
-                            <input type="text" class="form-control" id="name" required>
+                <div class="contact-form animate-slide-up animate-delay-1">
+                    <div class="contact-form-card" id="contact-form">
+                        <div class="form-header">
+                            <div class="eyebrow">Start Your Project</div>
+                            <h3>Send Us a Message</h3>
+                            <p>Fill out the form below and we'll get back to you within 24 hours.</p>
                         </div>
                         
-                        <div class="form-group">
-                            <label class="form-label" for="email" data-translate="contact.formEmail">Email Address</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label" for="phone" data-translate="contact.formPhone">Phone Number</label>
-                            <input type="tel" class="form-control" id="phone">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label" for="service" data-translate="contact.formService">Service Interested In</label>
-                            <select class="form-control" id="service">
-                                <option value="" data-translate="contact.formSelect">Select a service</option>
-                                <option value="digital" data-translate="services.digital.title">Digital Marketing</option>
-                                <option value="social" data-translate="services.social.title">Social Media</option>
-                                <option value="seo" data-translate="services.seo.title">SEO</option>
-                                <option value="branding" data-translate="contact.formBranding">Brand Strategy</option>
-                                <option value="website" data-translate="contact.formWebsite">Website Design</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label" for="message" data-translate="contact.formMessage">Your Message</label>
-                            <textarea class="form-control" id="message" rows="5" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn" data-translate="contact.formSubmit">
-                            <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i> Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="map-section">
-        <div class="container">
-            <h2 data-translate="contact.mapTitle">Find Our Office</h2>
-            <p data-translate="contact.mapDescription">Visit us at our headquarters in Dar es Salaam</p>
-            
-            <div class="map-container">
-                <div class="map-placeholder">
-                    <div style="text-align: center;">
-                        <i class="fas fa-map-marker-alt" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                        <h3 style="color: var(--white); margin-bottom: 0.5rem;">Dar es Salaam, Tanzania</h3>
-                        <p style="opacity: 0.8;">Mwinyijuma Rd, Kinondoni</p>
+                        <form id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="firstName">First Name *</label>
+                                    <input type="text" class="form-control" id="firstName" name="firstName" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label" for="lastName">Last Name *</label>
+                                    <input type="text" class="form-control" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="email">Email Address *</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="phone">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" name="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="service">Service Interested In</label>
+                                <select class="form-control form-select" id="service" name="service">
+                                    <option value="">Select a service</option>
+                                    <option value="digital-marketing">Digital Marketing</option>
+                                    <option value="social-media">Social Media Management</option>
+                                    <option value="seo">SEO Optimization</option>
+                                    <option value="branding">Brand Strategy</option>
+                                    <option value="web-design">Website Design</option>
+                                    <option value="consultation">Marketing Consultation</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="budget">Project Budget (USD)</label>
+                                <select class="form-control form-select" id="budget" name="budget">
+                                    <option value="">Select budget range</option>
+                                    <option value="under-1000">Under $1,000</option>
+                                    <option value="1000-5000">$1,000 - $5,000</option>
+                                    <option value="5000-10000">$5,000 - $10,000</option>
+                                    <option value="10000-25000">$10,000 - $25,000</option>
+                                    <option value="25000-plus">$25,000+</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="message">Project Details *</label>
+                                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                            </div>
+                            
+                            <div class="form-submit">
+                                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                    <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i> Send Message
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Map Section -->
+    <section class="map-section" id="map">
+        <div class="container">
+            <div class="map-container">
+                <div class="map-overlay animate-slide-up">
+                    <h4>Visit Our Office</h4>
+                    <p><i class="fas fa-map-marker-alt" style="color: var(--accent); margin-right: 0.5rem;"></i> Dar es Salaam, Tanzania</p>
+                    <p><i class="fas fa-clock" style="color: var(--accent); margin-right: 0.5rem;"></i> Mon-Fri: 8:00 AM - 6:00 PM</p>
+                    <p><i class="fas fa-phone" style="color: var(--accent); margin-right: 0.5rem;"></i> +255 684 320 325</p>
+                </div>
+                <div class="map-placeholder">
+                    <div>
+                        <i class="fas fa-map-marked-alt" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                        <p>Dar es Salaam, Tanzania</p>
+                        <p style="font-size: 1rem; opacity: 0.8;">Our headquarters location</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
     <section class="faq-section">
         <div class="container">
-            <h2 style="text-align: center;" data-translate="contact.faqTitle">Frequently Asked Questions</h2>
-            <p style="text-align: center; margin-bottom: 3rem;" data-translate="contact.faqSubtitle">Quick answers to common questions</p>
+            <div class="faq-header animate-slide-up">
+                <div class="eyebrow">Common Questions</div>
+                <h2>Frequently Asked <span style="color: var(--accent);">Questions</span></h2>
+                <p class="lead">Find quick answers to common questions about working with us.</p>
+            </div>
             
             <div class="faq-grid">
-                <div class="faq-item">
-                    <div class="faq-question" data-translate="contact.faq1">What is your typical response time?</div>
-                    <p data-translate="contact.faq1answer">We respond to all inquiries within 4 hours during business hours (8 AM - 6 PM GMT+3). For inquiries outside business hours, we'll respond by the next business day.</p>
+                <div class="faq-item animate-slide-up">
+                    <div class="faq-question">
+                        <h4>What is your typical response time for new inquiries?</h4>
+                        <div class="faq-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We respond to all new inquiries within 4 hours during business hours (8 AM - 6 PM GMT+3). For inquiries received outside business hours, we'll respond by the next business day.</p>
+                    </div>
                 </div>
                 
-                <div class="faq-item">
-                    <div class="faq-question" data-translate="contact.faq2">Do you offer free consultations?</div>
-                    <p data-translate="contact.faq2answer">Yes! We offer a free 30-minute initial consultation for all new clients to discuss your business goals and provide preliminary recommendations.</p>
+                <div class="faq-item animate-slide-up animate-delay-1">
+                    <div class="faq-question">
+                        <h4>Do you offer free consultations?</h4>
+                        <div class="faq-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer a free 30-minute initial consultation for all new clients. This allows us to understand your business, discuss your goals, and provide preliminary recommendations before any commitment.</p>
+                    </div>
                 </div>
                 
-                <div class="faq-item">
-                    <div class="faq-question" data-translate="contact.faq3">What industries do you specialize in?</div>
-                    <p data-translate="contact.faq3answer">We have experience across multiple industries including e-commerce, tourism, real estate, education, healthcare, and technology.</p>
+                <div class="faq-item animate-slide-up animate-delay-2">
+                    <div class="faq-question">
+                        <h4>What industries do you specialize in?</h4>
+                        <div class="faq-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We have experience across multiple industries including e-commerce, tourism, real estate, education, healthcare, and technology. Our strategies are tailored to each industry's unique challenges and opportunities.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-slide-up animate-delay-3">
+                    <div class="faq-question">
+                        <h4>How do you measure campaign success?</h4>
+                        <div class="faq-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We use a comprehensive set of KPIs including ROI, conversion rates, lead generation, engagement metrics, and brand awareness. We provide detailed monthly reports with transparent analytics.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- CTA Section -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="contact-cta-content animate-slide-up">
+                <h2>Start Your Digital Transformation Today</h2>
+                <p class="lead">Join 150+ businesses that trust Ad Pollex with their digital marketing strategy. Let's build something remarkable together.</p>
+                
+                <div class="btn-group" style="display: flex; gap: 1rem; justify-content: center; margin-top: 3rem; flex-wrap: wrap;">
+                    <a href="#contact-form" class="btn btn-primary">
+                        <i class="fas fa-calendar" style="margin-right: 0.5rem;"></i> Book Free Consultation
+                    </a>
+                    <a href="tel:+255684320325" class="btn btn-secondary">
+                        <i class="fas fa-phone" style="margin-right: 0.5rem;"></i> Call Now
+                    </a>
+                </div>
+                
+                <div class="cta-stats">
+                    <div class="cta-stat-item">
+                        <div class="cta-stat-number">150+</div>
+                        <div class="cta-stat-label">Happy Clients</div>
+                    </div>
+                    <div class="cta-stat-item">
+                        <div class="cta-stat-number">98%</div>
+                        <div class="cta-stat-label">Retention Rate</div>
+                    </div>
+                    <div class="cta-stat-item">
+                        <div class="cta-stat-number">24h</div>
+                        <div class="cta-stat-label">Average Response Time</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-container">
@@ -565,218 +1361,183 @@
                             <div class="logo-main">Ad Pollex</div>
                         </div>
                     </a>
-                    <p class="footer-description" data-translate="footer.description">Full-service digital marketing agency helping businesses grow their online presence since 2016.</p>
+                    <p class="footer-description">Full-service advertising and digital marketing agency helping businesses grow their online presence since 2016.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
                 
                 <div class="footer-links">
-                    <h4 data-translate="footer.links1.title">Quick Links</h4>
+                    <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="index.html" data-translate="nav.home">Home</a></li>
-                        <li><a href="services.html" data-translate="nav.services">Services</a></li>
-                        <li><a href="portfolio.html" data-translate="nav.portfolio">Portfolio</a></li>
-                        <li><a href="team.html" data-translate="nav.team">Our Team</a></li>
-                        <li><a href="contact.html" data-translate="nav.contact">Contact</a></li>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="portfolio.html"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                        <li><a href="team.html"><i class="fas fa-chevron-right"></i> Our Team</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
-                    <h4 data-translate="footer.contact.title">Contact Info</h4>
+                    <h4>Our Services</h4>
                     <ul>
-                        <li><a href="contact.html">Dar es Salaam, Tanzania</a></li>
-                        <li><a href="tel:+255684320325">+255 684 320 325</a></li>
-                        <li><a href="mailto:adpollex@gmail.com">adpollex@gmail.com</a></li>
+                        <li><a href="services.html#digital-marketing"><i class="fas fa-chevron-right"></i> Digital Marketing</a></li>
+                        <li><a href="services.html#social-media"><i class="fas fa-chevron-right"></i> Social Media</a></li>
+                        <li><a href="services.html#seo"><i class="fas fa-chevron-right"></i> SEO Optimization</a></li>
+                        <li><a href="services.html#branding"><i class="fas fa-chevron-right"></i> Brand Strategy</a></li>
+                        <li><a href="services.html#web-design"><i class="fas fa-chevron-right"></i> Website Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Dar es Salaam, Tanzania</a></li>
+                        <li><a href="tel:+255684320325"><i class="fas fa-phone"></i> +255 684 320 325</a></li>
+                        <li><a href="mailto:adpollex@gmail.com"><i class="fas fa-envelope"></i> adpollex@gmail.com</a></li>
+                        <li><a href="#"><i class="fas fa-globe"></i> adpollex.com</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p data-translate="footer.copyright">&copy; 2023 Ad Pollex. All Rights Reserved.</p>
+                <div class="footer-credits">
+                    <p>&copy; 2023 <span class="highlight">Ad Pollex</span> - Advertising & Digital Marketing Company. All Rights Reserved. | Crafted with <span class="highlight">passion</span> in Dar es Salaam</p>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script>
-        // Language System
-        const translations = {
-            en: {
-                // Navigation
-                "nav.home": "Home",
-                "nav.services": "Services",
-                "nav.portfolio": "Portfolio",
-                "nav.team": "Our Team",
-                "nav.contact": "Contact",
-                "nav.tagline": "Digital Marketing Excellence",
-
-                // Contact Page
-                "contact.eyebrow": "Get In Touch",
-                "contact.title": "Let's Start Something Big",
-                "contact.subtitle": "We're here to answer your questions and discuss how we can help grow your business. Reach out to us today!",
-                
-                "contact.infoTitle": "Connect With Us",
-                "contact.infoDescription": "Whether you're ready to start a project or just want to learn more about our services, we're here to help.",
-                
-                "contact.addressTitle": "Our Office",
-                "contact.address": "Mwinyijuma Rd, Kinondoni<br>Dar es Salaam, Tanzania",
-                
-                "contact.phoneTitle": "Phone Number",
-                "contact.hours": "Mon-Fri: 8:00 AM - 6:00 PM",
-                
-                "contact.emailTitle": "Email Address",
-                "contact.response": "Typically reply within 4 hours",
-                
-                "contact.socialTitle": "Follow Us",
-                
-                "contact.formTitle": "Send Us a Message",
-                "contact.formSubtitle": "Fill out the form below and we'll get back to you within 24 hours.",
-                "contact.formName": "Full Name",
-                "contact.formEmail": "Email Address",
-                "contact.formPhone": "Phone Number",
-                "contact.formService": "Service Interested In",
-                "contact.formSelect": "Select a service",
-                "contact.formBranding": "Brand Strategy",
-                "contact.formWebsite": "Website Design",
-                "contact.formMessage": "Your Message",
-                "contact.formSubmit": "Send Message",
-                
-                "contact.mapTitle": "Find Our Office",
-                "contact.mapDescription": "Visit us at our headquarters in Dar es Salaam",
-                
-                "contact.faqTitle": "Frequently Asked Questions",
-                "contact.faqSubtitle": "Quick answers to common questions",
-                "contact.faq1": "What is your typical response time?",
-                "contact.faq1answer": "We respond to all inquiries within 4 hours during business hours (8 AM - 6 PM GMT+3). For inquiries outside business hours, we'll respond by the next business day.",
-                "contact.faq2": "Do you offer free consultations?",
-                "contact.faq2answer": "Yes! We offer a free 30-minute initial consultation for all new clients to discuss your business goals and provide preliminary recommendations.",
-                "contact.faq3": "What industries do you specialize in?",
-                "contact.faq3answer": "We have experience across multiple industries including e-commerce, tourism, real estate, education, healthcare, and technology.",
-
-                // Footer
-                "footer.description": "Full-service digital marketing agency helping businesses grow their online presence since 2016.",
-                "footer.links1.title": "Quick Links",
-                "footer.contact.title": "Contact Info",
-                "footer.copyright": "© 2023 Ad Pollex. All Rights Reserved."
-            },
-            sw: {
-                // Navigation - Kiswahili
-                "nav.home": "Nyumbani",
-                "nav.services": "Huduma",
-                "nav.portfolio": "Portfolio",
-                "nav.team": "Timu Yetu",
-                "nav.contact": "Wasiliana",
-                "nav.tagline": "Ubora wa Uuzaji wa Kidijitali",
-
-                // Mawasiliano - Kiswahili
-                "contact.eyebrow": "Wasiliana Nasi",
-                "contact.title": "Tuanze Kitu Kikubwa",
-                "contact.subtitle": "Tupo hapa kujibu maswali yako na kujadili jinsi tunaweza kusaidia biashara yako kukua. Wasiliana nasi leo!",
-                
-                "contact.infoTitle": "Ungana Nasi",
-                "contact.infoDescription": "Ikiwa tayari kuanza mradi au unataka tu kujifunza zaidi kuhusu huduma zetu, tupo hapa kusaidia.",
-                
-                "contact.addressTitle": "Ofisi Yetu",
-                "contact.address": "Barabara ya Mwinyijuma, Kinondoni<br>Dar es Salaam, Tanzania",
-                
-                "contact.phoneTitle": "Nambari ya Simu",
-                "contact.hours": "Jumatatu-Ijumaa: 8:00 asubuhi - 6:00 usiku",
-                
-                "contact.emailTitle": "Anwani ya Barua Pepe",
-                "contact.response": "Kawaida hujibu ndani ya masaa 4",
-                
-                "contact.socialTitle": "Tufuate",
-                
-                "contact.formTitle": "Tutumie Ujumbe",
-                "contact.formSubtitle": "Jaza fomu hapa chini na tutakujibu ndani ya masaa 24.",
-                "contact.formName": "Jina Kamili",
-                "contact.formEmail": "Anwani ya Barua Pepe",
-                "contact.formPhone": "Nambari ya Simu",
-                "contact.formService": "Huduma Unayovutiwa Nayo",
-                "contact.formSelect": "Chagua huduma",
-                "contact.formBranding": "Mkakati wa Chapa",
-                "contact.formWebsite": "Usanifu wa Tovuti",
-                "contact.formMessage": "Ujumbe Wako",
-                "contact.formSubmit": "Tuma Ujumbe",
-                
-                "contact.mapTitle": "Pata Ofisi Yetu",
-                "contact.mapDescription": "Tembelea makao makuu yetu Dar es Salaam",
-                
-                "contact.faqTitle": "Maswali Yanayoulizwa Mara Kwa Mara",
-                "contact.faqSubtitle": "Majibu ya haraka kwa maswali ya kawaida",
-                "contact.faq1": "Ni wakati gani wa kawaida wa kujibu?",
-                "contact.faq1answer": "Tunajibu maswali yote ndani ya masaa 4 wakati wa masaa ya kazi (8 AM - 6 PM GMT+3). Kwa maswali nje ya masaa ya kazi, tutajibu kwa siku inayofuata ya biashara.",
-                "contact.faq2": "Je, unatoa ushauri wa bure?",
-                "contact.faq2answer": "Ndio! Tunatoa ushauri wa awali wa dakika 30 kwa wateja wote wapya kujadili malengo yako ya biashara na kutoa mapendekezo ya awali.",
-                "contact.faq3": "Je, unajishughulisha na viwanda gani?",
-                "contact.faq3answer": "Tuna uzoefu katika viwanda mbalimbali ikiwa ni pamoja na biashara ya mtandaoni, utalii, mali isiyohamishika, elimu, afya, na teknolojia.",
-
-                // Footer - Kiswahili
-                "footer.description": "Kampuni kamili ya uuzaji wa kidijitali inayosaidia biashara kukuza uwepo wao mtandaoni tangu 2016.",
-                "footer.links1.title": "Viungo vya Haraka",
-                "footer.contact.title": "Maelezo ya Mawasiliano",
-                "footer.copyright": "© 2023 Ad Pollex. Haki zote zimehifadhiwa."
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
             }
-        };
-
-        // Language System
-        function updateLanguage(lang) {
-            document.querySelectorAll('[data-translate]').forEach(element => {
-                const key = element.getAttribute('data-translate');
-                if (translations[lang] && translations[lang][key]) {
-                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                        element.placeholder = translations[lang][key];
-                    } else if (element.tagName === 'OPTION') {
-                        element.textContent = translations[lang][key];
-                    } else {
-                        element.textContent = translations[lang][key];
-                    }
-                }
-            });
-
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                if (btn.getAttribute('data-lang') === lang) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
-            });
-
-            localStorage.setItem('preferred-language', lang);
-        }
-
-        // Form Submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                service: document.getElementById('service').value,
-                message: document.getElementById('message').value
-            };
-            
-            // Show success message
-            const currentLang = localStorage.getItem('preferred-language') || 'en';
-            const successMessage = currentLang === 'en' 
-                ? 'Thank you for your message! We will contact you within 24 hours.'
-                : 'Asante kwa ujumbe wako! Tutawasiliana nawe ndani ya masaa 24.';
-            
-            alert(successMessage);
-            
-            // Reset form
-            this.reset();
         });
 
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileClose = document.getElementById('mobileClose');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileNav.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        mobileClose.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close mobile menu when clicking links
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+                
+                // Close other FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem && item.classList.contains('active')) {
+                        item.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        // Contact form submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(contactForm);
+                const data = Object.fromEntries(formData);
+                
+                // In a real implementation, you would send this data to a server
+                console.log('Form submitted:', data);
+                
+                // Show success message
+                alert('Thank you for your message! We will get back to you within 24 hours.');
+                contactForm.reset();
+                
+                // Scroll to top of form
+                contactForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        });
+
+        // Observe all animate-slide-up elements
+        document.querySelectorAll('.animate-slide-up').forEach(el => {
+            el.style.opacity = '0';
+            observer.observe(el);
+        });
+
+        // Initialize on load
         document.addEventListener('DOMContentLoaded', () => {
-            // Initialize language
-            const savedLang = localStorage.getItem('preferred-language') || 'en';
-            updateLanguage(savedLang);
-            
-            // Language buttons
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const lang = btn.getAttribute('data-lang');
-                    updateLanguage(lang);
+            // Set active nav link
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('nav a').forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Add hover effect to contact method buttons
+            document.querySelectorAll('.contact-method-btn').forEach(btn => {
+                btn.addEventListener('mouseenter', () => {
+                    btn.style.transform = 'translateY(-5px) scale(1.05)';
+                });
+                
+                btn.addEventListener('mouseleave', () => {
+                    btn.style.transform = 'translateY(0) scale(1)';
                 });
             });
         });
