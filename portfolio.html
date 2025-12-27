@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Portfolio | Ad Pollex - Successful Digital Marketing Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* ===== PREMIUM CSS FOR PORTFOLIO PAGE ===== */
+        :root {
+            --primary: #1a73e8;
+            --primary-dark: #0d62d9;
+            --secondary: #fbbc04;
+            --secondary-dark: #e6a800;
+            --accent: #34a853;
+            --dark: #202124;
+            --dark-light: #2d2f33;
+            --light: #f8f9fa;
+            --gray: #5f6368;
+            --gray-light: #dadce0;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
+            --border-radius: 12px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.2rem;
+        }
+        
+        h1 {
+            font-size: 3.8rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+        }
+        
+        h2 {
+            font-size: 2.8rem;
+            color: var(--dark);
+            position: relative;
+            padding-bottom: 20px;
+            margin-bottom: 3rem;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 3px;
+        }
+        
+        h3 {
+            font-size: 1.9rem;
+            color: var(--dark);
+        }
+        
+        p {
+            margin-bottom: 1.8rem;
+            color: var(--gray);
+            font-size: 1.05rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ===== PREMIUM BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 16px 38px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: var(--shadow);
+        }
+        
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+            transition: var(--transition);
+            z-index: -1;
+        }
+        
+        .btn:hover:before {
+            left: 0;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+            color: var(--dark);
+        }
+        
+        .btn-secondary:before {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:before {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        }
+        
+        .btn-outline:hover {
+            color: white;
+        }
+        
+        section {
+            padding: 100px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        
+        .section-header h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        /* ===== PREMIUM HEADER & NAVIGATION ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            padding: 18px 0;
+            transition: var(--transition);
+        }
+        
+        header.scrolled {
+            padding: 12px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.8rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .logo-text span {
+            font-size: 0.9rem;
+            color: var(--gray);
+            font-weight: 400;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            position: relative;
+            padding: 8px 0;
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        nav ul li a:hover:after,
+        nav ul li a.active:after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+        
+        .mobile-menu-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        /* ===== PAGE HEADER ===== */
+        .page-header {
+            background: linear-gradient(rgba(26, 115, 232, 0.9), rgba(26, 115, 232, 0.85)), 
+                        url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 180px 0 100px;
+            text-align: center;
+            position: relative;
+            margin-top: 86px;
+        }
+        
+        .page-header:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, #ffffff, transparent);
+        }
+        
+        .page-header h1 {
+            color: white;
+            -webkit-text-fill-color: white;
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .page-header p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.95);
+        }
+        
+        /* ===== PORTFOLIO FILTER ===== */
+        .portfolio-filter {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 12px 28px;
+            background: var(--light);
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            color: var(--gray);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+        }
+        
+        /* ===== PORTFOLIO GRID ===== */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 40px;
+        }
+        
+        .portfolio-item {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .portfolio-item.hidden {
+            display: none;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .portfolio-img {
+            height: 280px;
+            overflow: hidden;
+        }
+        
+        .portfolio-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .portfolio-item:hover .portfolio-img img {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-content {
+            padding: 35px;
+        }
+        
+        .portfolio-tags {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .portfolio-tag {
+            background: rgba(26, 115, 232, 0.1);
+            color: var(--primary);
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .portfolio-stats {
+            display: flex;
+            justify-content: space-between;
+            margin: 25px 0;
+            padding: 20px 0;
+            border-top: 1px solid var(--gray-light);
+            border-bottom: 1px solid var(--gray-light);
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        /* ===== CASE STUDY DETAIL ===== */
+        .case-study-section {
+            padding: 100px 0;
+            background: var(--light);
+        }
+        
+        .case-study {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .case-study-header {
+            padding: 60px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+        }
+        
+        .case-study-header h2 {
+            color: white;
+        }
+        
+        .case-study-header h2:after {
+            background: var(--secondary);
+        }
+        
+        .case-study-content {
+            padding: 60px;
+        }
+        
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin: 50px 0;
+        }
+        
+        .case-study-box {
+            background: var(--light);
+            padding: 40px;
+            border-radius: var(--border-radius);
+        }
+        
+        .case-study-box h4 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        /* ===== PREMIUM CTA ===== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            border-radius: var(--border-radius);
+            margin: 100px 0;
+        }
+        
+        .cta-section h2,
+        .cta-section p {
+            color: white;
+        }
+        
+        .cta-section .btn {
+            background: white;
+            color: var(--primary);
+            margin-top: 40px;
+        }
+        
+        .cta-section .btn:before {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+        }
+        
+        /* ===== PREMIUM FOOTER ===== */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 80px 0 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-logo h3 {
+            color: white;
+            font-size: 2.2rem;
+        }
+        
+        .footer-logo span {
+            color: var(--secondary);
+        }
+        
+        .footer-links h4 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .footer-links h4:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links ul li a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-links ul li a:hover {
+            color: var(--secondary);
+            transform: translateX(5px);
+        }
+        
+        .footer-links ul li a i {
+            color: var(--secondary);
+            width: 20px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .social-icons a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        
+        .social-icons a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.95rem;
+        }
+        
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 3.2rem;
+            }
+            
+            h2 {
+                font-size: 2.4rem;
+            }
+            
+            .page-header h1 {
+                font-size: 3.5rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .page-header h1 {
+                font-size: 3rem;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            nav {
+                position: fixed;
+                top: 86px;
+                left: 0;
+                width: 100%;
+                background: white;
+                box-shadow: var(--shadow-hover);
+                padding: 30px;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                border-radius: 0 0 var(--border-radius) var(--border-radius);
+                z-index: 999;
+            }
+            
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            h1 {
+                font-size: 2.4rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .page-header {
+                margin-top: 86px;
+                padding: 150px 0 80px;
+                background-attachment: scroll;
+            }
+            
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .page-header p {
+                font-size: 1.1rem;
+            }
+            
+            section {
+                padding: 80px 0;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .portfolio-content {
+                padding: 25px;
+            }
+            
+            .case-study-header,
+            .case-study-content {
+                padding: 40px 25px;
+            }
+        }
+        
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+        
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+        
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Premium Header -->
+    <header id="mainHeader">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">AP</div>
+                <div class="logo-text">
+                    <h1>Ad Pollex</h1>
+                    <span>Digital Marketing Excellence</span>
+                </div>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="fade-in">Our Portfolio</h1>
+            <p class="fade-in delay-1">Explore our successful digital marketing campaigns and creative solutions that have helped businesses achieve remarkable growth and engagement.</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Filter -->
+    <section>
+        <div class="container">
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="digital-marketing">Digital Marketing</button>
+                <button class="filter-btn" data-filter="social-media">Social Media</button>
+                <button class="filter-btn" data-filter="seo">SEO</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="web-design">Web Design</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-item fade-in" data-category="digital-marketing web-design">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="E-commerce Project">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>E-commerce Brand Launch</h3>
+                        <p>Complete digital strategy for a fashion e-commerce startup, resulting in 200% growth in online sales within 6 months.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Digital Marketing</span>
+                            <span class="portfolio-tag">Brand Strategy</span>
+                            <span class="portfolio-tag">E-commerce</span>
+                        </div>
+                        <div class="portfolio-stats">
+                            <div class="stat">
+                                <div class="stat-number">200%</div>
+                                <div class="stat-label">Sales Growth</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">6</div>
+                                <div class="stat-label">Months</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">50K+</div>
+                                <div class="stat-label">Visitors</div>
+                            </div>
+                        </div>
+                        <a href="#project1" class="btn-outline view-details">View Case Study</a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="portfolio-item fade-in delay-1" data-category="social-media">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1551836026-d5c2c3af8f81?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Social Media Campaign">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Restaurant Social Media Revamp</h3>
+                        <p>Transformed a local restaurant's social media presence, increasing engagement by 300% and foot traffic by 40%.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Social Media</span>
+                            <span class="portfolio-tag">Content Creation</span>
+                            <span class="portfolio-tag">Local Business</span>
+                        </div>
+                        <div class="portfolio-stats">
+                            <div class="stat">
+                                <div class="stat-number">300%</div>
+                                <div class="stat-label">Engagement</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">40%</div>
+                                <div class="stat-label">Foot Traffic</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">15K</div>
+                                <div class="stat-label">Followers</div>
+                            </div>
+                        </div>
+                        <a href="#project2" class="btn-outline view-details">View Case Study</a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="portfolio-item fade-in delay-2" data-category="seo digital-marketing">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="SEO Project">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Tourism SEO & Content Strategy</h3>
+                        <p>Implemented SEO and content marketing for a tourism company, increasing organic website traffic by 150%.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">SEO</span>
+                            <span class="portfolio-tag">Content Marketing</span>
+                            <span class="portfolio-tag">Tourism</span>
+                        </div>
+                        <div class="portfolio-stats">
+                            <div class="stat">
+                                <div class="stat-number">150%</div>
+                                <div class="stat-label">Organic Traffic</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">#1</div>
+                                <div class="stat-label">Google Ranking</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">200+</div>
+                                <div class="stat-label">Keywords</div>
+                            </div>
+                        </div>
+                        <a href="#project3" class="btn-outline view-details">View Case Study</a>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="portfolio-item fade-in delay-3" data-category="branding web-design">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2064&q=80" alt="Branding Project">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Tech Startup Brand Identity</h3>
+                        <p>Complete brand identity and website design for a tech startup, establishing them as industry innovators.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Branding</span>
+                            <span class="portfolio-tag">Web Design</span>
+                            <span class="portfolio-tag">Tech</span>
+                        </div>
+                        <div class="portfolio-stats">
+                            <div class="stat">
+                                <div class="stat-number">100%</div>
+                                <div class="stat-label">Brand Recognition</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">75%</div>
+                                <div class="stat-label">Lead Increase</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">$500K</div>
+                                <div class="stat-label">Funding</div>
+                            </div>
+                        </div>
+                        <a href="#project4" class="btn-outline view-details">View Case Study</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Details -->
+    <section class="case-study-section" id="project1">
+        <div class="container">
+            <div class="case-study">
+                <div class="case-study-header">
+                    <h2>E-commerce Brand Launch</h2>
+                    <p>Complete digital strategy for a fashion e-commerce startup</p>
+                </div>
+                <div class="case-study-content">
+                    <h3>Project Overview</h3>
+                    <p>A new fashion e-commerce startup approached us to launch their brand in the competitive Tanzanian market. They needed a comprehensive digital strategy that would establish their brand identity, drive traffic to their website, and convert visitors into customers.</p>
+                    
+                    <div class="case-study-grid">
+                        <div class="case-study-box">
+                            <h4>Challenge</h4>
+                            <p>Entering a saturated market with limited brand recognition and budget constraints. Needed to stand out from established competitors.</p>
+                        </div>
+                        <div class="case-study-box">
+                            <h4>Solution</h4>
+                            <p>Developed a multi-channel digital marketing strategy combining social media marketing, influencer partnerships, SEO, and targeted advertising.</p>
+                        </div>
+                        <div class="case-study-box">
+                            <h4>Results</h4>
+                            <p>Achieved 200% growth in online sales within 6 months, established brand as a fashion leader, and built a loyal customer community.</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Strategy & Implementation</h3>
+                    <p>Our approach began with extensive market research to understand the target audience - young, fashion-conscious Tanzanians aged 18-35. We developed a comprehensive brand identity including logo, color palette, and brand voice that resonated with this demographic.</p>
+                    
+                    <p>The implementation phase included:</p>
+                    <ul style="margin: 20px 0 20px 30px;">
+                        <li>Launch of responsive e-commerce website with seamless shopping experience</li>
+                        <li>Social media strategy across Instagram, Facebook, and Twitter</li>
+                        <li>Influencer marketing campaign with local fashion influencers</li>
+                        <li>SEO optimization for key fashion-related keywords</li>
+                        <li>Email marketing automation for customer retention</li>
+                    </ul>
+                    
+                    <h3>Key Metrics</h3>
+                    <div class="portfolio-stats">
+                        <div class="stat">
+                            <div class="stat-number">200%</div>
+                            <div class="stat-label">Sales Growth</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">50,000+</div>
+                            <div class="stat-label">Website Visitors</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">25,000</div>
+                            <div class="stat-label">Social Media Followers</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">35%</div>
+                            <div class="stat-label">Conversion Rate</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="fade-in">Ready to See Similar Results?</h2>
+            <p class="fade-in delay-1">Contact us today to discuss how we can help you achieve remarkable growth with our proven digital marketing strategies.</p>
+            <a href="contact.html" class="btn fade-in delay-2">Start Your Project <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Premium Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <h3>Ad <span>Pollex</span></h3>
+                    <p>Full-service advertising and digital marketing agency helping businesses grow their online presence since 2016.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="portfolio.html"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                        <li><a href="team.html"><i class="fas fa-chevron-right"></i> Our Team</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services.html#digital-marketing"><i class="fas fa-chevron-right"></i> Digital Marketing</a></li>
+                        <li><a href="services.html#social-media"><i class="fas fa-chevron-right"></i> Social Media Management</a></li>
+                        <li><a href="services.html#seo"><i class="fas fa-chevron-right"></i> SEO Optimization</a></li>
+                        <li><a href="services.html#branding"><i class="fas fa-chevron-right"></i> Brand Strategy</a></li>
+                        <li><a href="services.html#web-design"><i class="fas fa-chevron-right"></i> Website Design</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Dar es Salaam, Tanzania</a></li>
+                        <li><a href="tel:+255684320325"><i class="fas fa-phone"></i> +255 684 320 325</a></li>
+                        <li><a href="mailto:adpollex@gmail.com"><i class="fas fa-envelope"></i> adpollex@gmail.com</a></li>
+                        <li><a href="#"><i class="fas fa-globe"></i> adpollex.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Ad Pollex - Advertising & Digital Marketing Company. All Rights Reserved. | Designed with <i class="fas fa-heart" style="color: #ff4757;"></i> in Dar es Salaam</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Premium JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        const mainHeader = document.getElementById('mainHeader');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mainNav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                mainHeader.classList.add('scrolled');
+            } else {
+                mainHeader.classList.remove('scrolled');
+            }
+        });
+        
+        // Portfolio Filter
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all') {
+                        item.classList.remove('hidden');
+                        setTimeout(() => {
+                            item.style.display = 'block';
+                        }, 300);
+                    } else {
+                        if (item.getAttribute('data-category').includes(filterValue)) {
+                            item.classList.remove('hidden');
+                            setTimeout(() => {
+                                item.style.display = 'block';
+                            }, 300);
+                        } else {
+                            item.classList.add('hidden');
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    }
+                });
+            });
+        });
+        
+        // View Details buttons
+        document.querySelectorAll('.view-details').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            observer.observe(el);
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return;
+                
+                const targetId = this.getAttribute('href');
+                if (targetId.startsWith('#')) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Initialize animations on load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set active nav link
+            const currentPage = window.location.pathname.split('/').pop();
+            document.querySelectorAll('nav a').forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
