@@ -1,1838 +1,1387 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ad Pollex - Leading Advertising & Digital Marketing Agency in Tanzania. Full-service marketing solutions since 2016.">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Ad Pollex | Digital Marketing Agency Tanzania">
-    <meta property="og:description" content="Grow your business with our strategic marketing solutions in Tanzania">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://adpollex.com">
-    
-    <!-- Font Awesome -->
+    <title>Ad Pollex | Premium Advertising & Digital Marketing Agency</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <title>Ad Pollex | Digital Marketing Agency Tanzania</title>
-    
-    <!-- EMBEDDED CSS FOR HOMEPAGE -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* ===== CSS RESET & BASE STYLES ===== */
+        /* ===== PREMIUM CSS FOR HOMEPAGE ===== */
         :root {
-            --primary-color: #2563eb;
-            --primary-dark: #1d4ed8;
-            --primary-light: #60a5fa;
-            --secondary-color: #10b981;
-            --accent-color: #8b5cf6;
-            --text-dark: #1f2937;
-            --text-light: #6b7280;
-            --text-white: #ffffff;
-            --bg-white: #ffffff;
-            --bg-light: #f9fafb;
-            --bg-gray: #f3f4f6;
-            --border-color: #e5e7eb;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            --radius: 8px;
-            --radius-lg: 16px;
-            --transition: all 0.3s ease;
-            --container-width: 1200px;
+            --primary: #1a73e8;
+            --primary-dark: #0d62d9;
+            --secondary: #fbbc04;
+            --secondary-dark: #e6a800;
+            --accent: #34a853;
+            --dark: #202124;
+            --dark-light: #2d2f33;
+            --light: #f8f9fa;
+            --gray: #5f6368;
+            --gray-light: #dadce0;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
+            --border-radius: 12px;
         }
-
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         html {
             scroll-behavior: smooth;
         }
-
+        
         body {
-            font-family: 'Inter', 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--bg-white);
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background: #ffffff;
             overflow-x: hidden;
-            transition: var(--transition);
         }
-
-        body.dark-mode {
-            color: var(--text-white);
-            background-color: #121212;
-        }
-
-        /* ===== TYPOGRAPHY ===== */
-        h1, h2, h3, h4 {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
             line-height: 1.2;
+            margin-bottom: 1.2rem;
         }
-
-        h1 { font-size: 3.5rem; }
-        h2 { font-size: 2.5rem; }
-        h3 { font-size: 1.75rem; }
-        h4 { font-size: 1.25rem; }
-
+        
+        h1 {
+            font-size: 3.8rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+        }
+        
+        h2 {
+            font-size: 2.8rem;
+            color: var(--dark);
+            position: relative;
+            padding-bottom: 20px;
+            margin-bottom: 3rem;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 3px;
+        }
+        
+        h3 {
+            font-size: 1.9rem;
+            color: var(--dark);
+        }
+        
         p {
-            margin-bottom: 1rem;
-            color: var(--text-light);
+            margin-bottom: 1.8rem;
+            color: var(--gray);
+            font-size: 1.05rem;
         }
-
-        body.dark-mode p {
-            color: #d1d5db;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transition);
-        }
-
-        /* ===== CONTAINER ===== */
+        
         .container {
             width: 100%;
-            max-width: var(--container-width);
+            max-width: 1320px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
-        /* ===== BUTTONS ===== */
+        
+        /* ===== PREMIUM BUTTONS ===== */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 12px 24px;
-            border-radius: var(--radius);
-            font-weight: 500;
-            cursor: pointer;
-            transition: var(--transition);
-            border: 2px solid transparent;
-            font-family: 'Poppins', sans-serif;
-            gap: 8px;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-color);
+            gap: 10px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
-            border-color: var(--primary-color);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--primary-dark);
-            border-color: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow);
-        }
-
-        .btn-secondary {
-            background-color: var(--secondary-color);
-            color: white;
-            border-color: var(--secondary-color);
-        }
-
-        .btn-secondary:hover {
-            background-color: #0ea271;
-            transform: translateY(-2px);
-            box-shadow: var(--shadow);
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            color: var(--primary-color);
-            border-color: var(--primary-color);
-        }
-
-        .btn-outline:hover {
-            background-color: var(--primary-color);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .btn-lg {
-            padding: 16px 32px;
-            font-size: 1.1rem;
-        }
-
-        /* ===== TOP BAR ===== */
-        .top-bar {
-            background-color: var(--bg-light);
-            padding: 8px 0;
-            font-size: 0.875rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        body.dark-mode .top-bar {
-            background-color: #1f2937;
-            border-color: #374151;
-        }
-
-        .top-bar-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .contact-info {
-            display: flex;
-            gap: 24px;
-        }
-
-        .contact-info span {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            color: var(--text-light);
-        }
-
-        body.dark-mode .contact-info span {
-            color: #9ca3af;
-        }
-
-        .top-bar-controls {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        /* ===== LANGUAGE SWITCHER ===== */
-        .language-switcher {
-            display: flex;
-            background-color: white;
-            border-radius: var(--radius);
-            border: 1px solid var(--border-color);
-            overflow: hidden;
-        }
-
-        body.dark-mode .language-switcher {
-            background-color: #374151;
-            border-color: #4b5563;
-        }
-
-        .lang-btn {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 6px 12px;
-            background: none;
+            padding: 16px 38px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
             border: none;
             cursor: pointer;
-            font-size: 0.875rem;
             transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: var(--shadow);
         }
-
-        .lang-btn.active {
-            background-color: var(--primary-color);
+        
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+            transition: var(--transition);
+            z-index: -1;
+        }
+        
+        .btn:hover:before {
+            left: 0;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+            color: var(--dark);
+        }
+        
+        .btn-secondary:before {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:before {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        }
+        
+        .btn-outline:hover {
             color: white;
         }
-
-        .lang-btn img {
-            width: 20px;
-            height: auto;
-            border-radius: 2px;
+        
+        section {
+            padding: 100px 0;
         }
-
-        /* ===== DARK MODE TOGGLE ===== */
-        .dark-mode-toggle {
-            background: none;
-            border: 1px solid var(--border-color);
-            border-radius: 50%;
-            width: 36px;
-            height: 36px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: var(--transition);
-            background-color: white;
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
         }
-
-        body.dark-mode .dark-mode-toggle {
-            background-color: #374151;
-            border-color: #4b5563;
+        
+        .section-header h2:after {
+            left: 50%;
+            transform: translateX(-50%);
         }
-
-        .dark-mode-toggle:hover {
-            background-color: var(--bg-gray);
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 2rem;
         }
-
-        body.dark-mode .dark-mode-toggle:hover {
-            background-color: #4b5563;
-        }
-
-        /* ===== NAVIGATION ===== */
-        .navbar {
-            background-color: var(--bg-white);
-            padding: 16px 0;
-            position: sticky;
+        
+        /* ===== PREMIUM HEADER & NAVIGATION ===== */
+        header {
+            position: fixed;
             top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
             z-index: 1000;
-            box-shadow: var(--shadow);
+            padding: 18px 0;
             transition: var(--transition);
         }
-
-        body.dark-mode .navbar {
-            background-color: #1f2937;
+        
+        header.scrolled {
+            padding: 12px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-
-        .navbar .container {
+        
+        .header-container {
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
         }
-
+        
         .logo {
             display: flex;
             align-items: center;
             gap: 12px;
             text-decoration: none;
         }
-
+        
         .logo-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            border-radius: 10px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.25rem;
+            font-weight: 700;
+            font-size: 1.8rem;
+            box-shadow: var(--shadow);
         }
-
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
         .logo-text h1 {
-            font-size: 1.75rem;
+            font-size: 1.8rem;
             margin: 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-
-        .highlight {
-            color: var(--primary-color);
+        
+        .logo-text span {
+            font-size: 0.9rem;
+            color: var(--gray);
+            font-weight: 400;
         }
-
-        .logo-tagline {
-            font-size: 0.75rem;
-            color: var(--text-light);
-            margin: 0;
-        }
-
-        body.dark-mode .logo-tagline {
-            color: #9ca3af;
-        }
-
-        .nav-menu {
+        
+        nav ul {
             display: flex;
             list-style: none;
-            gap: 32px;
-            align-items: center;
+            gap: 40px;
         }
-
-        .nav-link {
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: var(--transition);
             position: relative;
             padding: 8px 0;
-            font-weight: 500;
-            color: var(--text-dark);
         }
-
-        body.dark-mode .nav-link {
-            color: #e5e7eb;
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 3px;
+            transition: var(--transition);
         }
-
-        .nav-link.active {
-            color: var(--primary-color);
+        
+        nav ul li a:hover {
+            color: var(--primary);
         }
-
-        .nav-link.active::after {
+        
+        nav ul li a:hover:after,
+        nav ul li a.active:after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+        
+        .mobile-menu-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        /* ===== PREMIUM HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(rgba(26, 115, 232, 0.9), rgba(26, 115, 232, 0.85)), 
+                        url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 180px 0 120px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero:before {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 2px;
-            background-color: var(--primary-color);
+            height: 100px;
+            background: linear-gradient(to top, #ffffff, transparent);
         }
-
-        .nav-link:hover {
-            color: var(--primary-color);
+        
+        .hero h1 {
+            color: white;
+            -webkit-text-fill-color: white;
+            font-size: 4.2rem;
+            margin-bottom: 1.8rem;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
-
-        .nav-cta {
-            padding: 10px 24px;
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            color: rgba(255, 255, 255, 0.95);
         }
-
-        .mobile-menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--text-dark);
-        }
-
-        body.dark-mode .mobile-menu-toggle {
-            color: #e5e7eb;
-        }
-
-        /* ===== MOBILE MENU ===== */
-        .mobile-menu {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background-color: var(--bg-white);
-            z-index: 2000;
-            padding: 20px;
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
-        }
-
-        body.dark-mode .mobile-menu {
-            background-color: #1f2937;
-        }
-
-        .mobile-menu.active {
-            transform: translateX(0);
-        }
-
-        .mobile-menu-header {
+        
+        .hero-btns {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        body.dark-mode .mobile-menu-header {
-            border-color: #374151;
-        }
-
-        .mobile-menu-close {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--text-dark);
-        }
-
-        body.dark-mode .mobile-menu-close {
-            color: #e5e7eb;
-        }
-
-        .mobile-nav {
-            list-style: none;
-        }
-
-        .mobile-nav li {
-            margin-bottom: 20px;
-        }
-
-        .mobile-nav a {
-            display: block;
-            padding: 12px 0;
-            font-size: 1.1rem;
-            font-weight: 500;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        body.dark-mode .mobile-nav a {
-            border-color: #374151;
-        }
-
-        .mobile-nav a.active {
-            color: var(--primary-color);
-        }
-
-        .mobile-cta {
-            margin-top: 30px;
-        }
-
-        /* ===== HERO SECTION ===== */
-        .hero {
-            padding: 120px 0 80px;
-            background: linear-gradient(135deg, var(--bg-light) 0%, white 100%);
-            overflow: hidden;
-        }
-
-        body.dark-mode .hero {
-            background: linear-gradient(135deg, #1a1a1a 0%, #121212 100%);
-        }
-
-        .hero .container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background-color: var(--primary-light);
-            color: var(--primary-dark);
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 0.875rem;
-            font-weight: 500;
-            margin-bottom: 20px;
-        }
-
-        body.dark-mode .hero-badge {
-            background-color: #374151;
-            color: #60a5fa;
-        }
-
-        .hero-title {
-            margin-bottom: 20px;
-            font-size: 3.5rem;
-            line-height: 1.1;
-        }
-
-        .hero-description {
-            font-size: 1.125rem;
-            margin-bottom: 30px;
-            color: var(--text-light);
-        }
-
-        body.dark-mode .hero-description {
-            color: #d1d5db;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 40px;
-        }
-
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
             gap: 20px;
+            justify-content: center;
             margin-top: 40px;
         }
-
-        .stat-item h3 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 4px;
-        }
-
-        body.dark-mode .stat-item h3 {
-            color: var(--primary-light);
-        }
-
-        .stat-item p {
-            font-size: 0.875rem;
-            color: var(--text-light);
-            margin: 0;
-        }
-
-        .hero-image {
-            position: relative;
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: auto;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-lg);
-        }
-
-        /* ===== SECTIONS ===== */
-        .section {
-            padding: 80px 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title {
-            margin-bottom: 16px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background-color: var(--primary-color);
-            border-radius: 2px;
-        }
-
-        .section-subtitle {
-            max-width: 600px;
-            margin: 0 auto;
-            color: var(--text-light);
-            font-size: 1.125rem;
-        }
-
-        body.dark-mode .section-subtitle {
-            color: #d1d5db;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        .mt-4 {
-            margin-top: 40px;
-        }
-
-        /* ===== SERVICES GRID ===== */
+        
+        /* ===== PREMIUM SERVICES SECTION ===== */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
         }
-
+        
         .service-card {
-            background-color: var(--bg-white);
-            border-radius: var(--radius-lg);
-            padding: 30px;
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 50px 35px;
             box-shadow: var(--shadow);
             transition: var(--transition);
-            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--gray-light);
         }
-
-        body.dark-mode .service-card {
-            background-color: #1f2937;
-            border-color: #374151;
+        
+        .service-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+            transition: var(--transition);
         }
-
+        
+        .service-card:hover:before {
+            height: 100%;
+        }
+        
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--primary-light);
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-hover);
         }
-
+        
         .service-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, rgba(26, 115, 232, 0.1), rgba(251, 188, 4, 0.1));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+        
+        /* ===== PREMIUM PORTFOLIO SECTION ===== */
+        .portfolio-section {
+            background: var(--light);
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 40px;
+        }
+        
+        .portfolio-item {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .portfolio-img {
+            height: 280px;
+            overflow: hidden;
+        }
+        
+        .portfolio-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .portfolio-item:hover .portfolio-img img {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-content {
+            padding: 35px;
+        }
+        
+        .portfolio-tags {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .portfolio-tag {
+            background: rgba(26, 115, 232, 0.1);
+            color: var(--primary);
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        /* ===== PREMIUM TEAM SECTION ===== */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 40px;
+        }
+        
+        .team-member {
+            text-align: center;
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            background: white;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .member-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            overflow: hidden;
+            border: 5px solid white;
+            box-shadow: var(--shadow);
+        }
+        
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .team-member:hover .member-photo img {
+            transform: scale(1.1);
+        }
+        
+        .member-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .member-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--light);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .member-social a:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-5px);
+        }
+        
+        /* ===== PREMIUM CONTACT SECTION ===== */
+        .contact-section {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 100%);
+            color: white;
+        }
+        
+        .contact-section h2,
+        .contact-section p {
+            color: white;
+        }
+        
+        .contact-section h2:after {
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 60px;
+        }
+        
+        .contact-info h3 {
+            color: white;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .contact-info i {
+            width: 50px;
+            height: 50px;
+            background: rgba(251, 188, 4, 0.15);
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
-            color: white;
-            font-size: 1.5rem;
+            color: var(--secondary);
+            font-size: 1.3rem;
         }
-
-        .service-card h3 {
+        
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 18px 25px;
+            margin-bottom: 25px;
+            border: none;
+            border-radius: var(--border-radius);
+            background: rgba(255, 255, 255, 0.08);
+            color: white;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 0 0 3px rgba(251, 188, 4, 0.2);
+        }
+        
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* ===== PREMIUM FOOTER ===== */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 80px 0 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-logo h3 {
+            color: white;
+            font-size: 2.2rem;
+        }
+        
+        .footer-logo span {
+            color: var(--secondary);
+        }
+        
+        .footer-links h4 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .footer-links h4:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links ul li {
             margin-bottom: 15px;
         }
-
-        .service-card p {
-            margin-bottom: 20px;
-            color: var(--text-light);
-        }
-
-        body.dark-mode .service-card p {
-            color: #9ca3af;
-        }
-
-        .service-link {
-            display: inline-flex;
+        
+        .footer-links ul li a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
             align-items: center;
-            gap: 8px;
-            color: var(--primary-color);
-            font-weight: 500;
-            transition: var(--transition);
+            gap: 10px;
         }
-
-        .service-link:hover {
-            gap: 12px;
-            color: var(--primary-dark);
+        
+        .footer-links ul li a:hover {
+            color: var(--secondary);
+            transform: translateX(5px);
         }
-
-        /* ===== FEATURES GRID ===== */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+        
+        .footer-links ul li a i {
+            color: var(--secondary);
+            width: 20px;
         }
-
-        .feature-card {
-            background-color: var(--bg-light);
-            border-radius: var(--radius-lg);
-            padding: 30px;
-            transition: var(--transition);
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
         }
-
-        body.dark-mode .feature-card {
-            background-color: #1f2937;
-        }
-
-        .feature-card:hover {
-            background-color: var(--primary-light);
+        
+        .social-icons a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
             color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        
+        .social-icons a:hover {
+            background: var(--primary);
             transform: translateY(-5px);
         }
-
-        body.dark-mode .feature-card:hover {
-            background-color: #374151;
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.95rem;
         }
-
-        .feature-card:hover p {
+        
+        /* ===== PREMIUM STATS SECTION ===== */
+        .stats-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 30px;
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: white;
+        }
+        
+        .stat-label {
+            font-size: 1.2rem;
             color: rgba(255, 255, 255, 0.9);
         }
-
-        .feature-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary-light);
-            margin-bottom: 15px;
-            opacity: 0.2;
+        
+        /* ===== PREMIUM TESTIMONIALS ===== */
+        .testimonials-section {
+            background: var(--light);
         }
-
-        .feature-card:hover .feature-number {
-            color: white;
-            opacity: 0.3;
-        }
-
-        .feature-card h3 {
-            margin-bottom: 15px;
-        }
-
-        /* ===== PORTFOLIO GRID ===== */
-        .portfolio-grid {
+        
+        .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 40px;
-            margin-top: 40px;
         }
-
-        .portfolio-item {
-            background-color: var(--bg-white);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
+        
+        .testimonial-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
             box-shadow: var(--shadow);
-            transition: var(--transition);
+            position: relative;
         }
-
-        body.dark-mode .portfolio-item {
-            background-color: #1f2937;
+        
+        .testimonial-card:before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 5rem;
+            color: rgba(26, 115, 232, 0.1);
+            font-family: serif;
         }
-
-        .portfolio-item:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
+        
+        .testimonial-content {
+            margin-bottom: 25px;
+            font-style: italic;
         }
-
-        .portfolio-image {
-            height: 250px;
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .author-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
             overflow: hidden;
         }
-
-        .portfolio-image img {
+        
+        .author-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease;
         }
-
-        .portfolio-item:hover .portfolio-image img {
-            transform: scale(1.05);
-        }
-
-        .portfolio-content {
-            padding: 30px;
-        }
-
-        .portfolio-category {
-            display: inline-block;
-            padding: 6px 12px;
-            background-color: var(--bg-light);
-            color: var(--primary-color);
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
-
-        body.dark-mode .portfolio-category {
-            background-color: #374151;
-        }
-
-        .portfolio-content h3 {
-            margin-bottom: 15px;
-        }
-
-        .portfolio-content p {
-            margin-bottom: 20px;
-            color: var(--text-light);
-        }
-
-        /* ===== CTA SECTION ===== */
-        .cta-section {
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-            color: white;
-            text-align: center;
-            border-radius: var(--radius-lg);
-            margin: 80px 20px;
-        }
-
-        body.dark-mode .cta-section {
-            background: linear-gradient(135deg, #1d4ed8, #1e40af);
-        }
-
-        .cta-content h2 {
-            margin-bottom: 20px;
-            font-size: 2.5rem;
-        }
-
-        .cta-content p {
-            max-width: 600px;
-            margin: 0 auto 30px;
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.125rem;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .cta-section .btn-outline {
-            background-color: transparent;
-            color: white;
-            border-color: white;
-        }
-
-        .cta-section .btn-outline:hover {
-            background-color: white;
-            color: var(--primary-color);
-        }
-
-        /* ===== FOOTER ===== */
-        .footer {
-            background-color: var(--bg-light);
-            padding: 80px 0 0;
-        }
-
-        body.dark-mode .footer {
-            background-color: #111827;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 60px;
-        }
-
-        .footer-col h4 {
-            margin-bottom: 20px;
-            font-size: 1.125rem;
-        }
-
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-            text-decoration: none;
-        }
-
-        .footer-tagline {
-            font-size: 0.875rem;
-            margin: 0;
-        }
-
-        .footer-description {
-            margin-bottom: 20px;
-            color: var(--text-light);
-        }
-
-        body.dark-mode .footer-description {
-            color: #9ca3af;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 12px;
-        }
-
-        .social-link {
-            width: 40px;
-            height: 40px;
-            background-color: var(--bg-white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-dark);
-            transition: var(--transition);
-        }
-
-        body.dark-mode .social-link {
-            background-color: #374151;
-            color: #e5e7eb;
-        }
-
-        .social-link:hover {
-            background-color: var(--primary-color);
-            color: white;
-            transform: translateY(-3px);
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-
-        .footer-links a {
-            color: var(--text-light);
-            transition: var(--transition);
-        }
-
-        body.dark-mode .footer-links a {
-            color: #9ca3af;
-        }
-
-        .footer-links a:hover {
-            color: var(--primary-color);
-            padding-left: 5px;
-        }
-
-        .contact-info p {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 15px;
-            color: var(--text-light);
-        }
-
-        body.dark-mode .contact-info p {
-            color: #9ca3af;
-        }
-
-        .contact-info i {
-            color: var(--primary-color);
-            width: 20px;
-        }
-
-        .contact-info a {
-            color: var(--primary-color);
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid var(--border-color);
-            padding: 30px 0;
-        }
-
-        body.dark-mode .footer-bottom {
-            border-color: #374151;
-        }
-
-        .footer-bottom-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .footer-bottom p {
-            margin: 0;
-            color: var(--text-light);
-        }
-
-        body.dark-mode .footer-bottom p {
-            color: #9ca3af;
-        }
-
-        .footer-bottom-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .footer-bottom-links a {
-            color: var(--text-light);
-            font-size: 0.875rem;
-        }
-
-        body.dark-mode .footer-bottom-links a {
-            color: #9ca3af;
-        }
-
-        .footer-bottom-links a:hover {
-            color: var(--primary-color);
-        }
-
-        /* ===== WHATSAPP FLOAT ===== */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            background-color: #25D366;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            box-shadow: var(--shadow-lg);
-            z-index: 1000;
-            transition: var(--transition);
-            text-decoration: none;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            background-color: #128C7E;
-        }
-
-        .whatsapp-tooltip {
-            position: absolute;
-            right: 70px;
-            background-color: var(--text-dark);
-            color: white;
-            padding: 8px 16px;
-            border-radius: var(--radius);
-            font-size: 0.875rem;
-            white-space: nowrap;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-        }
-
-        .whatsapp-float:hover .whatsapp-tooltip {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        /* ===== BACK TO TOP ===== */
-        .back-to-top {
-            position: fixed;
-            bottom: 100px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.25rem;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-            z-index: 999;
-        }
-
-        .back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .back-to-top:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-5px);
-        }
-
+        
         /* ===== RESPONSIVE DESIGN ===== */
-        @media (max-width: 992px) {
-            h1 { font-size: 2.75rem; }
-            h2 { font-size: 2.25rem; }
-            
-            .hero .container {
-                grid-template-columns: 1fr;
-                text-align: center;
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 3.2rem;
             }
             
-            .hero-buttons {
-                justify-content: center;
-                flex-wrap: wrap;
+            h2 {
+                font-size: 2.4rem;
             }
             
-            .hero-stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .nav-menu, .nav-cta {
-                display: none;
-            }
-            
-            .mobile-menu-toggle {
-                display: block;
-            }
-            
-            .mobile-menu {
-                display: block;
+            .hero h1 {
+                font-size: 3.5rem;
             }
         }
-
-        @media (max-width: 768px) {
-            .section {
-                padding: 60px 0;
+        
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.8rem;
             }
             
-            .contact-info {
-                flex-direction: column;
-                gap: 8px;
+            h2 {
+                font-size: 2rem;
             }
             
-            .top-bar-content {
-                flex-direction: column;
-                gap: 15px;
-                text-align: center;
+            .hero h1 {
+                font-size: 3rem;
             }
             
-            .footer-bottom-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .cta-buttons {
+            .hero-btns {
                 flex-direction: column;
                 align-items: center;
             }
             
-            .whatsapp-float {
-                bottom: 20px;
-                right: 20px;
-                width: 50px;
-                height: 50px;
-                font-size: 1.5rem;
-            }
-            
-            .back-to-top {
-                bottom: 80px;
-                right: 20px;
-                width: 45px;
-                height: 45px;
+            .btn {
+                width: 100%;
+                max-width: 300px;
             }
         }
-
-        @media (max-width: 480px) {
-            h1 { font-size: 2.25rem; }
-            h2 { font-size: 1.75rem; }
-            
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .hero-buttons .btn {
-                width: 100%;
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: flex;
+                align-items: center;
                 justify-content: center;
             }
             
-            .services-grid,
-            .features-grid {
+            nav {
+                position: fixed;
+                top: 86px;
+                left: 0;
+                width: 100%;
+                background: white;
+                box-shadow: var(--shadow-hover);
+                padding: 30px;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                border-radius: 0 0 var(--border-radius) var(--border-radius);
+                z-index: 999;
+            }
+            
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            h1 {
+                font-size: 2.4rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero {
+                padding: 150px 0 80px;
+                background-attachment: scroll;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            section {
+                padding: 80px 0;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .service-card,
+            .portfolio-item,
+            .team-member {
+                padding: 30px 20px;
+            }
+            
+            .portfolio-grid,
+            .services-grid {
                 grid-template-columns: 1fr;
             }
         }
-
-        /* ===== DARK MODE OVERRIDES ===== */
-        body.dark-mode {
-            color: #f3f4f6;
-            background-color: #121212;
+        
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-
-        body.dark-mode p,
-        body.dark-mode .section-subtitle,
-        body.dark-mode .logo-tagline,
-        body.dark-mode .footer-description,
-        body.dark-mode .contact-info span,
-        body.dark-mode .footer-links a,
-        body.dark-mode .footer-bottom p,
-        body.dark-mode .footer-bottom-links a {
-            color: #9ca3af;
+        
+        .fade-in {
+            animation: fadeInUp 0.8s ease forwards;
         }
-
-        body.dark-mode .navbar,
-        body.dark-mode .service-card,
-        body.dark-mode .portfolio-item,
-        body.dark-mode .top-bar,
-        body.dark-mode .feature-card {
-            background-color: #1f2937;
+        
+        .delay-1 {
+            animation-delay: 0.2s;
         }
-
-        body.dark-mode .footer {
-            background-color: #111827;
+        
+        .delay-2 {
+            animation-delay: 0.4s;
         }
-
-        body.dark-mode .footer-bottom {
-            background-color: #111827;
-        }
-
-        body.dark-mode .top-bar,
-        body.dark-mode .mobile-menu-header,
-        body.dark-mode .mobile-nav a,
-        body.dark-mode .service-card,
-        body.dark-mode .portfolio-item,
-        body.dark-mode .footer-bottom,
-        body.dark-mode .language-switcher,
-        body.dark-mode .dark-mode-toggle {
-            border-color: #374151;
-        }
-
-        body.dark-mode input,
-        body.dark-mode textarea,
-        body.dark-mode select {
-            background-color: #374151;
-            border-color: #4b5563;
-            color: #f3f4f6;
-        }
-
-        body.dark-mode input::placeholder,
-        body.dark-mode textarea::placeholder {
-            color: #9ca3af;
-        }
-
-        body.dark-mode .service-card:hover,
-        body.dark-mode .feature-card:hover {
-            background-color: #374151;
-            border-color: #4b5563;
-        }
-
-        body.dark-mode .service-card,
-        body.dark-mode .portfolio-item,
-        body.dark-mode .navbar {
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-        }
-
-        body.dark-mode .service-card:hover,
-        body.dark-mode .portfolio-item:hover {
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-        }
-
-        body.dark-mode .nav-link {
-            color: #e5e7eb;
-        }
-
-        body.dark-mode .nav-link:hover {
-            color: var(--primary-light);
-        }
-
-        body.dark-mode .service-link {
-            color: var(--primary-light);
-        }
-
-        body.dark-mode .service-link:hover {
-            color: #93c5fd;
-        }
-
-        body.dark-mode .btn-outline {
-            color: var(--primary-light);
-            border-color: var(--primary-light);
-        }
-
-        body.dark-mode .btn-outline:hover {
-            background-color: var(--primary-light);
-            color: #1f2937;
-        }
-
-        body.dark-mode .hero {
-            background: linear-gradient(135deg, #1a1a1a 0%, #121212 100%);
-        }
-
-        body.dark-mode .hero-badge {
-            background-color: #374151;
-            color: #93c5fd;
-        }
-
-        body.dark-mode .stat-item h3 {
-            color: var(--primary-light);
-        }
-
-        body.dark-mode .social-link {
-            background-color: #374151;
-            color: #e5e7eb;
-        }
-
-        body.dark-mode .social-link:hover {
-            background-color: var(--primary-color);
-            color: white;
-        }
-
-        body.dark-mode .mobile-menu {
-            background-color: #1f2937;
-        }
-
-        body.dark-mode .mobile-menu-toggle,
-        body.dark-mode .mobile-menu-close {
-            color: #e5e7eb;
-        }
-
-        body.dark-mode .contact-info a {
-            color: var(--primary-light);
-        }
-
-        body.dark-mode .cta-section {
-            background: linear-gradient(135deg, #1d4ed8, #1e40af);
-        }
-
-        body.dark-mode .portfolio-category {
-            background-color: #374151;
-            color: var(--primary-light);
-        }
-
-        body.dark-mode .nav-link.active {
-            color: var(--primary-light);
-        }
-
-        body.dark-mode .whatsapp-tooltip {
-            background-color: #374151;
-            color: #f3f4f6;
+        
+        .delay-3 {
+            animation-delay: 0.6s;
         }
     </style>
 </head>
-<body class="light-mode">
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="top-bar-content">
-                <div class="contact-info">
-                    <span><i class="fas fa-phone-alt"></i> +255 684 320 325</span>
-                    <span><i class="fas fa-envelope"></i> adpollex@gmail.com</span>
-                    <span><i class="fas fa-map-marker-alt"></i> Mwinyijuma Rd, Kinondoni, Dar es Salaam</span>
-                </div>
-                <div class="top-bar-controls">
-                    <!-- Language Switcher -->
-                    <div class="language-switcher">
-                        <button class="lang-btn active" data-lang="en">
-                            <img src="https://flagcdn.com/w20/gb.png" alt="English"> EN
-                        </button>
-                        <button class="lang-btn" data-lang="sw">
-                            <img src="https://flagcdn.com/w20/tz.png" alt="Swahili"> SW
-                        </button>
-                    </div>
-                    
-                    <!-- Dark Mode Toggle -->
-                    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
-                        <i class="fas fa-moon"></i>
-                        <i class="fas fa-sun" style="display: none;"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Main Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <!-- Logo -->
+<body>
+    <!-- Premium Header -->
+    <header id="mainHeader">
+        <div class="container header-container">
             <a href="index.html" class="logo">
-                <div class="logo-icon">
-                    <i class="fas fa-bullseye"></i>
-                </div>
+                <div class="logo-icon">AP</div>
                 <div class="logo-text">
-                    <h1>Ad <span class="highlight">Pollex</span></h1>
-                    <p class="logo-tagline">Advertising & Digital Marketing</p>
+                    <h1>Ad Pollex</h1>
+                    <span>Digital Marketing Excellence</span>
                 </div>
             </a>
-
-            <!-- Desktop Navigation -->
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                <li><a href="about.html" class="nav-link">About Us</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-
-            <!-- CTA Button -->
-            <a href="contact.html" class="btn btn-primary nav-cta">
-                Get Started <i class="fas fa-arrow-right"></i>
-            </a>
-
-            <!-- Mobile Menu Toggle -->
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobileMenu">
-            <div class="mobile-menu-header">
-                <a href="index.html" class="logo">
-                    <h2>Ad <span class="highlight">Pollex</span></h2>
-                </a>
-                <button class="mobile-menu-close" id="mobileMenuClose">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <ul class="mobile-nav">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="mobile-cta">
-                <a href="contact.html" class="btn btn-primary">
-                    Get Free Consultation
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
+    <!-- Premium Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <i class="fas fa-award"></i> Since 2016
+            <div class="fade-in">
+                <h1>Transform Your Digital Presence</h1>
+                <p>Ad Pollex is a premium full-service advertising and digital marketing agency based in Dar es Salaam, Tanzania. We craft exceptional marketing strategies that drive growth, engagement, and measurable results for businesses across industries.</p>
+                <div class="hero-btns">
+                    <a href="contact.html" class="btn">Start Your Project <i class="fas fa-arrow-right"></i></a>
+                    <a href="portfolio.html" class="btn btn-secondary">View Our Work <i class="fas fa-eye"></i></a>
                 </div>
-                <h1 class="hero-title">Grow Your Business with Strategic Digital Marketing</h1>
-                <p class="hero-description">
-                    Full-service advertising agency in Tanzania helping businesses increase visibility, 
-                    attract customers, and boost sales through data-driven marketing strategies.
-                </p>
-                <div class="hero-buttons">
-                    <a href="contact.html" class="btn btn-primary btn-lg">
-                        Start Your Project <i class="fas fa-rocket"></i>
-                    </a>
-                    <a href="portfolio.html" class="btn btn-outline btn-lg">
-                        View Our Work <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <h3>50+</h3>
-                        <p>Happy Clients</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>8+</h3>
-                        <p>Years Experience</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>200+</h3>
-                        <p>Projects Completed</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>11-50</h3>
-                        <p>Team Members</p>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                     alt="Digital Marketing Team Collaboration">
             </div>
         </div>
     </section>
 
-    <!-- Services Preview -->
-    <section class="section services-preview">
+    <!-- Premium Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item fade-in">
+                    <div class="stat-number" data-count="150">0</div>
+                    <div class="stat-label">Successful Projects</div>
+                </div>
+                <div class="stat-item fade-in delay-1">
+                    <div class="stat-number" data-count="98">0</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+                <div class="stat-item fade-in delay-2">
+                    <div class="stat-number" data-count="7">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item fade-in delay-3">
+                    <div class="stat-number" data-count="40">0</div>
+                    <div class="stat-label">Team Members</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Services Preview -->
+    <section id="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Our Core Services</h2>
-                <p class="section-subtitle">
-                    Comprehensive digital marketing solutions tailored for Tanzanian businesses
-                </p>
+                <h2>Our Premium Services</h2>
+                <p class="section-subtitle">We offer comprehensive digital marketing solutions tailored to drive your business growth and maximize ROI.</p>
             </div>
-            
             <div class="services-grid">
-                <!-- Service 1 -->
-                <div class="service-card">
+                <div class="service-card fade-in">
                     <div class="service-icon">
                         <i class="fas fa-bullhorn"></i>
                     </div>
-                    <h3>Digital Marketing & Advertising</h3>
-                    <p>Strategic online campaigns that deliver measurable results and ROI for your business.</p>
-                    <a href="services.html#digital-marketing" class="service-link">Learn More →</a>
+                    <h3>Digital Marketing</h3>
+                    <p>Strategic online marketing campaigns to increase visibility, generate qualified leads, and drive conversions with measurable ROI.</p>
+                    <a href="services.html#digital-marketing" class="btn-outline">Learn More</a>
                 </div>
-                
-                <!-- Service 2 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3>Brand Strategy & Identity</h3>
-                    <p>Build strong brand identities that resonate with your target audience in Tanzania.</p>
-                    <a href="services.html#branding" class="service-link">Learn More →</a>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>SEO & Website Optimization</h3>
-                    <p>Optimized websites that rank higher and convert visitors into customers effectively.</p>
-                    <a href="services.html#seo" class="service-link">Learn More →</a>
-                </div>
-                
-                <!-- Service 4 -->
-                <div class="service-card">
+                <div class="service-card fade-in delay-1">
                     <div class="service-icon">
                         <i class="fas fa-users"></i>
                     </div>
                     <h3>Social Media Management</h3>
-                    <p>Engage your audience and grow your social media presence with professional management.</p>
-                    <a href="services.html#social-media" class="service-link">Learn More →</a>
+                    <p>Complete social media strategy, content creation, community management, and performance analytics across all platforms.</p>
+                    <a href="services.html#social-media" class="btn-outline">Learn More</a>
+                </div>
+                <div class="service-card fade-in delay-2">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>SEO Optimization</h3>
+                    <p>Comprehensive search engine optimization to improve rankings, drive organic traffic, and increase qualified leads.</p>
+                    <a href="services.html#seo" class="btn-outline">Learn More</a>
                 </div>
             </div>
-            
-            <div class="text-center mt-4">
-                <a href="services.html" class="btn btn-secondary">
-                    View All Services <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="section why-choose-us">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Why Choose Ad Pollex?</h2>
-                <p class="section-subtitle">
-                    We deliver results-driven marketing solutions with local expertise
-                </p>
-            </div>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-number">01</div>
-                    <h3>Local Market Expertise</h3>
-                    <p>Deep understanding of Tanzanian market dynamics and consumer behavior.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-number">02</div>
-                    <h3>Data-Driven Strategies</h3>
-                    <p>All campaigns are backed by analytics and performance metrics for optimal results.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-number">03</div>
-                    <h3>End-to-End Solutions</h3>
-                    <p>From strategy to execution, we handle every aspect of your marketing needs.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-number">04</div>
-                    <h3>Proven Track Record</h3>
-                    <p>8+ years of delivering successful campaigns for businesses across Tanzania.</p>
-                </div>
+            <div class="text-center" style="margin-top: 50px;">
+                <a href="services.html" class="btn">View All Services <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Preview -->
-    <section class="section portfolio-preview">
+    <!-- Premium Portfolio Preview -->
+    <section class="portfolio-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">
-                    See how we've helped businesses achieve their marketing goals
-                </p>
+                <h2>Featured Projects</h2>
+                <p class="section-subtitle">Explore our portfolio of successful digital marketing campaigns and creative solutions.</p>
             </div>
-            
             <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="E-commerce Campaign">
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="E-commerce Project">
                     </div>
                     <div class="portfolio-content">
-                        <span class="portfolio-category">E-commerce</span>
-                        <h3>Tanzania Retail Brand Expansion</h3>
-                        <p>Increased online sales by 300% in 6 months through targeted digital campaigns.</p>
-                        <a href="portfolio.html#project1" class="btn btn-outline">View Case Study</a>
+                        <h3>E-commerce Brand Launch</h3>
+                        <p>Complete digital strategy for a fashion e-commerce startup, resulting in 200% growth in online sales within 6 months.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Digital Marketing</span>
+                            <span class="portfolio-tag">Brand Strategy</span>
+                        </div>
+                        <a href="portfolio.html#project1" class="btn-outline">View Case Study</a>
                     </div>
                 </div>
-                
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="https://images.unsplash.com/photo-1551836026-d5c2c4af08f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Tourism Campaign">
+                <div class="portfolio-item fade-in delay-1">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1551836026-d5c2c3af8f81?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Social Media Campaign">
                     </div>
                     <div class="portfolio-content">
-                        <span class="portfolio-category">Tourism</span>
-                        <h3>Safari Company Digital Transformation</h3>
-                        <p>Rebranded and digitized marketing strategy resulting in 150% lead increase.</p>
-                        <a href="portfolio.html#project2" class="btn btn-outline">View Case Study</a>
+                        <h3>Social Media Revamp</h3>
+                        <p>Transformed a local restaurant's social media presence, increasing engagement by 300% and foot traffic by 40%.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Social Media</span>
+                            <span class="portfolio-tag">Content Creation</span>
+                        </div>
+                        <a href="portfolio.html#project2" class="btn-outline">View Case Study</a>
                     </div>
                 </div>
             </div>
-            
-            <div class="text-center">
-                <a href="portfolio.html" class="btn btn-primary">
-                    View All Projects <i class="fas fa-arrow-right"></i>
-                </a>
+            <div class="text-center" style="margin-top: 50px;">
+                <a href="portfolio.html" class="btn">View Full Portfolio <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="section cta-section">
+    <!-- Premium Testimonials -->
+    <section class="testimonials-section">
         <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Transform Your Digital Presence?</h2>
-                <p>Let's discuss how we can help your business grow in the Tanzanian market.</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary btn-lg">
-                        Get Free Consultation <i class="fas fa-calendar-check"></i>
-                    </a>
-                    <a href="tel:+255684320325" class="btn btn-outline btn-lg">
-                        <i class="fas fa-phone-alt"></i> +255 684 320 325
-                    </a>
+            <div class="section-header">
+                <h2>Client Testimonials</h2>
+                <p class="section-subtitle">See what our clients have to say about working with Ad Pollex.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-content">
+                        <p>"Ad Pollex transformed our online presence completely. Our website traffic increased by 250% and lead generation improved significantly. Their team is professional, creative, and results-driven."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client">
+                        </div>
+                        <div>
+                            <h4>James Mwinyi</h4>
+                            <p>CEO, Tech Solutions Ltd.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in delay-1">
+                    <div class="testimonial-content">
+                        <p>"The social media strategy developed by Ad Pollex helped us connect with our target audience in ways we never imagined. Engagement rates skyrocketed and our brand awareness is at an all-time high."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client">
+                        </div>
+                        <div>
+                            <h4>Sarah Juma</h4>
+                            <p>Marketing Director, Fashion House</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- Premium Team Preview -->
+    <section id="team-preview">
         <div class="container">
-            <div class="footer-grid">
-                <!-- Company Info -->
-                <div class="footer-col">
-                    <a href="index.html" class="footer-logo">
-                        <div class="logo-icon">
-                            <i class="fas fa-bullseye"></i>
-                        </div>
-                        <div class="logo-text">
-                            <h3>Ad <span class="highlight">Pollex</span></h3>
-                            <p class="footer-tagline">Advertising & Digital Marketing</p>
-                        </div>
-                    </a>
-                    <p class="footer-description">
-                        Full-service advertising and digital marketing agency in Tanzania, 
-                        helping businesses grow since 2016.
-                    </p>
-                    <div class="social-links">
-                        <a href="https://facebook.com/adpollex" class="social-link" aria-label="Facebook" target="_blank">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://instagram.com/adpollex" class="social-link" aria-label="Instagram" target="_blank">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://linkedin.com/company/adpollex" class="social-link" aria-label="LinkedIn" target="_blank">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://twitter.com/adpollex" class="social-link" aria-label="Twitter" target="_blank">
-                            <i class="fab fa-twitter"></i>
-                        </a>
+            <div class="section-header">
+                <h2>Meet Our Leadership</h2>
+                <p class="section-subtitle">Our team of experts combines creativity with strategic thinking to deliver exceptional results.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member fade-in">
+                    <div class="member-photo">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="CEO">
+                    </div>
+                    <h3>James Mwinyi</h3>
+                    <p class="position">CEO & Founder</p>
+                    <p>With over 10 years in digital marketing, James founded Ad Pollex to help Tanzanian businesses thrive online.</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
+                <div class="team-member fade-in delay-1">
+                    <div class="member-photo">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Marketing Director">
+                    </div>
+                    <h3>Sarah Juma</h3>
+                    <p class="position">Marketing Director</p>
+                    <p>Sarah leads our marketing strategies with expertise in brand development and customer engagement.</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 50px;">
+                <a href="team.html" class="btn">Meet Full Team <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
 
-                <!-- Quick Links -->
-                <div class="footer-col">
+    <!-- Premium CTA Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info fade-in">
+                    <h2>Ready to Grow Your Business?</h2>
+                    <p>Contact us today for a free consultation and let's discuss how we can help you achieve your digital marketing goals.</p>
+                    <h3><i class="fas fa-map-marker-alt"></i> Our Location</h3>
+                    <p>Mwinyijuma Rd, Kinondoni, Dar es Salaam, Tanzania</p>
+                    <h3><i class="fas fa-phone"></i> Phone</h3>
+                    <p>+255 684 320 325</p>
+                    <h3><i class="fas fa-envelope"></i> Email</h3>
+                    <p>adpollex@gmail.com</p>
+                </div>
+                <div class="contact-form fade-in delay-1">
+                    <form id="contactForm">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="text" placeholder="Company Name">
+                        <select required>
+                            <option value="">Select Service</option>
+                            <option value="digital-marketing">Digital Marketing</option>
+                            <option value="social-media">Social Media Management</option>
+                            <option value="seo">SEO Optimization</option>
+                            <option value="branding">Brand Strategy</option>
+                            <option value="web-design">Website Design</option>
+                        </select>
+                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <h3>Ad <span>Pollex</span></h3>
+                    <p>Full-service advertising and digital marketing agency helping businesses grow their online presence since 2016.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
                     <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="portfolio.html"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                        <li><a href="team.html"><i class="fas fa-chevron-right"></i> Our Team</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
                     </ul>
                 </div>
-
-                <!-- Services -->
-                <div class="footer-col">
+                <div class="footer-links">
                     <h4>Our Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="services.html#digital-marketing">Digital Marketing</a></li>
-                        <li><a href="services.html#branding">Brand Strategy</a></li>
-                        <li><a href="services.html#seo">SEO & Website</a></li>
-                        <li><a href="services.html#social-media">Social Media</a></li>
+                    <ul>
+                        <li><a href="services.html#digital-marketing"><i class="fas fa-chevron-right"></i> Digital Marketing</a></li>
+                        <li><a href="services.html#social-media"><i class="fas fa-chevron-right"></i> Social Media Management</a></li>
+                        <li><a href="services.html#seo"><i class="fas fa-chevron-right"></i> SEO Optimization</a></li>
+                        <li><a href="services.html#branding"><i class="fas fa-chevron-right"></i> Brand Strategy</a></li>
+                        <li><a href="services.html#web-design"><i class="fas fa-chevron-right"></i> Website Design</a></li>
                     </ul>
                 </div>
-
-                <!-- Contact Info -->
-                <div class="footer-col">
-                    <h4>Contact Us</h4>
-                    <div class="contact-info">
-                        <p>
-                            <i class="fas fa-map-marker-alt"></i>
-                            Mwinyijuma Road, Kinondoni, Dar es Salaam, Tanzania
-                        </p>
-                        <p>
-                            <i class="fas fa-phone-alt"></i>
-                            <a href="tel:+255684320325">+255 684 320 325</a>
-                        </p>
-                        <p>
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:adpollex@gmail.com">adpollex@gmail.com</a>
-                        </p>
-                        <p>
-                            <i class="fas fa-clock"></i>
-                            Mon - Fri: 8:00 AM - 6:00 PM
-                        </p>
-                    </div>
+                <div class="footer-links">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Dar es Salaam, Tanzania</a></li>
+                        <li><a href="tel:+255684320325"><i class="fas fa-phone"></i> +255 684 320 325</a></li>
+                        <li><a href="mailto:adpollex@gmail.com"><i class="fas fa-envelope"></i> adpollex@gmail.com</a></li>
+                        <li><a href="#"><i class="fas fa-globe"></i> adpollex.com</a></li>
+                    </ul>
                 </div>
             </div>
-
-            <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <p>&copy; 2024 Ad Pollex. All rights reserved.</p>
-                    <div class="footer-bottom-links">
-                        <a href="privacy.html">Privacy Policy</a>
-                        <a href="terms.html">Terms of Service</a>
-                        <a href="#">Cookie Policy</a>
-                    </div>
-                </div>
+            <div class="copyright">
+                <p>&copy; 2023 Ad Pollex - Advertising & Digital Marketing Company. All Rights Reserved. | Designed with <i class="fas fa-heart" style="color: #ff4757;"></i> in Dar es Salaam</p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Float -->
-    <a href="https://wa.me/255684320325" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-        <span class="whatsapp-tooltip">Chat with us!</span>
-    </a>
-
-    <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <!-- JavaScript -->
+    <!-- Premium JavaScript -->
     <script>
         // Mobile Menu Toggle
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const mobileMenuClose = document.getElementById('mobileMenuClose');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        if (mobileMenuToggle) {
-            mobileMenuToggle.addEventListener('click', () => {
-                mobileMenu.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
-        }
-
-        if (mobileMenuClose) {
-            mobileMenuClose.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        }
-
-        // Language Switcher
-        const langButtons = document.querySelectorAll('.lang-btn');
-        langButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                langButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-                const lang = button.dataset.lang;
-                // Language switching logic here
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        const mainHeader = document.getElementById('mainHeader');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mainNav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
             });
         });
-
-        // Dark Mode Toggle
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        if (darkModeToggle) {
-            darkModeToggle.addEventListener('click', () => {
-                document.body.classList.toggle('dark-mode');
-                const moonIcon = darkModeToggle.querySelector('.fa-moon');
-                const sunIcon = darkModeToggle.querySelector('.fa-sun');
-                
-                if (document.body.classList.contains('dark-mode')) {
-                    moonIcon.style.display = 'none';
-                    sunIcon.style.display = 'block';
-                    localStorage.setItem('darkMode', 'enabled');
-                } else {
-                    moonIcon.style.display = 'block';
-                    sunIcon.style.display = 'none';
-                    localStorage.setItem('darkMode', 'disabled');
-                }
-            });
-        }
-
-        // Check for saved dark mode preference
-        if (localStorage.getItem('darkMode') === 'enabled') {
-            document.body.classList.add('dark-mode');
-            const moonIcon = document.querySelector('.fa-moon');
-            const sunIcon = document.querySelector('.fa-sun');
-            if (moonIcon) moonIcon.style.display = 'none';
-            if (sunIcon) sunIcon.style.display = 'block';
-        }
-
-        // Back to Top Button
-        const backToTopBtn = document.getElementById('backToTop');
+        
+        // Header scroll effect
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.add('visible');
+            if (window.scrollY > 100) {
+                mainHeader.classList.add('scrolled');
             } else {
-                backToTopBtn.classList.remove('visible');
+                mainHeader.classList.remove('scrolled');
             }
         });
-
-        if (backToTopBtn) {
-            backToTopBtn.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
+        
+        // Animated counter for stats
+        function animateCounter() {
+            const counters = document.querySelectorAll('.stat-number');
+            const speed = 200;
+            
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = parseInt(counter.getAttribute('data-count'));
+                    const count = parseInt(counter.innerText);
+                    const increment = Math.ceil(target / speed);
+                    
+                    if (count < target) {
+                        counter.innerText = count + increment;
+                        setTimeout(updateCount, 10);
+                    } else {
+                        counter.innerText = target + '+';
+                    }
+                };
+                
+                updateCount();
             });
         }
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href === '#') return;
-                e.preventDefault();
-                const targetElement = document.querySelector(href);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Close mobile menu when clicking on links
-        document.querySelectorAll('.mobile-nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        });
-
-        // Service Card Animations
-        const serviceCards = document.querySelectorAll('.service-card');
+        
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                    if (entry.target.classList.contains('stats-section')) {
+                        animateCounter();
+                    }
+                    entry.target.classList.add('fade-in');
                 }
             });
-        }, { threshold: 0.1 });
-
-        serviceCards.forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            observer.observe(card);
+        }, observerOptions);
+        
+        // Observe elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
         });
+        
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = this.querySelector('input[type="text"]').value;
+            
+            // Show success message
+            Swal.fire({
+                icon: 'success',
+                title: 'Thank You!',
+                text: `Thanks ${name}, we've received your message and will contact you within 24 hours.`,
+                confirmButtonColor: 'var(--primary)',
+                confirmButtonText: 'Great!'
+            });
+            
+            // Reset form
+            this.reset();
+        });
+        
+        // Initialize animations on load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add animation classes
+            document.querySelectorAll('.fade-in').forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+            });
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') === '#') return;
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId.startsWith('#')) {
+                        e.preventDefault();
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 100,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+        });
+        
+        // Add SweetAlert for better alerts
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/sweetalert2@11';
+        document.head.appendChild(script);
     </script>
 </body>
 </html>
