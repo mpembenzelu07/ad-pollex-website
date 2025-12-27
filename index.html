@@ -3,26 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ad Pollex | Premium Advertising & Digital Marketing Agency</title>
+    <title>Ad Pollex | Digital Marketing Agency | Dar es Salaam, Tanzania</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* ===== PREMIUM CSS FOR HOMEPAGE ===== */
+        /* ===== PREMIUM REDESIGN - MINIMALIST & PROFESSIONAL ===== */
         :root {
-            --primary: #1a73e8;
-            --primary-dark: #0d62d9;
-            --secondary: #fbbc04;
-            --secondary-dark: #e6a800;
-            --accent: #34a853;
-            --dark: #202124;
-            --dark-light: #2d2f33;
-            --light: #f8f9fa;
-            --gray: #5f6368;
-            --gray-light: #dadce0;
-            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
-            --border-radius: 12px;
+            --primary: #2563EB;      /* Deep professional blue */
+            --primary-dark: #1D4ED8;
+            --secondary: #F59E0B;    /* Warm accent */
+            --accent: #10B981;       /* Success green */
+            --dark: #111827;         /* Deep dark */
+            --dark-light: #1F2937;
+            --light: #F9FAFB;
+            --gray: #6B7280;
+            --gray-light: #E5E7EB;
+            --gray-dark: #374151;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --radius: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
         }
         
         * {
@@ -33,173 +37,136 @@
         
         html {
             scroll-behavior: smooth;
+            font-size: 16px;
         }
         
         body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.7;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
             color: var(--dark);
-            background: #ffffff;
+            background-color: #ffffff;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         
+        /* ===== TYPOGRAPHY HIERARCHY ===== */
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             line-height: 1.2;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
         }
         
         h1 {
-            font-size: 3.8rem;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
         }
         
         h2 {
-            font-size: 2.8rem;
-            color: var(--dark);
-            position: relative;
-            padding-bottom: 20px;
-            margin-bottom: 3rem;
-        }
-        
-        h2:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100px;
-            height: 5px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            border-radius: 3px;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
         }
         
         h3 {
-            font-size: 1.9rem;
-            color: var(--dark);
+            font-size: 1.875rem;
+        }
+        
+        h4 {
+            font-size: 1.5rem;
         }
         
         p {
-            margin-bottom: 1.8rem;
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: var(--gray-dark);
+            margin-bottom: 1.5rem;
+        }
+        
+        .lead {
+            font-size: 1.25rem;
             color: var(--gray);
-            font-size: 1.05rem;
         }
         
         .container {
             width: 100%;
-            max-width: 1320px;
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 1.5rem;
         }
         
-        /* ===== PREMIUM BUTTONS ===== */
+        /* ===== BUTTON SYSTEM ===== */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            padding: 16px 38px;
-            border-radius: var(--border-radius);
-            text-decoration: none;
+            padding: 0.875rem 2rem;
+            font-size: 1rem;
             font-weight: 600;
-            font-size: 1.05rem;
-            border: none;
-            cursor: pointer;
+            line-height: 1.5;
+            text-decoration: none;
+            border-radius: var(--radius);
             transition: var(--transition);
+            cursor: pointer;
+            border: none;
             position: relative;
             overflow: hidden;
-            z-index: 1;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
             box-shadow: var(--shadow);
         }
         
-        .btn:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
-            transition: var(--transition);
-            z-index: -1;
-        }
-        
-        .btn:hover:before {
-            left: 0;
-        }
-        
-        .btn:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
         }
         
         .btn-secondary {
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
-            color: var(--dark);
-        }
-        
-        .btn-secondary:before {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-        }
-        
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--primary);
+            background-color: transparent;
             color: var(--primary);
+            border: 2px solid var(--primary);
         }
         
-        .btn-outline:before {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        .btn-secondary:hover {
+            background-color: rgba(37, 99, 235, 0.05);
+            transform: translateY(-2px);
         }
         
-        .btn-outline:hover {
-            color: white;
+        .btn-accent {
+            background-color: var(--secondary);
+            color: var(--dark);
+            font-weight: 700;
         }
         
-        section {
-            padding: 100px 0;
+        .btn-accent:hover {
+            background-color: #FBBF24;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
         }
         
-        .section-header {
-            text-align: center;
-            margin-bottom: 5rem;
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
         }
         
-        .section-header h2:after {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        .section-subtitle {
-            font-size: 1.2rem;
-            color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto 2rem;
-        }
-        
-        /* ===== PREMIUM HEADER & NAVIGATION ===== */
+        /* ===== PREMIUM HEADER ===== */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.98);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(229, 231, 235, 0.5);
             z-index: 1000;
-            padding: 18px 0;
-            transition: var(--transition);
-        }
-        
-        header.scrolled {
-            padding: 12px 0;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
         }
         
         .header-container {
@@ -211,311 +178,479 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 0.75rem;
             text-decoration: none;
         }
         
-        .logo-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: 12px;
+        .logo-mark {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-weight: 700;
-            font-size: 1.8rem;
-            box-shadow: var(--shadow);
+            font-weight: 800;
+            font-size: 1.25rem;
         }
         
         .logo-text {
             display: flex;
             flex-direction: column;
+            line-height: 1.2;
         }
         
-        .logo-text h1 {
-            font-size: 1.8rem;
-            margin: 0;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+        .logo-text .brand {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--dark);
+            letter-spacing: -0.02em;
+        }
+        
+        .logo-text .tagline {
+            font-size: 0.75rem;
+            color: var(--gray);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        
+        /* ===== PREMIUM NAVIGATION ===== */
+        .nav-desktop {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+        
+        .nav-desktop a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 1rem;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: var(--transition);
+        }
+        
+        .nav-desktop a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-desktop a.active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .nav-desktop a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary);
+            border-radius: 1px;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: var(--dark);
+            font-size: 1.5rem;
+        }
+        
+        /* ===== PREMIUM HERO SECTION ===== */
+        .hero {
+            padding: 10rem 0 6rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.03) 0%, rgba(245, 158, 11, 0.03) 100%);
+            clip-path: polygon(100% 0, 100% 100%, 0 0);
+        }
+        
+        .hero-container {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+        
+        .hero h1 {
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
         
-        .logo-text span {
-            font-size: 0.9rem;
-            color: var(--gray);
-            font-weight: 400;
+        .hero .lead {
+            font-size: 1.25rem;
+            color: var(--gray-dark);
+            margin-bottom: 2.5rem;
+            max-width: 700px;
         }
         
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 40px;
+        /* ===== STATS SECTION ===== */
+        .stats {
+            padding: 4rem 0;
+            background: white;
         }
         
-        nav ul li a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 600;
-            font-size: 1.05rem;
-            transition: var(--transition);
-            position: relative;
-            padding: 8px 0;
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
         }
         
-        nav ul li a:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            border-radius: 3px;
-            transition: var(--transition);
-        }
-        
-        nav ul li a:hover {
-            color: var(--primary);
-        }
-        
-        nav ul li a:hover:after,
-        nav ul li a.active:after {
-            width: 100%;
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            border: none;
-            border-radius: 12px;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: var(--transition);
-            box-shadow: var(--shadow);
-        }
-        
-        .mobile-menu-btn:hover {
-            transform: scale(1.05);
-        }
-        
-        /* ===== PREMIUM HERO SECTION ===== */
-        .hero {
-            background: linear-gradient(rgba(26, 115, 232, 0.9), rgba(26, 115, 232, 0.85)), 
-                        url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: white;
-            padding: 180px 0 120px;
+        .stat-card {
             text-align: center;
-            position: relative;
-            overflow: hidden;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            background: white;
+            border: 1px solid var(--gray-light);
+            transition: var(--transition);
         }
         
-        .hero:before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            background: linear-gradient(to top, #ffffff, transparent);
+        .stat-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
         }
         
-        .hero h1 {
-            color: white;
-            -webkit-text-fill-color: white;
-            font-size: 4.2rem;
-            margin-bottom: 1.8rem;
-            text-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            line-height: 1;
         }
         
-        .hero p {
-            font-size: 1.3rem;
-            max-width: 800px;
-            margin: 0 auto 50px;
-            color: rgba(255, 255, 255, 0.95);
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--gray);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
         
-        .hero-btns {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 40px;
+        /* ===== SERVICES SECTION ===== */
+        .services {
+            padding: 6rem 0;
+            background: var(--light);
         }
         
-        /* ===== PREMIUM SERVICES SECTION ===== */
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
         }
         
         .service-card {
             background: white;
-            border-radius: var(--border-radius);
-            padding: 50px 35px;
-            box-shadow: var(--shadow);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem 2rem;
+            border: 1px solid var(--gray-light);
             transition: var(--transition);
             position: relative;
             overflow: hidden;
-            border: 1px solid var(--gray-light);
         }
         
-        .service-card:before {
+        .service-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 5px;
+            width: 4px;
             height: 0;
             background: linear-gradient(to bottom, var(--primary), var(--secondary));
             transition: var(--transition);
         }
         
-        .service-card:hover:before {
+        .service-card:hover::before {
             height: 100%;
         }
         
         .service-card:hover {
-            transform: translateY(-15px);
-            box-shadow: var(--shadow-hover);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: transparent;
         }
         
         .service-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, rgba(26, 115, 232, 0.1), rgba(251, 188, 4, 0.1));
-            border-radius: 20px;
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(245, 158, 11, 0.1));
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 30px;
-            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
             color: var(--primary);
         }
         
-        /* ===== PREMIUM PORTFOLIO SECTION ===== */
-        .portfolio-section {
-            background: var(--light);
+        .service-card h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .service-card p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            color: var(--gray-dark);
+        }
+        
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .service-link i {
+            margin-left: 0.5rem;
+            transition: var(--transition);
+        }
+        
+        .service-link:hover i {
+            transform: translateX(4px);
+        }
+        
+        /* ===== PORTFOLIO SECTION ===== */
+        .portfolio {
+            padding: 6rem 0;
+            background: white;
         }
         
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
         }
         
-        .portfolio-item {
+        .portfolio-card {
             background: white;
-            border-radius: var(--border-radius);
+            border-radius: var(--radius-lg);
             overflow: hidden;
-            box-shadow: var(--shadow);
+            border: 1px solid var(--gray-light);
             transition: var(--transition);
         }
         
-        .portfolio-item:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
+        .portfolio-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: transparent;
         }
         
-        .portfolio-img {
-            height: 280px;
+        .portfolio-image {
+            height: 240px;
             overflow: hidden;
         }
         
-        .portfolio-img img {
+        .portfolio-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: var(--transition);
         }
         
-        .portfolio-item:hover .portfolio-img img {
-            transform: scale(1.1);
+        .portfolio-card:hover .portfolio-image img {
+            transform: scale(1.05);
         }
         
         .portfolio-content {
-            padding: 35px;
+            padding: 2rem;
         }
         
         .portfolio-tags {
             display: flex;
-            gap: 10px;
-            margin: 20px 0;
+            gap: 0.5rem;
             flex-wrap: wrap;
+            margin: 1rem 0;
         }
         
-        .portfolio-tag {
-            background: rgba(26, 115, 232, 0.1);
+        .tag {
+            background: rgba(37, 99, 235, 0.1);
             color: var(--primary);
-            padding: 8px 18px;
-            border-radius: 30px;
-            font-size: 0.9rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 100px;
+            font-size: 0.75rem;
             font-weight: 600;
         }
         
-        /* ===== PREMIUM TEAM SECTION ===== */
-        .team-grid {
+        /* ===== TESTIMONIALS SECTION ===== */
+        .testimonials {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+        }
+        
+        .testimonials .section-header h2,
+        .testimonials .section-subtitle {
+            color: white;
+        }
+        
+        .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
         
-        .team-member {
-            text-align: center;
-            padding: 40px 30px;
-            border-radius: var(--border-radius);
-            background: white;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
-        .team-member:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
+        .testimonial-text {
+            font-size: 1.125rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            line-height: 1.8;
         }
         
-        .member-photo {
-            width: 180px;
-            height: 180px;
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .author-avatar {
+            width: 56px;
+            height: 56px;
             border-radius: 50%;
-            margin: 0 auto 25px;
             overflow: hidden;
-            border: 5px solid white;
-            box-shadow: var(--shadow);
+            border: 3px solid rgba(255, 255, 255, 0.3);
         }
         
-        .member-photo img {
+        .author-avatar img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+        
+        .author-info h4 {
+            color: white;
+            margin-bottom: 0.25rem;
+        }
+        
+        .author-info p {
+            color: rgba(255, 255, 255, 0.8);
+            margin: 0;
+            font-size: 0.875rem;
+        }
+        
+        /* ===== TEAM SECTION ===== */
+        .team {
+            padding: 6rem 0;
+            background: var(--light);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .team-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid var(--gray-light);
             transition: var(--transition);
         }
         
-        .team-member:hover .member-photo img {
-            transform: scale(1.1);
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: transparent;
         }
         
-        .member-social {
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 1.5rem;
+            border: 4px solid var(--gray-light);
+            transition: var(--transition);
+        }
+        
+        .team-card:hover .team-avatar {
+            border-color: var(--primary);
+        }
+        
+        .team-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .team-card h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .team-card .position {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .team-social {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
         }
         
-        .member-social a {
-            width: 40px;
-            height: 40px;
+        .team-social a {
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
-            background: var(--light);
-            color: var(--primary);
+            background: var(--gray-light);
+            color: var(--gray-dark);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -523,397 +658,320 @@
             transition: var(--transition);
         }
         
-        .member-social a:hover {
+        .team-social a:hover {
             background: var(--primary);
             color: white;
-            transform: translateY(-5px);
+            transform: translateY(-3px);
         }
         
-        /* ===== PREMIUM CONTACT SECTION ===== */
-        .contact-section {
-            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 100%);
+        /* ===== CTA SECTION ===== */
+        .cta {
+            padding: 6rem 0;
+            background: var(--dark);
             color: white;
         }
         
-        .contact-section h2,
-        .contact-section p {
-            color: white;
+        .cta-container {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
-        .contact-section h2:after {
-            background: linear-gradient(90deg, var(--secondary), var(--accent));
+        .cta h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta .lead {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2.5rem;
+        }
+        
+        /* ===== CONTACT SECTION ===== */
+        .contact {
+            padding: 6rem 0;
+            background: white;
         }
         
         .contact-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 4rem;
         }
         
-        .contact-info h3 {
-            color: white;
-            margin-top: 30px;
+        .contact-info h2 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-details {
+            margin-top: 2rem;
+        }
+        
+        .contact-item {
             display: flex;
-            align-items: center;
-            gap: 15px;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
         }
         
-        .contact-info i {
-            width: 50px;
-            height: 50px;
-            background: rgba(251, 188, 4, 0.15);
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(37, 99, 235, 0.1);
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--secondary);
-            font-size: 1.3rem;
+            color: var(--primary);
+            font-size: 1.25rem;
         }
         
-        .contact-form input,
-        .contact-form textarea,
-        .contact-form select {
+        .contact-item h4 {
+            margin-bottom: 0.25rem;
+        }
+        
+        .contact-form {
+            background: var(--light);
+            padding: 3rem;
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--gray-light);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .form-control {
             width: 100%;
-            padding: 18px 25px;
-            margin-bottom: 25px;
-            border: none;
-            border-radius: var(--border-radius);
-            background: rgba(255, 255, 255, 0.08);
-            color: white;
+            padding: 0.875rem 1rem;
             font-size: 1rem;
+            border: 1px solid var(--gray-light);
+            border-radius: var(--radius);
             transition: var(--transition);
+            background: white;
         }
         
-        .contact-form input:focus,
-        .contact-form textarea:focus,
-        .contact-form select:focus {
+        .form-control:focus {
             outline: none;
-            background: rgba(255, 255, 255, 0.12);
-            box-shadow: 0 0 0 3px rgba(251, 188, 4, 0.2);
-        }
-        
-        .contact-form input::placeholder,
-        .contact-form textarea::placeholder {
-            color: rgba(255, 255, 255, 0.6);
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
         }
         
         /* ===== PREMIUM FOOTER ===== */
         footer {
             background: var(--dark);
             color: white;
-            padding: 80px 0 30px;
+            padding: 4rem 0 2rem;
         }
         
         .footer-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 50px;
-            margin-bottom: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
         }
         
-        .footer-logo h3 {
+        .footer-logo .brand {
             color: white;
-            font-size: 2.2rem;
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
         }
         
-        .footer-logo span {
-            color: var(--secondary);
+        .footer-logo .tagline {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .footer-logo p {
+            color: rgba(255, 255, 255, 0.7);
+            margin: 1rem 0;
+            font-size: 0.875rem;
         }
         
         .footer-links h4 {
             color: white;
-            margin-bottom: 25px;
-            font-size: 1.3rem;
-            position: relative;
-            padding-bottom: 15px;
-        }
-        
-        .footer-links h4:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background: var(--secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
         }
         
         .footer-links ul {
             list-style: none;
         }
         
-        .footer-links ul li {
-            margin-bottom: 15px;
+        .footer-links li {
+            margin-bottom: 0.75rem;
         }
         
-        .footer-links ul li a {
+        .footer-links a {
             color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
+            font-size: 0.875rem;
             transition: var(--transition);
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 0.5rem;
         }
         
-        .footer-links ul li a:hover {
+        .footer-links a:hover {
             color: var(--secondary);
-            transform: translateX(5px);
+            transform: translateX(4px);
         }
         
-        .footer-links ul li a i {
-            color: var(--secondary);
-            width: 20px;
-        }
-        
-        .social-icons {
+        .social-links {
             display: flex;
-            gap: 15px;
-            margin-top: 25px;
+            gap: 1rem;
+            margin-top: 1.5rem;
         }
         
-        .social-icons a {
-            width: 45px;
-            height: 45px;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
             color: white;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            font-size: 1.2rem;
             transition: var(--transition);
         }
         
-        .social-icons a:hover {
+        .social-links a:hover {
             background: var(--primary);
-            transform: translateY(-5px);
+            transform: translateY(-3px);
         }
         
         .copyright {
             text-align: center;
-            padding-top: 30px;
+            padding-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: rgba(255, 255, 255, 0.5);
-            font-size: 0.95rem;
-        }
-        
-        /* ===== PREMIUM STATS SECTION ===== */
-        .stats-section {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            color: white;
-            padding: 80px 0;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            text-align: center;
-        }
-        
-        .stat-item {
-            padding: 30px;
-        }
-        
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: white;
-        }
-        
-        .stat-label {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.9);
-        }
-        
-        /* ===== PREMIUM TESTIMONIALS ===== */
-        .testimonials-section {
-            background: var(--light);
-        }
-        
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-        }
-        
-        .testimonial-card {
-            background: white;
-            border-radius: var(--border-radius);
-            padding: 40px;
-            box-shadow: var(--shadow);
-            position: relative;
-        }
-        
-        .testimonial-card:before {
-            content: '"';
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            font-size: 5rem;
-            color: rgba(26, 115, 232, 0.1);
-            font-family: serif;
-        }
-        
-        .testimonial-content {
-            margin-bottom: 25px;
-            font-style: italic;
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .author-img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            overflow: hidden;
-        }
-        
-        .author-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            font-size: 0.875rem;
         }
         
         /* ===== RESPONSIVE DESIGN ===== */
-        @media (max-width: 1200px) {
+        @media (max-width: 1024px) {
             h1 {
-                font-size: 3.2rem;
-            }
-            
-            h2 {
-                font-size: 2.4rem;
-            }
-            
-            .hero h1 {
-                font-size: 3.5rem;
-            }
-        }
-        
-        @media (max-width: 992px) {
-            h1 {
-                font-size: 2.8rem;
-            }
-            
-            h2 {
-                font-size: 2rem;
-            }
-            
-            .hero h1 {
                 font-size: 3rem;
             }
             
-            .hero-btns {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 100%;
-                max-width: 300px;
+            h2 {
+                font-size: 2.25rem;
             }
         }
         
         @media (max-width: 768px) {
             .mobile-menu-btn {
                 display: flex;
-                align-items: center;
-                justify-content: center;
             }
             
-            nav {
+            .nav-desktop {
+                display: none;
+            }
+            
+            .mobile-nav {
                 position: fixed;
-                top: 86px;
+                top: 72px;
                 left: 0;
                 width: 100%;
                 background: white;
-                box-shadow: var(--shadow-hover);
-                padding: 30px;
+                padding: 2rem;
+                border-top: 1px solid var(--gray-light);
                 transform: translateY(-100%);
                 opacity: 0;
                 visibility: hidden;
                 transition: var(--transition);
-                border-radius: 0 0 var(--border-radius) var(--border-radius);
                 z-index: 999;
+                box-shadow: var(--shadow-lg);
             }
             
-            nav.active {
+            .mobile-nav.active {
                 transform: translateY(0);
                 opacity: 1;
                 visibility: visible;
             }
             
-            nav ul {
-                flex-direction: column;
-                gap: 20px;
+            .mobile-nav a {
+                display: block;
+                padding: 1rem 0;
+                text-decoration: none;
+                color: var(--dark);
+                font-weight: 500;
+                font-size: 1rem;
+                border-bottom: 1px solid var(--gray-light);
+            }
+            
+            .mobile-nav a:last-child {
+                border-bottom: none;
+            }
+            
+            .mobile-nav a.active {
+                color: var(--primary);
+                font-weight: 600;
             }
             
             h1 {
-                font-size: 2.4rem;
-            }
-            
-            h2 {
-                font-size: 1.8rem;
-            }
-            
-            .hero {
-                padding: 150px 0 80px;
-                background-attachment: scroll;
-            }
-            
-            .hero h1 {
                 font-size: 2.5rem;
             }
             
-            .hero p {
-                font-size: 1.1rem;
+            h2 {
+                font-size: 2rem;
             }
             
-            section {
-                padding: 80px 0;
+            .hero {
+                padding: 8rem 0 4rem;
+            }
+            
+            .btn-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .btn {
+                width: 100%;
             }
         }
         
-        @media (max-width: 576px) {
+        @media (max-width: 640px) {
             .container {
-                padding: 0 15px;
+                padding: 0 1rem;
             }
             
             h1 {
-                font-size: 2rem;
+                font-size: 2.25rem;
             }
             
             h2 {
-                font-size: 1.6rem;
+                font-size: 1.75rem;
             }
             
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .service-card,
-            .portfolio-item,
-            .team-member {
-                padding: 30px 20px;
-            }
-            
+            .services-grid,
             .portfolio-grid,
-            .services-grid {
+            .testimonials-grid,
+            .team-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form {
+                padding: 2rem;
             }
         }
         
         /* ===== ANIMATIONS ===== */
-        @keyframes fadeInUp {
+        @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(20px);
             }
             to {
                 opacity: 1;
@@ -921,32 +979,32 @@
             }
         }
         
-        .fade-in {
-            animation: fadeInUp 0.8s ease forwards;
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
         }
         
-        .delay-1 {
+        .animate-delay-1 {
+            animation-delay: 0.1s;
+        }
+        
+        .animate-delay-2 {
             animation-delay: 0.2s;
         }
         
-        .delay-2 {
-            animation-delay: 0.4s;
-        }
-        
-        .delay-3 {
-            animation-delay: 0.6s;
+        .animate-delay-3 {
+            animation-delay: 0.3s;
         }
     </style>
 </head>
 <body>
     <!-- Premium Header -->
-    <header id="mainHeader">
+    <header>
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <div class="logo-icon">AP</div>
+                <div class="logo-mark">AP</div>
                 <div class="logo-text">
-                    <h1>Ad Pollex</h1>
-                    <span>Digital Marketing Excellence</span>
+                    <div class="brand">Ad Pollex</div>
+                    <div class="tagline">Digital Marketing Excellence</div>
                 </div>
             </a>
             
@@ -954,169 +1012,185 @@
                 <i class="fas fa-bars"></i>
             </button>
             
-            <nav id="mainNav">
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="team.html">Our Team</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+            <nav class="nav-desktop">
+                <a href="index.html" class="active">Home</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="team.html">Our Team</a>
+                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="btn-primary" style="padding: 0.5rem 1.5rem;">Get Started</a>
             </nav>
         </div>
+        
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="index.html" class="active">Home</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="team.html">Our Team</a>
+            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="btn-primary" style="margin-top: 1rem;">Get Started</a>
+        </nav>
     </header>
 
-    <!-- Premium Hero Section -->
+    <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <div class="fade-in">
-                <h1>Transform Your Digital Presence</h1>
-                <p>Ad Pollex is a premium full-service advertising and digital marketing agency based in Dar es Salaam, Tanzania. We craft exceptional marketing strategies that drive growth, engagement, and measurable results for businesses across industries.</p>
-                <div class="hero-btns">
-                    <a href="contact.html" class="btn">Start Your Project <i class="fas fa-arrow-right"></i></a>
-                    <a href="portfolio.html" class="btn btn-secondary">View Our Work <i class="fas fa-eye"></i></a>
-                </div>
+        <div class="container hero-container animate-fade-in">
+            <h1>Transform Your Digital Presence</h1>
+            <p class="lead">Ad Pollex is a premium full-service advertising and digital marketing agency based in Dar es Salaam, Tanzania. We craft exceptional marketing strategies that drive growth, engagement, and measurable results for businesses across industries.</p>
+            <div class="btn-group">
+                <a href="contact.html" class="btn btn-primary">Start Your Project <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i></a>
+                <a href="portfolio.html" class="btn btn-secondary">View Our Work <i class="fas fa-eye" style="margin-left: 0.5rem;"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- Premium Stats Section -->
-    <section class="stats-section">
+    <!-- Stats Section -->
+    <section class="stats">
         <div class="container">
             <div class="stats-grid">
-                <div class="stat-item fade-in">
-                    <div class="stat-number" data-count="150">0</div>
+                <div class="stat-card animate-fade-in">
+                    <div class="stat-number" data-count="150">150+</div>
                     <div class="stat-label">Successful Projects</div>
                 </div>
-                <div class="stat-item fade-in delay-1">
-                    <div class="stat-number" data-count="98">0</div>
+                <div class="stat-card animate-fade-in animate-delay-1">
+                    <div class="stat-number" data-count="98">98%</div>
                     <div class="stat-label">Client Satisfaction</div>
                 </div>
-                <div class="stat-item fade-in delay-2">
-                    <div class="stat-number" data-count="7">0</div>
+                <div class="stat-card animate-fade-in animate-delay-2">
+                    <div class="stat-number" data-count="7">7+</div>
                     <div class="stat-label">Years Experience</div>
                 </div>
-                <div class="stat-item fade-in delay-3">
-                    <div class="stat-number" data-count="40">0</div>
+                <div class="stat-card animate-fade-in animate-delay-3">
+                    <div class="stat-number" data-count="40">40+</div>
                     <div class="stat-label">Team Members</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Premium Services Preview -->
-    <section id="services">
+    <!-- Services Section -->
+    <section class="services">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header animate-fade-in">
                 <h2>Our Premium Services</h2>
                 <p class="section-subtitle">We offer comprehensive digital marketing solutions tailored to drive your business growth and maximize ROI.</p>
             </div>
+            
             <div class="services-grid">
-                <div class="service-card fade-in">
+                <div class="service-card animate-fade-in">
                     <div class="service-icon">
                         <i class="fas fa-bullhorn"></i>
                     </div>
                     <h3>Digital Marketing</h3>
                     <p>Strategic online marketing campaigns to increase visibility, generate qualified leads, and drive conversions with measurable ROI.</p>
-                    <a href="services.html#digital-marketing" class="btn-outline">Learn More</a>
+                    <a href="services.html#digital-marketing" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="service-card fade-in delay-1">
+                
+                <div class="service-card animate-fade-in animate-delay-1">
                     <div class="service-icon">
                         <i class="fas fa-users"></i>
                     </div>
                     <h3>Social Media Management</h3>
                     <p>Complete social media strategy, content creation, community management, and performance analytics across all platforms.</p>
-                    <a href="services.html#social-media" class="btn-outline">Learn More</a>
+                    <a href="services.html#social-media" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="service-card fade-in delay-2">
+                
+                <div class="service-card animate-fade-in animate-delay-2">
                     <div class="service-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3>SEO Optimization</h3>
                     <p>Comprehensive search engine optimization to improve rankings, drive organic traffic, and increase qualified leads.</p>
-                    <a href="services.html#seo" class="btn-outline">Learn More</a>
+                    <a href="services.html#seo" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-            <div class="text-center" style="margin-top: 50px;">
-                <a href="services.html" class="btn">View All Services <i class="fas fa-arrow-right"></i></a>
+            
+            <div class="text-center animate-fade-in animate-delay-3" style="margin-top: 3rem;">
+                <a href="services.html" class="btn btn-secondary">View All Services <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- Premium Portfolio Preview -->
-    <section class="portfolio-section">
+    <!-- Portfolio Section -->
+    <section class="portfolio">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header animate-fade-in">
                 <h2>Featured Projects</h2>
                 <p class="section-subtitle">Explore our portfolio of successful digital marketing campaigns and creative solutions.</p>
             </div>
+            
             <div class="portfolio-grid">
-                <div class="portfolio-item fade-in">
-                    <div class="portfolio-img">
+                <div class="portfolio-card animate-fade-in">
+                    <div class="portfolio-image">
                         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="E-commerce Project">
                     </div>
                     <div class="portfolio-content">
                         <h3>E-commerce Brand Launch</h3>
                         <p>Complete digital strategy for a fashion e-commerce startup, resulting in 200% growth in online sales within 6 months.</p>
                         <div class="portfolio-tags">
-                            <span class="portfolio-tag">Digital Marketing</span>
-                            <span class="portfolio-tag">Brand Strategy</span>
+                            <span class="tag">Digital Marketing</span>
+                            <span class="tag">Brand Strategy</span>
                         </div>
-                        <a href="portfolio.html#project1" class="btn-outline">View Case Study</a>
+                        <a href="portfolio.html#project1" class="btn btn-secondary" style="padding: 0.5rem 1.5rem;">View Case Study</a>
                     </div>
                 </div>
-                <div class="portfolio-item fade-in delay-1">
-                    <div class="portfolio-img">
+                
+                <div class="portfolio-card animate-fade-in animate-delay-1">
+                    <div class="portfolio-image">
                         <img src="https://images.unsplash.com/photo-1551836026-d5c2c3af8f81?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Social Media Campaign">
                     </div>
                     <div class="portfolio-content">
-                        <h3>Social Media Revamp</h3>
+                        <h3>Restaurant Social Media Revamp</h3>
                         <p>Transformed a local restaurant's social media presence, increasing engagement by 300% and foot traffic by 40%.</p>
                         <div class="portfolio-tags">
-                            <span class="portfolio-tag">Social Media</span>
-                            <span class="portfolio-tag">Content Creation</span>
+                            <span class="tag">Social Media</span>
+                            <span class="tag">Content Creation</span>
                         </div>
-                        <a href="portfolio.html#project2" class="btn-outline">View Case Study</a>
+                        <a href="portfolio.html#project2" class="btn btn-secondary" style="padding: 0.5rem 1.5rem;">View Case Study</a>
                     </div>
                 </div>
             </div>
-            <div class="text-center" style="margin-top: 50px;">
-                <a href="portfolio.html" class="btn">View Full Portfolio <i class="fas fa-arrow-right"></i></a>
+            
+            <div class="text-center animate-fade-in animate-delay-2" style="margin-top: 3rem;">
+                <a href="portfolio.html" class="btn btn-primary">View Full Portfolio <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- Premium Testimonials -->
-    <section class="testimonials-section">
+    <!-- Testimonials Section -->
+    <section class="testimonials">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header animate-fade-in">
                 <h2>Client Testimonials</h2>
                 <p class="section-subtitle">See what our clients have to say about working with Ad Pollex.</p>
             </div>
+            
             <div class="testimonials-grid">
-                <div class="testimonial-card fade-in">
-                    <div class="testimonial-content">
-                        <p>"Ad Pollex transformed our online presence completely. Our website traffic increased by 250% and lead generation improved significantly. Their team is professional, creative, and results-driven."</p>
+                <div class="testimonial-card animate-fade-in">
+                    <div class="testimonial-text">
+                        "Ad Pollex transformed our online presence completely. Our website traffic increased by 250% and lead generation improved significantly. Their team is professional, creative, and results-driven."
                     </div>
                     <div class="testimonial-author">
-                        <div class="author-img">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client">
+                        <div class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="James Mwinyi">
                         </div>
-                        <div>
+                        <div class="author-info">
                             <h4>James Mwinyi</h4>
                             <p>CEO, Tech Solutions Ltd.</p>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card fade-in delay-1">
-                    <div class="testimonial-content">
-                        <p>"The social media strategy developed by Ad Pollex helped us connect with our target audience in ways we never imagined. Engagement rates skyrocketed and our brand awareness is at an all-time high."</p>
+                
+                <div class="testimonial-card animate-fade-in animate-delay-1">
+                    <div class="testimonial-text">
+                        "The social media strategy developed by Ad Pollex helped us connect with our target audience in ways we never imagined. Engagement rates skyrocketed and our brand awareness is at an all-time high."
                     </div>
                     <div class="testimonial-author">
-                        <div class="author-img">
-                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client">
+                        <div class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sarah Juma">
                         </div>
-                        <div>
+                        <div class="author-info">
                             <h4>Sarah Juma</h4>
                             <p>Marketing Director, Fashion House</p>
                         </div>
@@ -1126,90 +1200,145 @@
         </div>
     </section>
 
-    <!-- Premium Team Preview -->
-    <section id="team-preview">
+    <!-- Team Section -->
+    <section class="team">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header animate-fade-in">
                 <h2>Meet Our Leadership</h2>
                 <p class="section-subtitle">Our team of experts combines creativity with strategic thinking to deliver exceptional results.</p>
             </div>
+            
             <div class="team-grid">
-                <div class="team-member fade-in">
-                    <div class="member-photo">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="CEO">
+                <div class="team-card animate-fade-in">
+                    <div class="team-avatar">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="James Mwinyi">
                     </div>
                     <h3>James Mwinyi</h3>
-                    <p class="position">CEO & Founder</p>
+                    <div class="position">CEO & Founder</div>
                     <p>With over 10 years in digital marketing, James founded Ad Pollex to help Tanzanian businesses thrive online.</p>
-                    <div class="member-social">
+                    <div class="team-social">
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
-                <div class="team-member fade-in delay-1">
-                    <div class="member-photo">
-                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Marketing Director">
+                
+                <div class="team-card animate-fade-in animate-delay-1">
+                    <div class="team-avatar">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Sarah Juma">
                     </div>
                     <h3>Sarah Juma</h3>
-                    <p class="position">Marketing Director</p>
+                    <div class="position">Marketing Director</div>
                     <p>Sarah leads our marketing strategies with expertise in brand development and customer engagement.</p>
-                    <div class="member-social">
+                    <div class="team-social">
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="text-center" style="margin-top: 50px;">
-                <a href="team.html" class="btn">Meet Full Team <i class="fas fa-arrow-right"></i></a>
+            
+            <div class="text-center animate-fade-in animate-delay-2" style="margin-top: 3rem;">
+                <a href="team.html" class="btn btn-primary">Meet Full Team <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- Premium CTA Section -->
-    <section class="contact-section">
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container cta-container animate-fade-in">
+            <h2>Ready to Grow Your Business?</h2>
+            <p class="lead">Contact us today for a free consultation and let's discuss how we can help you achieve your digital marketing goals.</p>
+            <a href="contact.html" class="btn btn-accent">Get Started Today <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i></a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
         <div class="container">
             <div class="contact-container">
-                <div class="contact-info fade-in">
-                    <h2>Ready to Grow Your Business?</h2>
-                    <p>Contact us today for a free consultation and let's discuss how we can help you achieve your digital marketing goals.</p>
-                    <h3><i class="fas fa-map-marker-alt"></i> Our Location</h3>
-                    <p>Mwinyijuma Rd, Kinondoni, Dar es Salaam, Tanzania</p>
-                    <h3><i class="fas fa-phone"></i> Phone</h3>
-                    <p>+255 684 320 325</p>
-                    <h3><i class="fas fa-envelope"></i> Email</h3>
-                    <p>adpollex@gmail.com</p>
+                <div class="contact-info animate-fade-in">
+                    <h2>Get In Touch</h2>
+                    <p>We're here to help your business succeed in the digital world. Contact us for a free consultation.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Our Location</h4>
+                                <p>Mwinyijuma Rd, Kinondoni, Dar es Salaam, Tanzania</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+255 684 320 325</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>adpollex@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-form fade-in delay-1">
+                
+                <div class="contact-form animate-fade-in animate-delay-1">
                     <form id="contactForm">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <input type="text" placeholder="Company Name">
-                        <select required>
-                            <option value="">Select Service</option>
-                            <option value="digital-marketing">Digital Marketing</option>
-                            <option value="social-media">Social Media Management</option>
-                            <option value="seo">SEO Optimization</option>
-                            <option value="branding">Brand Strategy</option>
-                            <option value="web-design">Website Design</option>
-                        </select>
-                        <textarea rows="5" placeholder="Your Message" required></textarea>
-                        <button type="submit" class="btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" class="form-control" required>
+                                <option value="">Select a service</option>
+                                <option value="digital-marketing">Digital Marketing</option>
+                                <option value="social-media">Social Media Management</option>
+                                <option value="seo">SEO Optimization</option>
+                                <option value="branding">Brand Strategy</option>
+                                <option value="web-design">Website Design</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" rows="4" placeholder="Tell us about your project" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message <i class="fas fa-paper-plane" style="margin-left: 0.5rem;"></i></button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Premium Footer -->
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-container">
                 <div class="footer-logo">
-                    <h3>Ad <span>Pollex</span></h3>
+                    <div class="brand">Ad Pollex</div>
+                    <div class="tagline">Digital Marketing Excellence</div>
                     <p>Full-service advertising and digital marketing agency helping businesses grow their online presence since 2016.</p>
-                    <div class="social-icons">
+                    <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -1217,6 +1346,7 @@
                         <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
+                
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
@@ -1227,6 +1357,7 @@
                         <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-links">
                     <h4>Our Services</h4>
                     <ul>
@@ -1237,6 +1368,7 @@
                         <li><a href="services.html#web-design"><i class="fas fa-chevron-right"></i> Website Design</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-links">
                     <h4>Contact Info</h4>
                     <ul>
@@ -1247,63 +1379,48 @@
                     </ul>
                 </div>
             </div>
+            
             <div class="copyright">
-                <p>&copy; 2023 Ad Pollex - Advertising & Digital Marketing Company. All Rights Reserved. | Designed with <i class="fas fa-heart" style="color: #ff4757;"></i> in Dar es Salaam</p>
+                <p>&copy; 2023 Ad Pollex - Advertising & Digital Marketing Company. All Rights Reserved. | Designed with <i class="fas fa-heart" style="color: #EF4444;"></i> in Dar es Salaam</p>
             </div>
         </div>
     </footer>
 
-    <!-- Premium JavaScript -->
+    <!-- JavaScript -->
     <script>
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mainNav = document.getElementById('mainNav');
-        const mainHeader = document.getElementById('mainHeader');
+        const mobileNav = document.getElementById('mobileNav');
         
         mobileMenuBtn.addEventListener('click', () => {
-            mainNav.classList.toggle('active');
-            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+            mobileNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mobileNav.classList.contains('active') 
                 ? '<i class="fas fa-times"></i>' 
                 : '<i class="fas fa-bars"></i>';
         });
         
         // Close mobile menu when clicking a link
-        document.querySelectorAll('#mainNav a').forEach(link => {
+        mobileNav.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                mainNav.classList.remove('active');
+                mobileNav.classList.remove('active');
                 mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
             });
         });
         
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                mainHeader.classList.add('scrolled');
-            } else {
-                mainHeader.classList.remove('scrolled');
-            }
-        });
-        
-        // Animated counter for stats
+        // Animated counter
         function animateCounter() {
             const counters = document.querySelectorAll('.stat-number');
-            const speed = 200;
-            
             counters.forEach(counter => {
-                const updateCount = () => {
-                    const target = parseInt(counter.getAttribute('data-count'));
-                    const count = parseInt(counter.innerText);
-                    const increment = Math.ceil(target / speed);
-                    
-                    if (count < target) {
-                        counter.innerText = count + increment;
-                        setTimeout(updateCount, 10);
-                    } else {
-                        counter.innerText = target + '+';
-                    }
-                };
+                const target = parseInt(counter.getAttribute('data-count'));
+                const count = parseInt(counter.innerText.replace('+', '').replace('%', ''));
+                const increment = target / 200;
                 
-                updateCount();
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment) + (counter.innerText.includes('+') ? '+' : counter.innerText.includes('%') ? '%' : '');
+                    setTimeout(animateCounter, 10);
+                } else {
+                    counter.innerText = target + (counter.innerText.includes('+') ? '+' : counter.innerText.includes('%') ? '%' : '');
+                }
             });
         }
         
@@ -1316,16 +1433,17 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    if (entry.target.classList.contains('stats-section')) {
+                    if (entry.target.classList.contains('stats')) {
                         animateCounter();
                     }
-                    entry.target.classList.add('fade-in');
+                    entry.target.classList.add('animate-fade-in');
                 }
             });
         }, observerOptions);
         
         // Observe elements
-        document.querySelectorAll('.fade-in').forEach(el => {
+        document.querySelectorAll('.animate-fade-in').forEach(el => {
+            el.style.opacity = '0';
             observer.observe(el);
         });
         
@@ -1333,17 +1451,24 @@
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form data
-            const formData = new FormData(this);
-            const name = this.querySelector('input[type="text"]').value;
+            const name = this.querySelector('#name').value;
             
             // Show success message
-            Swal.fire({
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            });
+            
+            Toast.fire({
                 icon: 'success',
-                title: 'Thank You!',
-                text: `Thanks ${name}, we've received your message and will contact you within 24 hours.`,
-                confirmButtonColor: 'var(--primary)',
-                confirmButtonText: 'Great!'
+                title: `Thank you ${name}! We'll contact you soon.`
             });
             
             // Reset form
@@ -1352,36 +1477,21 @@
         
         // Initialize animations on load
         document.addEventListener('DOMContentLoaded', () => {
-            // Add animation classes
-            document.querySelectorAll('.fade-in').forEach((el, index) => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-            });
+            // Load SweetAlert
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/sweetalert2@11';
+            document.head.appendChild(script);
             
-            // Smooth scroll for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    if (this.getAttribute('href') === '#') return;
-                    
-                    const targetId = this.getAttribute('href');
-                    if (targetId.startsWith('#')) {
-                        e.preventDefault();
-                        const targetElement = document.querySelector(targetId);
-                        if (targetElement) {
-                            window.scrollTo({
-                                top: targetElement.offsetTop - 100,
-                                behavior: 'smooth'
-                            });
-                        }
-                    }
-                });
+            // Set active nav link
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('nav a').forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
             });
         });
-        
-        // Add SweetAlert for better alerts
-        const script = document.createElement('script');
-        script.src = 'https://cdn.jsdelivr.net/npm/sweetalert2@11';
-        document.head.appendChild(script);
     </script>
 </body>
 </html>
