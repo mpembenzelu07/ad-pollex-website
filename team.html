@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Team | Ad Pollex - Digital Marketing Experts in Tanzania</title>
+    <title>Our Team | Ad Pollex - Marketing Experts & Strategists</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* ===== ULTRA PREMIUM DESIGN SYSTEM ===== */
         :root {
             --primary: #000000;
             --primary-light: #1a1a1a;
@@ -28,7 +27,6 @@
             --radius-sm: 8px;
             --radius-md: 16px;
             --radius-lg: 24px;
-            --radius-xl: 40px;
         }
 
         * {
@@ -37,158 +35,43 @@
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
-
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.7;
+            font-family: 'Inter', sans-serif;
             color: var(--dark-gray);
             background: var(--white);
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        /* ===== TYPOGRAPHY ===== */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
-        }
-
-        h1 {
-            font-size: 4.5rem;
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        h2 {
-            font-size: 3.5rem;
-            color: var(--primary);
-        }
-
-        h3 {
-            font-size: 2.5rem;
-            color: var(--primary);
-        }
-
-        h4 {
-            font-size: 1.5rem;
-            color: var(--primary);
-        }
-
-        .display {
-            font-size: 5.5rem;
-            font-weight: 900;
-            line-height: 1;
-            letter-spacing: -0.04em;
-        }
-
-        p {
-            font-size: 1.125rem;
-            line-height: 1.8;
-            color: var(--gray);
-            margin-bottom: 1.5rem;
-        }
-
-        .lead {
-            font-size: 1.375rem;
-            color: var(--primary-light);
             line-height: 1.6;
         }
 
-        .eyebrow {
-            font-size: 0.875rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--accent);
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            line-height: 1.1;
             margin-bottom: 1rem;
         }
 
+        h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
         .container {
-            width: 100%;
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
         }
 
-        section {
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* ===== BUTTONS ===== */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1.25rem 2.5rem;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: var(--radius-xl);
-            transition: var(--transition);
-            cursor: pointer;
-            border: none;
-            position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(10px);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .btn-primary {
-            background: var(--accent);
-            color: var(--white);
-            box-shadow: 0 10px 30px rgba(255, 59, 48, 0.3);
-        }
-
-        .btn-primary:hover {
-            background: var(--accent-dark);
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 20px 40px rgba(255, 59, 48, 0.4);
-        }
-
-        .btn-secondary {
-            background: rgba(0, 0, 0, 0.8);
-            color: var(--white);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(0, 0, 0, 0.9);
-            transform: translateY(-5px);
-            border-color: var(--accent);
-        }
-
-        /* ===== HEADER ===== */
+        /* Header */
         header {
             position: fixed;
             top: 0;
-            left: 0;
             width: 100%;
-            z-index: 1000;
-            padding: 1.5rem 0;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
+            padding: 1.5rem 0;
+            z-index: 1000;
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
-        }
-
-        header.scrolled {
-            padding: 1rem 0;
-            background: rgba(255, 255, 255, 0.98);
-            box-shadow: var(--shadow-sm);
         }
 
         .header-container {
@@ -216,39 +99,6 @@
             font-family: 'Space Grotesk', sans-serif;
             font-weight: 900;
             font-size: 1.5rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .logo-symbol::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-        }
-
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .logo-main {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 800;
-            font-size: 1.5rem;
-            color: var(--primary);
-            letter-spacing: -0.02em;
-        }
-
-        .logo-sub {
-            font-size: 0.75rem;
-            color: var(--accent);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
         }
 
         .nav-desktop {
@@ -261,22 +111,9 @@
             text-decoration: none;
             color: var(--primary);
             font-weight: 500;
-            font-size: 0.9375rem;
-            position: relative;
-            padding: 0.5rem 0;
-            transition: var(--transition);
             text-transform: uppercase;
+            font-size: 0.875rem;
             letter-spacing: 0.05em;
-        }
-
-        .nav-desktop a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent);
             transition: var(--transition);
         }
 
@@ -285,287 +122,104 @@
             color: var(--accent);
         }
 
-        .nav-desktop a:hover::after,
-        .nav-desktop a.active::after {
-            width: 100%;
+        .language-switcher {
+            display: flex;
+            gap: 0.5rem;
+            margin-left: 2rem;
         }
 
-        .mobile-menu-btn {
-            display: none;
-            width: 48px;
-            height: 48px;
-            background: var(--primary);
-            border: none;
-            border-radius: 12px;
+        .lang-btn {
+            background: transparent;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            color: var(--primary);
+            padding: 0.5rem 1.25rem;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            font-size: 0.875rem;
+        }
+
+        .lang-btn:hover, .lang-btn.active {
+            background: var(--accent);
             color: var(--white);
-            font-size: 1.25rem;
+            border-color: var(--accent);
+        }
+
+        /* Hero */
+        .team-hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: var(--white);
+            padding: 8rem 0 4rem;
+        }
+
+        .team-hero h1 {
+            background: linear-gradient(135deg, var(--white), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 6rem 0;
+        }
+
+        .team-categories {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .team-category-btn {
+            padding: 0.75rem 2rem;
+            background: var(--off-white);
+            border: none;
+            border-radius: var(--radius-md);
+            font-weight: 600;
             cursor: pointer;
             transition: var(--transition);
         }
 
-        /* ===== TEAM HERO ===== */
-        .team-hero {
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            color: var(--white);
-            padding: 8rem 0 4rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .team-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(255, 59, 48, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(0, 122, 255, 0.1) 0%, transparent 50%);
-        }
-
-        .team-hero-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.1;
-            z-index: 1;
-        }
-
-        .team-hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-        }
-
-        .team-hero h1 {
-            font-size: 4rem;
-            margin-bottom: 2rem;
-            background: linear-gradient(135deg, var(--white), var(--gold));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .team-hero .lead {
-            font-size: 1.5rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 3rem;
-        }
-
-        .team-stats {
-            display: flex;
-            gap: 4rem;
-            margin-top: 4rem;
-            padding-top: 3rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .team-stat-item {
-            text-align: center;
-        }
-
-        .team-stat-number {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--white);
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .team-stat-label {
-            font-size: 0.875rem;
-            color: rgba(255, 255, 255, 0.7);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        /* ===== LEADERSHIP SECTION ===== */
-        .leadership {
-            padding: 8rem 0;
-            background: var(--white);
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 6rem;
-        }
-
-        .section-header h2 {
-            margin-bottom: 1rem;
-        }
-
-        .section-subtitle {
-            font-size: 1.125rem;
-            color: var(--gray);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .leadership-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 4rem;
-            margin-bottom: 6rem;
-        }
-
-        .leader-card {
-            background: var(--off-white);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            position: relative;
-            transition: var(--transition);
-        }
-
-        .leader-card:hover {
-            transform: translateY(-20px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .leader-image {
-            height: 400px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .leader-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .leader-card:hover .leader-image img {
-            transform: scale(1.1);
-        }
-
-        .leader-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 2rem;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-            color: var(--white);
-            transform: translateY(20px);
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .leader-card:hover .leader-overlay {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        .leader-social {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .leader-social a {
-            width: 40px;
-            height: 40px;
-            background: var(--white);
-            color: var(--primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .leader-social a:hover {
+        .team-category-btn:hover,
+        .team-category-btn.active {
             background: var(--accent);
             color: var(--white);
-            transform: translateY(-3px);
-        }
-
-        .leader-content {
-            padding: 3rem;
-        }
-
-        .leader-content h3 {
-            margin-bottom: 0.5rem;
-        }
-
-        .leader-role {
-            color: var(--accent);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            font-size: 0.875rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .leader-bio {
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-
-        /* ===== TEAM GRID SECTION ===== */
-        .team-grid-section {
-            padding: 8rem 0;
-            background: var(--off-white);
         }
 
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 3rem;
         }
 
         .team-member-card {
             background: var(--white);
             border-radius: var(--radius-lg);
-            padding: 3rem;
+            padding: 2.5rem;
             text-align: center;
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: var(--shadow-md);
             transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .team-member-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent), var(--secondary));
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: var(--transition);
-        }
-
-        .team-member-card:hover::before {
-            transform: scaleX(1);
         }
 
         .team-member-card:hover {
-            transform: translateY(-15px);
+            transform: translateY(-10px);
             box-shadow: var(--shadow-lg);
-            border-color: transparent;
         }
 
         .member-avatar {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             overflow: hidden;
-            margin: 0 auto 2rem;
+            margin: 0 auto 1.5rem;
             border: 4px solid var(--white);
             box-shadow: var(--shadow-md);
-            position: relative;
         }
 
         .member-avatar img {
@@ -579,28 +233,31 @@
             transform: scale(1.1);
         }
 
-        .member-social {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 1rem;
-            background: rgba(0, 0, 0, 0.7);
-            display: flex;
-            justify-content: center;
-            gap: 0.75rem;
-            transform: translateY(100%);
-            transition: var(--transition);
+        .member-role {
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
         }
 
-        .team-member-card:hover .member-social {
-            transform: translateY(0);
+        .member-bio {
+            color: var(--gray);
+            margin: 1rem 0;
+        }
+
+        .member-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
         }
 
         .member-social a {
-            width: 36px;
-            height: 36px;
-            background: var(--white);
+            width: 40px;
+            height: 40px;
+            background: var(--off-white);
             color: var(--primary);
             border-radius: 50%;
             display: flex;
@@ -613,252 +270,58 @@
         .member-social a:hover {
             background: var(--accent);
             color: var(--white);
+            transform: translateY(-3px);
         }
 
-        .member-content h3 {
-            margin-bottom: 0.5rem;
+        /* Stats Section */
+        .team-stats {
+            padding: 4rem 0;
+            background: var(--off-white);
+            margin-top: 4rem;
         }
 
-        .member-role {
-            color: var(--accent);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            font-size: 0.875rem;
-            margin-bottom: 1rem;
-        }
-
-        .member-department {
-            color: var(--gray);
-            font-weight: 500;
-            margin-bottom: 1.5rem;
-            font-size: 0.9375rem;
-        }
-
-        .member-expertise {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            justify-content: center;
-            margin-top: 1.5rem;
-        }
-
-        .expertise-tag {
-            background: rgba(255, 59, 48, 0.1);
-            color: var(--accent);
-            padding: 0.25rem 0.75rem;
-            border-radius: 100px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        /* ===== CULTURE SECTION ===== */
-        .culture {
-            padding: 8rem 0;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            color: var(--white);
-        }
-
-        .culture-header {
-            text-align: center;
-            margin-bottom: 6rem;
-        }
-
-        .culture-header h2 {
-            color: var(--white);
-        }
-
-        .culture-header .lead {
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .culture-grid {
+        .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 3rem;
         }
 
-        .culture-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: var(--radius-lg);
-            padding: 3rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            text-align: center;
-            transition: var(--transition);
-        }
-
-        .culture-card:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.15);
-            border-color: var(--accent);
-        }
-
-        .culture-icon {
-            width: 80px;
-            height: 80px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 2rem;
-            font-size: 2rem;
-            color: var(--white);
-        }
-
-        .culture-card h3 {
-            color: var(--white);
-            margin-bottom: 1rem;
-        }
-
-        .culture-card p {
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        /* ===== CAREERS SECTION ===== */
-        .careers {
-            padding: 8rem 0;
-            background: var(--white);
-        }
-
-        .careers-content {
-            max-width: 800px;
-            margin: 0 auto;
+        .stat-item {
             text-align: center;
         }
 
-        .careers-content h2 {
-            margin-bottom: 2rem;
-        }
-
-        .careers-content .lead {
-            margin-bottom: 3rem;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 4rem 0;
-        }
-
-        .benefit-item {
-            text-align: center;
-            padding: 2rem;
-            background: var(--off-white);
-            border-radius: var(--radius-lg);
-        }
-
-        .benefit-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 59, 48, 0.1);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
+        .stat-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
             color: var(--accent);
-            font-size: 1.5rem;
-        }
-
-        .benefit-item h4 {
             margin-bottom: 0.5rem;
         }
 
-        /* ===== CTA SECTION ===== */
-        .team-cta {
-            padding: 8rem 0;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            color: var(--white);
-            text-align: center;
+        .stat-label {
+            color: var(--gray);
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            letter-spacing: 0.05em;
         }
 
-        .team-cta-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .team-cta h2 {
-            color: var(--white);
-            margin-bottom: 2rem;
-        }
-
-        .team-cta .lead {
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 3rem;
-        }
-
-        /* ===== FOOTER ===== */
+        /* Footer */
         footer {
             background: var(--primary);
             color: var(--white);
-            padding: 6rem 0 3rem;
+            padding: 4rem 0 2rem;
         }
 
         .footer-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 4rem;
-            margin-bottom: 4rem;
-        }
-
-        .footer-brand {
-            max-width: 300px;
-        }
-
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            text-decoration: none;
-        }
-
-        .footer-logo .logo-symbol {
-            background: var(--white);
-            color: var(--primary);
-        }
-
-        .footer-logo .logo-main {
-            color: var(--white);
-        }
-
-        .footer-description {
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 2rem;
-        }
-
-        .footer-social {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .footer-social a {
-            width: 44px;
-            height: 44px;
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--white);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-social a:hover {
-            background: var(--accent);
-            transform: translateY(-3px);
+            gap: 3rem;
+            margin-bottom: 3rem;
         }
 
         .footer-links h4 {
             color: var(--white);
             margin-bottom: 1.5rem;
-            font-size: 1.125rem;
         }
 
         .footer-links ul {
@@ -866,551 +329,189 @@
         }
 
         .footer-links li {
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
         }
 
         .footer-links a {
             color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: var(--transition);
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
         }
 
         .footer-links a:hover {
             color: var(--accent);
-            transform: translateX(5px);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 3rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        .footer-credits {
-            font-size: 0.875rem;
-        }
-
-        .footer-credits .highlight {
-            color: var(--accent);
-            font-weight: 600;
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 1200px) {
-            h1 {
-                font-size: 4rem;
-            }
-            
-            h2 {
-                font-size: 3rem;
-            }
-            
-            .display {
-                font-size: 4.5rem;
-            }
-            
-            .team-hero h1 {
-                font-size: 3.5rem;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .nav-desktop {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            
-            .mobile-nav {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100vh;
-                background: var(--primary);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 2rem;
-                transform: translateX(100%);
-                transition: var(--transition);
-                z-index: 9999;
-            }
-            
-            .mobile-nav.active {
-                transform: translateX(0);
-            }
-            
-            .mobile-nav a {
-                color: var(--white);
-                font-size: 1.5rem;
-                text-decoration: none;
-                text-transform: uppercase;
-                letter-spacing: 0.1em;
-                transition: var(--transition);
-            }
-            
-            .mobile-nav a:hover {
-                color: var(--accent);
-            }
-            
-            .mobile-close {
-                position: absolute;
-                top: 2rem;
-                right: 2rem;
-                background: none;
-                border: none;
-                color: var(--white);
-                font-size: 2rem;
-                cursor: pointer;
-            }
-            
-            .leadership-grid {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
         }
 
         @media (max-width: 768px) {
-            .container {
-                padding: 0 1.5rem;
-            }
-            
-            h1 {
-                font-size: 3rem;
-            }
-            
-            h2 {
-                font-size: 2.5rem;
-            }
-            
-            .team-hero h1 {
-                font-size: 3rem;
-            }
-            
-            .team-stats {
-                flex-direction: column;
-                gap: 2rem;
-            }
-            
-            .team-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .culture-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 576px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            
-            h2 {
-                font-size: 2rem;
-            }
-            
-            .team-hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .btn {
-                padding: 1rem 2rem;
-                width: 100%;
-            }
-            
-            .leader-content {
-                padding: 2rem;
-            }
-            
-            .team-member-card {
-                padding: 2rem;
-            }
-        }
-
-        /* ===== ANIMATIONS ===== */
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(60px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-
-        .animate-slide-up {
-            animation: slideInUp 1s ease-out forwards;
-        }
-
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .animate-delay-1 {
-            animation-delay: 0.2s;
-        }
-
-        .animate-delay-2 {
-            animation-delay: 0.4s;
-        }
-
-        .animate-delay-3 {
-            animation-delay: 0.6s;
+            h1 { font-size: 2.5rem; }
+            .team-grid { grid-template-columns: 1fr; }
+            .nav-desktop { display: none; }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header id="mainHeader">
+    <header>
         <div class="container header-container">
             <a href="index.html" class="logo">
                 <div class="logo-symbol">AP</div>
                 <div class="logo-text">
                     <div class="logo-main">Ad Pollex</div>
-                    <div class="logo-sub">Digital Marketing Excellence</div>
+                    <div class="logo-sub" data-translate="nav.tagline">Digital Marketing Excellence</div>
                 </div>
             </a>
             
             <nav class="nav-desktop">
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="team.html" class="active">Our Team</a>
-                <a href="contact.html">Contact</a>
-                <a href="contact.html" class="btn btn-primary">Get Started →</a>
+                <a href="index.html" data-translate="nav.home">Home</a>
+                <a href="services.html" data-translate="nav.services">Services</a>
+                <a href="portfolio.html" data-translate="nav.portfolio">Portfolio</a>
+                <a href="team.html" class="active" data-translate="nav.team">Our Team</a>
+                <a href="contact.html" data-translate="nav.contact">Contact</a>
+                
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="sw">SW</button>
+                </div>
             </nav>
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
         </div>
     </header>
 
-    <!-- Mobile Navigation -->
-    <nav class="mobile-nav" id="mobileNav">
-        <button class="mobile-close" id="mobileClose">
-            <i class="fas fa-times"></i>
-        </button>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="team.html" class="active">Our Team</a>
-        <a href="contact.html">Contact</a>
-        <a href="contact.html" class="btn btn-primary" style="margin-top: 2rem;">Get Started →</a>
-    </nav>
-
-    <!-- Team Hero -->
     <section class="team-hero">
-        <video class="team-hero-video" autoplay muted loop playsinline>
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-team-of-designers-collaborating-43725-large.mp4" type="video/mp4">
-        </video>
-        
         <div class="container">
-            <div class="team-hero-content animate-slide-up">
-                <div class="eyebrow">Meet The Minds Behind</div>
-                <h1>The Team That <span class="display">Delivers</span></h1>
-                <p class="lead">Creative strategists, data analysts, and marketing experts united by one goal: your success. Meet the passionate professionals who make Ad Pollex exceptional.</p>
-                
-                <div class="team-stats animate-delay-1">
-                    <div class="team-stat-item">
-                        <div class="team-stat-number">40+</div>
-                        <div class="team-stat-label">Expert Team Members</div>
-                    </div>
-                    <div class="team-stat-item">
-                        <div class="team-stat-number">15</div>
-                        <div class="team-stat-label">Years Combined Experience</div>
-                    </div>
-                    <div class="team-stat-item">
-                        <div class="team-stat-number">98%</div>
-                        <div class="team-stat-label">Client Satisfaction</div>
-                    </div>
-                </div>
+            <div class="hero-content">
+                <div class="eyebrow" data-translate="team.eyebrow">The Minds Behind</div>
+                <h1 data-translate="team.title">Meet Our Dream Team</h1>
+                <p class="lead" data-translate="team.subtitle">Creative strategists, data analysts, and marketing experts united by one goal: your success.</p>
             </div>
         </div>
     </section>
 
-    <!-- Leadership Section -->
-    <section class="leadership">
+    <section class="team-section">
         <div class="container">
-            <div class="section-header animate-slide-up">
-                <div class="eyebrow">Leadership</div>
-                <h2>Meet Our <span style="color: var(--accent);">Visionaries</span></h2>
-                <p class="section-subtitle">Our leadership team combines decades of experience with innovative thinking to drive our agency's success.</p>
+            <div class="team-categories">
+                <button class="team-category-btn active" data-team="all" data-translate="team.filter.all">All Team</button>
+                <button class="team-category-btn" data-team="leadership" data-translate="team.filter.leadership">Leadership</button>
+                <button class="team-category-btn" data-team="marketing" data-translate="team.filter.marketing">Marketing</button>
+                <button class="team-category-btn" data-team="creative" data-translate="team.filter.creative">Creative</button>
+                <button class="team-category-btn" data-team="technical" data-translate="team.filter.technical">Technical</button>
             </div>
-            
-            <div class="leadership-grid">
-                <div class="leader-card animate-slide-up">
-                    <div class="leader-image">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="James Mwinyi">
-                        <div class="leader-overlay">
-                            <div class="leader-social">
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="leader-content">
-                        <h3>James Mwinyi</h3>
-                        <div class="leader-role">CEO & Founder</div>
-                        <p class="leader-bio">With over 10 years in digital marketing, James founded Ad Pollex to help Tanzanian businesses thrive online. He oversees strategic direction and client relationships, ensuring every campaign delivers exceptional results.</p>
-                    </div>
-                </div>
-                
-                <div class="leader-card animate-slide-up animate-delay-1">
-                    <div class="leader-image">
-                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sarah Juma">
-                        <div class="leader-overlay">
-                            <div class="leader-social">
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="leader-content">
-                        <h3>Sarah Juma</h3>
-                        <div class="leader-role">Marketing Director</div>
-                        <p class="leader-bio">Sarah leads our marketing strategies with expertise in brand development and customer engagement. With 8+ years in digital marketing, she crafts campaigns that resonate with audiences and drive conversions.</p>
-                    </div>
-                </div>
-                
-                <div class="leader-card animate-slide-up animate-delay-2">
-                    <div class="leader-image">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="David Omondi">
-                        <div class="leader-overlay">
-                            <div class="leader-social">
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-github"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="leader-content">
-                        <h3>David Omondi</h3>
-                        <div class="leader-role">Technical Lead</div>
-                        <p class="leader-bio">David oversees our technical projects including website development, SEO, and analytics. He ensures all our digital solutions are cutting-edge, scalable, and deliver exceptional performance for our clients.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Team Grid Section -->
-    <section class="team-grid-section">
-        <div class="container">
-            <div class="section-header animate-slide-up">
-                <div class="eyebrow">Expert Departments</div>
-                <h2>Our <span style="color: var(--accent);">Specialized Teams</span></h2>
-                <p class="section-subtitle">Each department brings unique expertise to deliver comprehensive digital marketing solutions.</p>
-            </div>
-            
             <div class="team-grid">
-                <!-- Creative Team -->
-                <div class="team-member-card animate-slide-up">
+                <!-- James Mwinyi -->
+                <div class="team-member-card" data-team="leadership">
+                    <div class="member-avatar">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="James Mwinyi">
+                    </div>
+                    <h3 data-translate="team.member1.name">James Mwinyi</h3>
+                    <div class="member-role" data-translate="team.member1.role">CEO & Founder</div>
+                    <p class="member-bio" data-translate="team.member1.bio">With over 10 years in digital marketing, James founded Ad Pollex to help Tanzanian businesses thrive online. He oversees strategic direction and client relationships.</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Sarah Juma -->
+                <div class="team-member-card" data-team="leadership marketing">
+                    <div class="member-avatar">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Sarah Juma">
+                    </div>
+                    <h3 data-translate="team.member2.name">Sarah Juma</h3>
+                    <div class="member-role" data-translate="team.member2.role">Marketing Director</div>
+                    <p class="member-bio" data-translate="team.member2.bio">Sarah leads our marketing strategies with expertise in brand development and customer engagement. With 8+ years in digital marketing, she crafts campaigns that resonate.</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- David Omondi -->
+                <div class="team-member-card" data-team="leadership technical">
+                    <div class="member-avatar">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="David Omondi">
+                    </div>
+                    <h3 data-translate="team.member3.name">David Omondi</h3>
+                    <div class="member-role" data-translate="team.member3.role">Technical Lead</div>
+                    <p class="member-bio" data-translate="team.member3.bio">David oversees our technical projects including website development, SEO, and analytics. He ensures all our digital solutions are cutting-edge and scalable.</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Amina Hassan -->
+                <div class="team-member-card" data-team="creative">
                     <div class="member-avatar">
                         <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Amina Hassan">
-                        <div class="member-social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-behance"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
                     </div>
-                    <div class="member-content">
-                        <h3>Amina Hassan</h3>
-                        <div class="member-role">Creative Director</div>
-                        <div class="member-department">Creative Team</div>
-                        <p>Amina brings creative vision to our campaigns with a focus on visual storytelling and brand identity. She leads our design and content teams to create compelling visuals.</p>
-                        <div class="member-expertise">
-                            <span class="expertise-tag">Brand Design</span>
-                            <span class="expertise-tag">UI/UX</span>
-                            <span class="expertise-tag">Content Creation</span>
-                        </div>
+                    <h3 data-translate="team.member4.name">Amina Hassan</h3>
+                    <div class="member-role" data-translate="team.member4.role">Creative Director</div>
+                    <p class="member-bio" data-translate="team.member4.bio">Amina brings creative vision to our campaigns with a focus on visual storytelling and brand identity. She leads our design and content teams to create compelling visuals.</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-behance"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                
-                <!-- Digital Marketing Team -->
-                <div class="team-member-card animate-slide-up animate-delay-1">
+
+                <!-- Michael Joseph -->
+                <div class="team-member-card" data-team="marketing">
                     <div class="member-avatar">
                         <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Michael Joseph">
-                        <div class="member-social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-google"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                        </div>
                     </div>
-                    <div class="member-content">
-                        <h3>Michael Joseph</h3>
-                        <div class="member-role">Digital Strategist</div>
-                        <div class="member-department">Digital Marketing</div>
-                        <p>Michael specializes in multi-channel campaign strategy and performance optimization. He develops data-driven strategies that deliver measurable ROI for our clients.</p>
-                        <div class="member-expertise">
-                            <span class="expertise-tag">Campaign Strategy</span>
-                            <span class="expertise-tag">PPC</span>
-                            <span class="expertise-tag">Analytics</span>
-                        </div>
+                    <h3 data-translate="team.member5.name">Michael Joseph</h3>
+                    <div class="member-role" data-translate="team.member5.role">Digital Strategist</div>
+                    <p class="member-bio" data-translate="team.member5.bio">Michael specializes in multi-channel campaign strategy and performance optimization. He develops data-driven strategies that deliver measurable ROI.</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-google"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                
-                <!-- SEO Team -->
-                <div class="team-member-card animate-slide-up animate-delay-2">
+
+                <!-- Robert Kimambo -->
+                <div class="team-member-card" data-team="technical">
                     <div class="member-avatar">
                         <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Robert Kimambo">
-                        <div class="member-social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-google"></i></a>
-                            <a href="#"><i class="fab fa-github"></i></a>
-                        </div>
                     </div>
-                    <div class="member-content">
-                        <h3>Robert Kimambo</h3>
-                        <div class="member-role">SEO Specialist</div>
-                        <div class="member-department">SEO Team</div>
-                        <p>Robert specializes in search engine optimization, helping clients achieve top rankings and increase organic traffic through strategic SEO campaigns and technical optimization.</p>
-                        <div class="member-expertise">
-                            <span class="expertise-tag">Technical SEO</span>
-                            <span class="expertise-tag">Content Strategy</span>
-                            <span class="expertise-tag">Link Building</span>
-                        </div>
+                    <h3 data-translate="team.member6.name">Robert Kimambo</h3>
+                    <div class="member-role" data-translate="team.member6.role">SEO Specialist</div>
+                    <p class="member-bio" data-translate="team.member6.bio">Robert specializes in search engine optimization, helping clients achieve top rankings and increase organic traffic through strategic SEO campaigns.</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-google"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Culture Section -->
-    <section class="culture">
+    <section class="team-stats">
         <div class="container">
-            <div class="culture-header animate-slide-up">
-                <div class="eyebrow" style="color: var(--gold);">Our Culture</div>
-                <h2>More Than <span style="color: var(--gold);">Just Work</span></h2>
-                <p class="lead">We believe great results come from a great team culture. Here's what makes Ad Pollex special.</p>
-            </div>
-            
-            <div class="culture-grid">
-                <div class="culture-card animate-slide-up">
-                    <div class="culture-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Innovation First</h3>
-                    <p>We constantly explore new technologies and strategies to stay ahead in the ever-evolving digital landscape.</p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">40+</div>
+                    <div class="stat-label" data-translate="team.stat1">Team Members</div>
                 </div>
-                
-                <div class="culture-card animate-slide-up animate-delay-1">
-                    <div class="culture-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>Collaborative Spirit</h3>
-                    <p>We believe in working closely with our clients as partners to achieve shared success and growth.</p>
+                <div class="stat-item">
+                    <div class="stat-number">15</div>
+                    <div class="stat-label" data-translate="team.stat2">Years Combined Experience</div>
                 </div>
-                
-                <div class="culture-card animate-slide-up animate-delay-2">
-                    <div class="culture-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3>Excellence Driven</h3>
-                    <p>We strive for excellence in every project, delivering exceptional quality and measurable results.</p>
+                <div class="stat-item">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label" data-translate="team.stat3">Projects Completed</div>
                 </div>
-                
-                <div class="culture-card animate-slide-up animate-delay-3">
-                    <div class="culture-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Team Growth</h3>
-                    <p>Our collaborative environment fosters creativity, knowledge sharing, and collective problem-solving.</p>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label" data-translate="team.stat4">Client Satisfaction</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Careers Section -->
-    <section class="careers">
-        <div class="container">
-            <div class="careers-content animate-slide-up">
-                <div class="eyebrow">Join Our Team</div>
-                <h2>Build Your Career <span style="color: var(--accent);">With Us</span></h2>
-                <p class="lead">We're always looking for talented individuals who are passionate about digital marketing and want to make an impact.</p>
-                
-                <div class="benefits-grid">
-                    <div class="benefit-item animate-slide-up">
-                        <div class="benefit-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h4>Learning & Growth</h4>
-                        <p>Continuous training and professional development opportunities.</p>
-                    </div>
-                    
-                    <div class="benefit-item animate-slide-up animate-delay-1">
-                        <div class="benefit-icon">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <h4>Health & Wellness</h4>
-                        <p>Comprehensive health benefits and wellness programs.</p>
-                    </div>
-                    
-                    <div class="benefit-item animate-slide-up animate-delay-2">
-                        <div class="benefit-icon">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <h4>Flexible Work</h4>
-                        <p>Remote work options and flexible hours for work-life balance.</p>
-                    </div>
-                    
-                    <div class="benefit-item animate-slide-up animate-delay-3">
-                        <div class="benefit-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <h4>Career Advancement</h4>
-                        <p>Clear career paths and opportunities for growth within the agency.</p>
-                    </div>
-                </div>
-                
-                <a href="contact.html" class="btn btn-primary">View Open Positions →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="team-cta">
-        <div class="container">
-            <div class="team-cta-content animate-slide-up">
-                <h2>Work With Our Experts</h2>
-                <p class="lead">Ready to partner with a team that understands your business and delivers exceptional results? Let's create something amazing together.</p>
-                
-                <div class="btn-group" style="display: flex; gap: 1rem; justify-content: center; margin-top: 3rem;">
-                    <a href="contact.html" class="btn btn-primary">
-                        <i class="fas fa-calendar" style="margin-right: 0.5rem;"></i> Schedule Consultation
-                    </a>
-                    <a href="portfolio.html" class="btn btn-secondary">
-                        <i class="fas fa-eye" style="margin-right: 0.5rem;"></i> See Our Work
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-container">
@@ -1421,157 +522,211 @@
                             <div class="logo-main">Ad Pollex</div>
                         </div>
                     </a>
-                    <p class="footer-description">Full-service advertising and digital marketing agency helping businesses grow their online presence since 2016.</p>
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
+                    <p class="footer-description" data-translate="footer.description">A team of passionate digital marketing experts dedicated to helping businesses succeed online.</p>
                 </div>
                 
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h4 data-translate="footer.links1.title">Quick Links</h4>
                     <ul>
-                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
-                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
-                        <li><a href="portfolio.html"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
-                        <li><a href="team.html"><i class="fas fa-chevron-right"></i> Our Team</a></li>
-                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                        <li><a href="index.html" data-translate="nav.home">Home</a></li>
+                        <li><a href="services.html" data-translate="nav.services">Services</a></li>
+                        <li><a href="portfolio.html" data-translate="nav.portfolio">Portfolio</a></li>
+                        <li><a href="team.html" data-translate="nav.team">Our Team</a></li>
+                        <li><a href="contact.html" data-translate="nav.contact">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
-                    <h4>Our Services</h4>
+                    <h4 data-translate="footer.contact.title">Contact Info</h4>
                     <ul>
-                        <li><a href="services.html#digital-marketing"><i class="fas fa-chevron-right"></i> Digital Marketing</a></li>
-                        <li><a href="services.html#social-media"><i class="fas fa-chevron-right"></i> Social Media</a></li>
-                        <li><a href="services.html#seo"><i class="fas fa-chevron-right"></i> SEO Optimization</a></li>
-                        <li><a href="services.html#branding"><i class="fas fa-chevron-right"></i> Brand Strategy</a></li>
-                        <li><a href="services.html#web-design"><i class="fas fa-chevron-right"></i> Website Design</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>Contact Info</h4>
-                    <ul>
-                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Dar es Salaam, Tanzania</a></li>
-                        <li><a href="tel:+255684320325"><i class="fas fa-phone"></i> +255 684 320 325</a></li>
-                        <li><a href="mailto:adpollex@gmail.com"><i class="fas fa-envelope"></i> adpollex@gmail.com</a></li>
-                        <li><a href="#"><i class="fas fa-globe"></i> adpollex.com</a></li>
+                        <li><a href="contact.html">Dar es Salaam, Tanzania</a></li>
+                        <li><a href="tel:+255684320325">+255 684 320 325</a></li>
+                        <li><a href="mailto:adpollex@gmail.com">adpollex@gmail.com</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <div class="footer-credits">
-                    <p>&copy; 2023 <span class="highlight">Ad Pollex</span> - Advertising & Digital Marketing Company. All Rights Reserved. | Crafted with <span class="highlight">passion</span> in Dar es Salaam</p>
-                </div>
+                <p data-translate="footer.copyright">&copy; 2023 Ad Pollex. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script>
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('mainHeader');
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
+        // Language System
+        const translations = {
+            en: {
+                // Navigation
+                "nav.home": "Home",
+                "nav.services": "Services",
+                "nav.portfolio": "Portfolio",
+                "nav.team": "Our Team",
+                "nav.contact": "Contact",
+                "nav.tagline": "Digital Marketing Excellence",
 
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileNav = document.getElementById('mobileNav');
-        const mobileClose = document.getElementById('mobileClose');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileNav.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-
-        mobileClose.addEventListener('click', () => {
-            mobileNav.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        });
-
-        // Close mobile menu when clicking links
-        mobileNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileNav.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            });
-        });
-
-        // Team stats counter
-        function animateTeamStats() {
-            const counters = document.querySelectorAll('.team-stat-number');
-            counters.forEach(counter => {
-                const target = parseInt(counter.getAttribute('data-count') || counter.textContent.replace('+', '').replace('%', ''));
-                const count = parseInt(counter.textContent.replace('+', '').replace('%', ''));
-                const increment = target / 100;
+                // Team Page
+                "team.eyebrow": "The Minds Behind",
+                "team.title": "Meet Our Dream Team",
+                "team.subtitle": "Creative strategists, data analysts, and marketing experts united by one goal: your success.",
                 
-                if (count < target) {
-                    counter.textContent = Math.ceil(count + increment) + 
-                        (counter.textContent.includes('+') ? '+' : 
-                         counter.textContent.includes('%') ? '%' : '');
-                    setTimeout(animateTeamStats, 20);
+                "team.filter.all": "All Team",
+                "team.filter.leadership": "Leadership",
+                "team.filter.marketing": "Marketing",
+                "team.filter.creative": "Creative",
+                "team.filter.technical": "Technical",
+                
+                "team.member1.name": "James Mwinyi",
+                "team.member1.role": "CEO & Founder",
+                "team.member1.bio": "With over 10 years in digital marketing, James founded Ad Pollex to help Tanzanian businesses thrive online. He oversees strategic direction and client relationships.",
+                
+                "team.member2.name": "Sarah Juma",
+                "team.member2.role": "Marketing Director",
+                "team.member2.bio": "Sarah leads our marketing strategies with expertise in brand development and customer engagement. With 8+ years in digital marketing, she crafts campaigns that resonate.",
+                
+                "team.member3.name": "David Omondi",
+                "team.member3.role": "Technical Lead",
+                "team.member3.bio": "David oversees our technical projects including website development, SEO, and analytics. He ensures all our digital solutions are cutting-edge and scalable.",
+                
+                "team.member4.name": "Amina Hassan",
+                "team.member4.role": "Creative Director",
+                "team.member4.bio": "Amina brings creative vision to our campaigns with a focus on visual storytelling and brand identity. She leads our design and content teams to create compelling visuals.",
+                
+                "team.member5.name": "Michael Joseph",
+                "team.member5.role": "Digital Strategist",
+                "team.member5.bio": "Michael specializes in multi-channel campaign strategy and performance optimization. He develops data-driven strategies that deliver measurable ROI.",
+                
+                "team.member6.name": "Robert Kimambo",
+                "team.member6.role": "SEO Specialist",
+                "team.member6.bio": "Robert specializes in search engine optimization, helping clients achieve top rankings and increase organic traffic through strategic SEO campaigns.",
+                
+                "team.stat1": "Team Members",
+                "team.stat2": "Years Combined Experience",
+                "team.stat3": "Projects Completed",
+                "team.stat4": "Client Satisfaction",
+
+                // Footer
+                "footer.description": "A team of passionate digital marketing experts dedicated to helping businesses succeed online.",
+                "footer.links1.title": "Quick Links",
+                "footer.contact.title": "Contact Info",
+                "footer.copyright": "© 2023 Ad Pollex. All Rights Reserved."
+            },
+            sw: {
+                // Navigation - Kiswahili
+                "nav.home": "Nyumbani",
+                "nav.services": "Huduma",
+                "nav.portfolio": "Portfolio",
+                "nav.team": "Timu Yetu",
+                "nav.contact": "Wasiliana",
+                "nav.tagline": "Ubora wa Uuzaji wa Kidijitali",
+
+                // Timu - Kiswahili
+                "team.eyebrow": "Akili Nyuma",
+                "team.title": "Kukutana na Timu Yetu ya Ndoto",
+                "team.subtitle": "Wabunifu wa mikakati, wachambuzi wa data, na wataalamu wa uuzaji walioungana kwa lengo moja: mafanikio yako.",
+                
+                "team.filter.all": "Timu Yote",
+                "team.filter.leadership": "Uongozi",
+                "team.filter.marketing": "Uuzaji",
+                "team.filter.creative": "Ubunifu",
+                "team.filter.technical": "Kiufundi",
+                
+                "team.member1.name": "James Mwinyi",
+                "team.member1.role": "Mkurugenzi Mtendaji na Mwanzilishi",
+                "team.member1.bio": "Akiwa na uzoefu wa zaidi ya miaka 10 katika uuzaji wa kidijitali, James alianzisha Ad Pollex ili kusaidia biashara za Kitanzania kustawi mtandaoni. Anasimamia mwelekeo wa kimkakati na uhusiano na wateja.",
+                
+                "team.member2.name": "Sarah Juma",
+                "team.member2.role": "Mkurugenzi wa Uuzaji",
+                "team.member2.bio": "Sarah anaongoza mikakati yetu ya uuzaji kwa utaalamu katika uanzishaji wa chapa na ushiriki wa wateja. Akiwa na uzoefu wa zaidi ya miaka 8 katika uuzaji wa kidijitali, anabuni kampeni zinazovutia.",
+                
+                "team.member3.name": "David Omondi",
+                "team.member3.role": "Kiongozi wa Kiufundi",
+                "team.member3.bio": "David anasimamia miradi yetu ya kiufundi ikiwa ni pamoja na uundaji wa tovuti, SEO, na uchambuzi. Anahakikisha suluhisho zetu zote za kidijitali ni za kisasa na zinazoweza kupanuka.",
+                
+                "team.member4.name": "Amina Hassan",
+                "team.member4.role": "Mkurugenzi wa Ubunifu",
+                "team.member4.bio": "Amina analeta maono ya ubunifu kwenye kampeni zetu kwa kuzingatia hadithi za kuona na utambulisho wa chapa. Anaongoza timu zetu za kubuni na maudhui kuunda picha zinazovutia.",
+                
+                "team.member5.name": "Michael Joseph",
+                "team.member5.role": "Mwanamkakati wa Kidijitali",
+                "team.member5.bio": "Michael anajishughulisha na mkakati wa kampeni ya njia nyingi na uboreshaji wa utendaji. Anatengeneza mikakati inayotumia data inayotoa mapato yanayoweza kupimika.",
+                
+                "team.member6.name": "Robert Kimambo",
+                "team.member6.role": "Mtaalamu wa SEO",
+                "team.member6.bio": "Robert anajishughulisha na uboreshaji wa injini za utafutaji, akisaidia wateja kufikia nafasi za juu na kuongeza trafiki ya asili kupitia kampeni za kimkakati za SEO.",
+                
+                "team.stat1": "Wanachama wa Timu",
+                "team.stat2": "Miaka ya Uzoefu Uliochanganywa",
+                "team.stat3": "Miradi Iliyokamilika",
+                "team.stat4": "Uridhishaji wa Mteja",
+
+                // Footer - Kiswahili
+                "footer.description": "Timu ya wataalamu wa uuzaji wa kidijitali wenye shauku wamejikita kusaidia biashara kufanikiwa mtandaoni.",
+                "footer.links1.title": "Viungo vya Haraka",
+                "footer.contact.title": "Maelezo ya Mawasiliano",
+                "footer.copyright": "© 2023 Ad Pollex. Haki zote zimehifadhiwa."
+            }
+        };
+
+        // Language System
+        function updateLanguage(lang) {
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('active');
                 } else {
-                    counter.textContent = target + 
-                        (counter.textContent.includes('+') ? '+' : 
-                         counter.textContent.includes('%') ? '%' : '');
+                    btn.classList.remove('active');
+                }
+            });
+
+            localStorage.setItem('preferred-language', lang);
+        }
+
+        // Team Filtering
+        function filterTeam(category) {
+            const members = document.querySelectorAll('.team-member-card');
+            const buttons = document.querySelectorAll('.team-category-btn');
+            
+            buttons.forEach(btn => {
+                if (btn.dataset.team === category) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+            
+            members.forEach(member => {
+                if (category === 'all' || member.dataset.team.includes(category)) {
+                    member.style.display = 'block';
+                } else {
+                    member.style.display = 'none';
                 }
             });
         }
 
-        // Intersection Observer for animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    if (entry.target.classList.contains('team-stats')) {
-                        setTimeout(animateTeamStats, 500);
-                    }
-                    entry.target.classList.add('animate-slide-up');
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        });
-
-        // Observe all animate-slide-up elements
-        document.querySelectorAll('.animate-slide-up').forEach(el => {
-            el.style.opacity = '0';
-            observer.observe(el);
-        });
-
-        // Add floating animation to some elements
-        document.querySelectorAll('.leader-card, .team-member-card').forEach((card, index) => {
-            card.style.animationDelay = `${index * 0.1}s`;
-        });
-
-        // Initialize on load
         document.addEventListener('DOMContentLoaded', () => {
-            // Set active nav link
-            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            document.querySelectorAll('nav a').forEach(link => {
-                if (link.getAttribute('href') === currentPage) {
-                    link.classList.add('active');
-                }
-            });
-
-            // Add hover effect to team cards
-            document.querySelectorAll('.team-member-card').forEach(card => {
-                card.addEventListener('mouseenter', () => {
-                    card.style.transform = 'translateY(-15px) scale(1.02)';
+            // Initialize language
+            const savedLang = localStorage.getItem('preferred-language') || 'en';
+            updateLanguage(savedLang);
+            
+            // Language buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const lang = btn.getAttribute('data-lang');
+                    updateLanguage(lang);
                 });
-                
-                card.addEventListener('mouseleave', () => {
-                    card.style.transform = 'translateY(0) scale(1)';
+            });
+            
+            // Filter buttons
+            document.querySelectorAll('.team-category-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const category = btn.getAttribute('data-team');
+                    filterTeam(category);
                 });
             });
         });
