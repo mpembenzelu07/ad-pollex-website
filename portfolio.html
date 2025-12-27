@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Portfolio | Ad Pollex - Success Stories & Case Studies</title>
+    <title>Our Portfolio | Ad Pollex - Award-Winning Digital Marketing Projects</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
+        /* ===== ULTRA PREMIUM DESIGN SYSTEM ===== */
         :root {
             --primary: #000000;
             --primary-light: #1a1a1a;
@@ -27,6 +28,7 @@
             --radius-sm: 8px;
             --radius-md: 16px;
             --radius-lg: 24px;
+            --radius-xl: 40px;
         }
 
         * {
@@ -35,40 +37,151 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--dark-gray);
-            background: var(--white);
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
         }
 
-        h1, h2, h3, h4 {
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--dark-gray);
+            background: var(--white);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4, h5, h6 {
             font-family: 'Space Grotesk', sans-serif;
             font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
         }
 
         h1 {
-            font-size: 3.5rem;
+            font-size: 4.5rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
             background: linear-gradient(135deg, var(--primary), var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 3.5rem;
+            color: var(--primary);
+        }
+
+        h3 {
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+
+        h4 {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .lead {
+            font-size: 1.375rem;
+            color: var(--primary-light);
+            line-height: 1.6;
+        }
+
+        .eyebrow {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: 1rem;
         }
 
         .container {
+            width: 100%;
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
         }
 
-        /* Header */
+        section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.25rem 2.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--radius-xl);
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--white);
+            box-shadow: 0 10px 30px rgba(255, 59, 48, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(255, 59, 48, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(0, 0, 0, 0.8);
+            color: var(--white);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 0, 0, 0.9);
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        /* ===== HEADER ===== */
         header {
             position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
+            z-index: 1000;
+            padding: 1.5rem 0;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
-            padding: 1.5rem 0;
-            z-index: 1000;
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 1rem 0;
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-sm);
         }
 
         .header-container {
@@ -96,6 +209,39 @@
             font-family: 'Space Grotesk', sans-serif;
             font-weight: 900;
             font-size: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-symbol::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-main {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary);
+            letter-spacing: -0.02em;
+        }
+
+        .logo-sub {
+            font-size: 0.75rem;
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
         }
 
         .nav-desktop {
@@ -108,9 +254,22 @@
             text-decoration: none;
             color: var(--primary);
             font-weight: 500;
+            font-size: 0.9375rem;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: var(--transition);
             text-transform: uppercase;
-            font-size: 0.875rem;
             letter-spacing: 0.05em;
+        }
+
+        .nav-desktop a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
             transition: var(--transition);
         }
 
@@ -119,128 +278,180 @@
             color: var(--accent);
         }
 
-        .language-switcher {
-            display: flex;
-            gap: 0.5rem;
-            margin-left: 2rem;
+        .nav-desktop a:hover::after,
+        .nav-desktop a.active::after {
+            width: 100%;
         }
 
-        .lang-btn {
-            background: transparent;
-            border: 2px solid rgba(0, 0, 0, 0.1);
-            color: var(--primary);
-            padding: 0.5rem 1.25rem;
-            border-radius: 40px;
-            font-weight: 600;
+        .mobile-menu-btn {
+            display: none;
+            width: 48px;
+            height: 48px;
+            background: var(--primary);
+            border: none;
+            border-radius: 12px;
+            color: var(--white);
+            font-size: 1.25rem;
             cursor: pointer;
             transition: var(--transition);
-            text-transform: uppercase;
-            font-size: 0.875rem;
         }
 
-        .lang-btn:hover, .lang-btn.active {
-            background: var(--accent);
-            color: var(--white);
-            border-color: var(--accent);
-        }
-
-        /* Hero */
+        /* ===== PORTFOLIO HERO ===== */
         .portfolio-hero {
-            min-height: 50vh;
+            min-height: 80vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             color: var(--white);
             padding: 8rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 59, 48, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 122, 255, 0.1) 0%, transparent 50%);
+        }
+
+        .portfolio-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
         }
 
         .portfolio-hero h1 {
+            font-size: 4rem;
+            margin-bottom: 2rem;
             background: linear-gradient(135deg, var(--white), var(--gold));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        /* Portfolio Grid */
-        .portfolio-grid {
-            padding: 6rem 0;
+        .portfolio-hero .lead {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 3rem;
         }
 
-        .portfolio-categories {
+        /* ===== PORTFOLIO FILTER ===== */
+        .portfolio-filter {
+            padding: 4rem 0;
+            background: var(--off-white);
+        }
+
+        .filter-container {
             display: flex;
             justify-content: center;
             gap: 1rem;
-            margin-bottom: 4rem;
             flex-wrap: wrap;
         }
 
-        .category-btn {
-            padding: 0.75rem 2rem;
-            background: var(--off-white);
-            border: none;
-            border-radius: var(--radius-md);
-            font-weight: 600;
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            background: var(--white);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: var(--radius-xl);
+            font-weight: 500;
+            color: var(--gray);
             cursor: pointer;
             transition: var(--transition);
         }
 
-        .category-btn:hover,
-        .category-btn.active {
+        .filter-btn.active,
+        .filter-btn:hover {
             background: var(--accent);
             color: var(--white);
+            border-color: var(--accent);
+            transform: translateY(-3px);
         }
 
-        .projects-grid {
+        /* ===== PORTFOLIO GRID ===== */
+        .portfolio-grid-section {
+            padding: 4rem 0 8rem;
+            background: var(--white);
+        }
+
+        .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 3rem;
         }
 
-        .project-card {
+        .portfolio-item {
+            position: relative;
             border-radius: var(--radius-lg);
             overflow: hidden;
-            background: var(--white);
-            box-shadow: var(--shadow-md);
+            height: 500px;
+            cursor: pointer;
             transition: var(--transition);
         }
 
-        .project-card:hover {
-            transform: translateY(-10px);
+        .portfolio-item:hover {
+            transform: translateY(-20px);
             box-shadow: var(--shadow-lg);
         }
 
-        .project-image {
-            height: 300px;
-            overflow: hidden;
-        }
-
-        .project-image img {
+        .portfolio-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: var(--transition);
         }
 
-        .project-card:hover .project-image img {
+        .portfolio-item:hover .portfolio-image {
             transform: scale(1.1);
         }
 
-        .project-content {
-            padding: 2rem;
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 3rem;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+            color: var(--white);
+            transform: translateY(20px);
+            opacity: 0;
+            transition: var(--transition);
         }
 
-        .project-category {
-            color: var(--accent);
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .portfolio-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        .portfolio-tag {
+            background: var(--accent);
+            color: var(--white);
+            padding: 0.25rem 0.75rem;
+            border-radius: 100px;
+            font-size: 0.75rem;
             font-weight: 600;
             text-transform: uppercase;
-            font-size: 0.875rem;
             letter-spacing: 0.05em;
-            margin-bottom: 0.5rem;
         }
 
-        .project-stats {
+        .portfolio-stats {
             display: flex;
             gap: 2rem;
-            margin: 1.5rem 0;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .stat {
@@ -251,33 +462,269 @@
             font-family: 'Space Grotesk', sans-serif;
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--accent);
+            color: var(--white);
+            line-height: 1;
         }
 
         .stat-label {
             font-size: 0.75rem;
-            color: var(--gray);
+            color: rgba(255, 255, 255, 0.7);
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
 
-        /* Footer */
+        /* ===== CASE STUDY MODAL ===== */
+        .case-study-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .case-study-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .case-study-content {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            width: 90%;
+            max-width: 1200px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            transform: translateY(50px);
+            transition: var(--transition);
+        }
+
+        .case-study-modal.active .case-study-content {
+            transform: translateY(0);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: var(--primary);
+            color: var(--white);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: none;
+            font-size: 1.25rem;
+            cursor: pointer;
+            z-index: 100;
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            background: var(--accent);
+            transform: rotate(90deg);
+        }
+
+        .case-study-header {
+            padding: 4rem 4rem 0;
+        }
+
+        .case-study-header h2 {
+            margin-bottom: 1rem;
+        }
+
+        .case-study-meta {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .meta-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 59, 48, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+        }
+
+        .case-study-body {
+            padding: 4rem;
+        }
+
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin: 4rem 0;
+        }
+
+        .case-study-box {
+            background: var(--off-white);
+            padding: 3rem;
+            border-radius: var(--radius-lg);
+        }
+
+        .case-study-box h4 {
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .case-study-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            margin: 2rem 0;
+        }
+
+        .case-study-results {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: 4rem;
+            border-radius: var(--radius-lg);
+            margin: 4rem 0;
+        }
+
+        .case-study-results h3 {
+            color: var(--white);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+        }
+
+        .result-item {
+            text-align: center;
+        }
+
+        .result-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .portfolio-cta {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .portfolio-cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .portfolio-cta h2 {
+            color: var(--white);
+            margin-bottom: 2rem;
+        }
+
+        .portfolio-cta .lead {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 3rem;
+        }
+
+        /* ===== FOOTER ===== */
         footer {
             background: var(--primary);
             color: var(--white);
-            padding: 4rem 0 2rem;
+            padding: 6rem 0 3rem;
         }
 
         .footer-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand {
+            max-width: 300px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            text-decoration: none;
+        }
+
+        .footer-logo .logo-symbol {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        .footer-logo .logo-main {
+            color: var(--white);
+        }
+
+        .footer-description {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 2rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-social a {
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-social a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
         }
 
         .footer-links h4 {
             color: var(--white);
             margin-bottom: 1.5rem;
+            font-size: 1.125rem;
         }
 
         .footer-links ul {
@@ -285,180 +732,413 @@
         }
 
         .footer-links li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
         }
 
         .footer-links a {
             color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         .footer-links a:hover {
             color: var(--accent);
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .footer-credits {
+            font-size: 0.875rem;
+        }
+
+        .footer-credits .highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 4rem;
+            }
+            
+            h2 {
+                font-size: 3rem;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            }
+        }
+
+        @media (max-width: 992px) {
+            .nav-desktop {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .mobile-nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: var(--primary);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                transform: translateX(100%);
+                transition: var(--transition);
+                z-index: 9999;
+            }
+            
+            .mobile-nav.active {
+                transform: translateX(0);
+            }
+            
+            .mobile-nav a {
+                color: var(--white);
+                font-size: 1.5rem;
+                text-decoration: none;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                transition: var(--transition);
+            }
+            
+            .mobile-nav a:hover {
+                color: var(--accent);
+            }
+            
+            .mobile-close {
+                position: absolute;
+                top: 2rem;
+                right: 2rem;
+                background: none;
+                border: none;
+                color: var(--white);
+                font-size: 2rem;
+                cursor: pointer;
+            }
+            
+            .case-study-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
         }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            .projects-grid { grid-template-columns: 1fr; }
-            .nav-desktop { display: none; }
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.5rem;
+            }
+            
+            .portfolio-hero h1 {
+                font-size: 3rem;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .case-study-header,
+            .case-study-body {
+                padding: 3rem 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .portfolio-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .btn {
+                padding: 1rem 2rem;
+                width: 100%;
+            }
+            
+            .portfolio-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-slide-up {
+            animation: slideInUp 1s ease-out forwards;
+        }
+
+        .animate-delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-delay-3 {
+            animation-delay: 0.6s;
         }
     </style>
 </head>
 <body>
-    <header>
+    <!-- Header -->
+    <header id="mainHeader">
         <div class="container header-container">
             <a href="index.html" class="logo">
                 <div class="logo-symbol">AP</div>
                 <div class="logo-text">
                     <div class="logo-main">Ad Pollex</div>
-                    <div class="logo-sub" data-translate="nav.tagline">Digital Marketing Excellence</div>
+                    <div class="logo-sub">Digital Marketing Excellence</div>
                 </div>
             </a>
             
             <nav class="nav-desktop">
-                <a href="index.html" data-translate="nav.home">Home</a>
-                <a href="services.html" data-translate="nav.services">Services</a>
-                <a href="portfolio.html" class="active" data-translate="nav.portfolio">Portfolio</a>
-                <a href="team.html" data-translate="nav.team">Our Team</a>
-                <a href="contact.html" data-translate="nav.contact">Contact</a>
-                
-                <div class="language-switcher">
-                    <button class="lang-btn active" data-lang="en">EN</button>
-                    <button class="lang-btn" data-lang="sw">SW</button>
-                </div>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html" class="active">Portfolio</a>
+                <a href="team.html">Our Team</a>
+                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="btn btn-primary">Get Started →</a>
             </nav>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
 
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <button class="mobile-close" id="mobileClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="team.html">Our Team</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn btn-primary" style="margin-top: 2rem;">Get Started →</a>
+    </nav>
+
+    <!-- Portfolio Hero -->
     <section class="portfolio-hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="eyebrow" data-translate="portfolio.eyebrow">Success Stories</div>
-                <h1 data-translate="portfolio.title">Our Masterpieces</h1>
-                <p class="lead" data-translate="portfolio.subtitle">Real projects, transformative results. See how we've helped businesses across Tanzania achieve remarkable growth.</p>
+            <div class="portfolio-hero-content animate-slide-up">
+                <div class="eyebrow">Our Masterpieces</div>
+                <h1>Case Studies That <span class="display">Inspire</span></h1>
+                <p class="lead">Real projects, real results. See how we've transformed businesses across Tanzania with our data-driven marketing strategies.</p>
+                
+                <div class="btn-group" style="display: flex; gap: 1rem; margin-top: 3rem;">
+                    <a href="#portfolio-grid" class="btn btn-primary">View All Projects</a>
+                    <a href="contact.html" class="btn btn-secondary">Start Your Project</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="portfolio-grid">
+    <!-- Portfolio Filter -->
+    <section class="portfolio-filter">
         <div class="container">
-            <div class="portfolio-categories">
-                <button class="category-btn active" data-category="all" data-translate="portfolio.filter.all">All Projects</button>
-                <button class="category-btn" data-category="hospitality" data-translate="portfolio.filter.hospitality">Hospitality</button>
-                <button class="category-btn" data-category="retail" data-translate="portfolio.filter.retail">Retail</button>
-                <button class="category-btn" data-category="tech" data-translate="portfolio.filter.tech">Technology</button>
-                <button class="category-btn" data-category="healthcare" data-translate="portfolio.filter.healthcare">Healthcare</button>
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="digital-marketing">Digital Marketing</button>
+                <button class="filter-btn" data-filter="social-media">Social Media</button>
+                <button class="filter-btn" data-filter="seo">SEO</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="web-design">Web Design</button>
             </div>
+        </div>
+    </section>
 
-            <div class="projects-grid">
-                <!-- Restaurant Project -->
-                <div class="project-card" data-category="hospitality">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Restaurant Digital Transformation">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-category" data-translate="portfolio.category1">Hospitality</div>
-                        <h3 data-translate="portfolio.project1.title">Restaurants Revamp</h3>
-                        <p data-translate="portfolio.project1.description">Complete digital transformation for a chain of local restaurants, increasing online reservations by 300% and social media engagement by 450%.</p>
-                        <div class="project-stats">
+    <!-- Portfolio Grid -->
+    <section class="portfolio-grid-section" id="portfolio-grid">
+        <div class="container">
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-item animate-slide-up" data-category="digital-marketing branding">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                         alt="E-commerce Transformation" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3>E-commerce Brand Launch</h3>
+                        <p>Complete digital strategy for a fashion e-commerce startup, resulting in 200% growth in online sales within 6 months.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Digital Marketing</span>
+                            <span class="portfolio-tag">Brand Strategy</span>
+                            <span class="portfolio-tag">E-commerce</span>
+                        </div>
+                        <div class="portfolio-stats">
                             <div class="stat">
-                                <div class="stat-number">300%</div>
-                                <div class="stat-label" data-translate="portfolio.stat1">Reservations</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-number">450%</div>
-                                <div class="stat-label" data-translate="portfolio.stat2">Engagement</div>
+                                <div class="stat-number">200%</div>
+                                <div class="stat-label">Sales Growth</div>
                             </div>
                             <div class="stat">
                                 <div class="stat-number">6</div>
-                                <div class="stat-label" data-translate="portfolio.stat3">Months</div>
+                                <div class="stat-label">Months</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">50K+</div>
+                                <div class="stat-label">Visitors</div>
                             </div>
                         </div>
+                        <button class="btn btn-primary" data-project="1" style="margin-top: 1.5rem;">View Case Study</button>
                     </div>
                 </div>
 
-                <!-- Fashion Brand -->
-                <div class="project-card" data-category="retail">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Fashion Brand Launch">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-category" data-translate="portfolio.category2">Fashion & Retail</div>
-                        <h3 data-translate="portfolio.project2.title">Fashion Brand Launch</h3>
-                        <p data-translate="portfolio.project2.description">Strategic brand launch campaign that generated 10,000+ pre-orders and established market leadership within 6 months of operation.</p>
-                        <div class="project-stats">
+                <!-- Project 2 -->
+                <div class="portfolio-item animate-slide-up animate-delay-1" data-category="social-media">
+                    <img src="https://images.unsplash.com/photo-1551836026-d5c2c3af8f81?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Restaurant Social Media" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3>Restaurant Social Media Revamp</h3>
+                        <p>Transformed a local restaurant's social media presence, increasing engagement by 300% and foot traffic by 40%.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Social Media</span>
+                            <span class="portfolio-tag">Content Creation</span>
+                            <span class="portfolio-tag">Local Business</span>
+                        </div>
+                        <div class="portfolio-stats">
                             <div class="stat">
-                                <div class="stat-number">10K+</div>
-                                <div class="stat-label" data-translate="portfolio.stat4">Pre-orders</div>
+                                <div class="stat-number">300%</div>
+                                <div class="stat-label">Engagement</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">40%</div>
+                                <div class="stat-label">Foot Traffic</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">15K</div>
+                                <div class="stat-label">Followers</div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" data-project="2" style="margin-top: 1.5rem;">View Case Study</button>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-item animate-slide-up animate-delay-2" data-category="seo digital-marketing">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Tourism SEO" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3>Tourism SEO Strategy</h3>
+                        <p>Implemented SEO and content marketing for a tourism company, increasing organic website traffic by 150%.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">SEO</span>
+                            <span class="portfolio-tag">Content Marketing</span>
+                            <span class="portfolio-tag">Tourism</span>
+                        </div>
+                        <div class="portfolio-stats">
+                            <div class="stat">
+                                <div class="stat-number">150%</div>
+                                <div class="stat-label">Organic Traffic</div>
                             </div>
                             <div class="stat">
                                 <div class="stat-number">#1</div>
-                                <div class="stat-label" data-translate="portfolio.stat5">Market Rank</div>
+                                <div class="stat-label">Google Ranking</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-number">6</div>
-                                <div class="stat-label" data-translate="portfolio.stat3">Months</div>
+                                <div class="stat-number">200+</div>
+                                <div class="stat-label">Keywords</div>
                             </div>
                         </div>
+                        <button class="btn btn-primary" data-project="3" style="margin-top: 1.5rem;">View Case Study</button>
                     </div>
                 </div>
 
-                <!-- Tech Solutions -->
-                <div class="project-card" data-category="tech">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Tech Solutions Growth">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-category" data-translate="portfolio.category3">Technology</div>
-                        <h3 data-translate="portfolio.project3.title">Tech Solutions Growth</h3>
-                        <p data-translate="portfolio.project3.description">B2B marketing strategy that increased qualified leads by 220% and reduced customer acquisition cost by 65% for a SaaS company.</p>
-                        <div class="project-stats">
+                <!-- Project 4 -->
+                <div class="portfolio-item animate-slide-up animate-delay-3" data-category="branding web-design">
+                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2064&q=80" 
+                         alt="Tech Startup Branding" class="portfolio-image">
+                    <div class="portfolio-overlay">
+                        <h3>Tech Startup Brand Identity</h3>
+                        <p>Complete brand identity and website design for a tech startup, establishing them as industry innovators.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Branding</span>
+                            <span class="portfolio-tag">Web Design</span>
+                            <span class="portfolio-tag">Tech</span>
+                        </div>
+                        <div class="portfolio-stats">
                             <div class="stat">
-                                <div class="stat-number">220%</div>
-                                <div class="stat-label" data-translate="portfolio.stat6">Leads Growth</div>
+                                <div class="stat-number">100%</div>
+                                <div class="stat-label">Brand Recognition</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-number">65%</div>
-                                <div class="stat-label" data-translate="portfolio.stat7">Cost Reduction</div>
+                                <div class="stat-number">75%</div>
+                                <div class="stat-label">Lead Increase</div>
                             </div>
                             <div class="stat">
-                                <div class="stat-number">12</div>
-                                <div class="stat-label" data-translate="portfolio.stat8">Months</div>
+                                <div class="stat-number">$500K</div>
+                                <div class="stat-label">Funding</div>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Healthcare -->
-                <div class="project-card" data-category="healthcare">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Healthcare Clinic">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-category" data-translate="portfolio.category4">Healthcare</div>
-                        <h3 data-translate="portfolio.project4.title">Healthcare Clinic Expansion</h3>
-                        <p data-translate="portfolio.project4.description">Digital marketing campaign that increased patient appointments by 180% and improved brand awareness for a growing healthcare clinic.</p>
-                        <div class="project-stats">
-                            <div class="stat">
-                                <div class="stat-number">180%</div>
-                                <div class="stat-label" data-translate="portfolio.stat9">Appointments</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-number">95%</div>
-                                <div class="stat-label" data-translate="portfolio.stat10">Satisfaction</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat-number">8</div>
-                                <div class="stat-label" data-translate="portfolio.stat3">Months</div>
-                            </div>
-                        </div>
+                        <button class="btn btn-primary" data-project="4" style="margin-top: 1.5rem;">View Case Study</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- CTA Section -->
+    <section class="portfolio-cta">
+        <div class="container">
+            <div class="portfolio-cta-content animate-slide-up">
+                <h2>Ready to Be Our Next Success Story?</h2>
+                <p class="lead">Join the businesses that have transformed their digital presence with Ad Pollex. Let's create your success story together.</p>
+                
+                <div class="btn-group" style="display: flex; gap: 1rem; justify-content: center; margin-top: 3rem;">
+                    <a href="contact.html" class="btn btn-primary">
+                        <i class="fas fa-calendar" style="margin-right: 0.5rem;"></i> Book Strategy Session
+                    </a>
+                    <a href="tel:+255684320325" class="btn btn-secondary">
+                        <i class="fas fa-phone" style="margin-right: 0.5rem;"></i> Call +255 684 320 325
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-container">
@@ -469,208 +1149,394 @@
                             <div class="logo-main">Ad Pollex</div>
                         </div>
                     </a>
-                    <p class="footer-description" data-translate="footer.description">Transforming businesses through innovative digital marketing solutions since 2016.</p>
+                    <p class="footer-description">Full-service advertising and digital marketing agency helping businesses grow their online presence since 2016.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
                 
                 <div class="footer-links">
-                    <h4 data-translate="footer.links1.title">Quick Links</h4>
+                    <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="index.html" data-translate="nav.home">Home</a></li>
-                        <li><a href="services.html" data-translate="nav.services">Services</a></li>
-                        <li><a href="portfolio.html" data-translate="nav.portfolio">Portfolio</a></li>
-                        <li><a href="team.html" data-translate="nav.team">Our Team</a></li>
-                        <li><a href="contact.html" data-translate="nav.contact">Contact</a></li>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="portfolio.html"><i class="fas fa-chevron-right"></i> Portfolio</a></li>
+                        <li><a href="team.html"><i class="fas fa-chevron-right"></i> Our Team</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
-                    <h4 data-translate="footer.contact.title">Contact Info</h4>
+                    <h4>Our Services</h4>
                     <ul>
-                        <li><a href="contact.html">Dar es Salaam, Tanzania</a></li>
-                        <li><a href="tel:+255684320325">+255 684 320 325</a></li>
-                        <li><a href="mailto:adpollex@gmail.com">adpollex@gmail.com</a></li>
+                        <li><a href="services.html#digital-marketing"><i class="fas fa-chevron-right"></i> Digital Marketing</a></li>
+                        <li><a href="services.html#social-media"><i class="fas fa-chevron-right"></i> Social Media</a></li>
+                        <li><a href="services.html#seo"><i class="fas fa-chevron-right"></i> SEO Optimization</a></li>
+                        <li><a href="services.html#branding"><i class="fas fa-chevron-right"></i> Brand Strategy</a></li>
+                        <li><a href="services.html#web-design"><i class="fas fa-chevron-right"></i> Website Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Dar es Salaam, Tanzania</a></li>
+                        <li><a href="tel:+255684320325"><i class="fas fa-phone"></i> +255 684 320 325</a></li>
+                        <li><a href="mailto:adpollex@gmail.com"><i class="fas fa-envelope"></i> adpollex@gmail.com</a></li>
+                        <li><a href="#"><i class="fas fa-globe"></i> adpollex.com</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p data-translate="footer.copyright">&copy; 2023 Ad Pollex. All Rights Reserved.</p>
+                <div class="footer-credits">
+                    <p>&copy; 2023 <span class="highlight">Ad Pollex</span> - Advertising & Digital Marketing Company. All Rights Reserved. | Crafted with <span class="highlight">passion</span> in Dar es Salaam</p>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- Case Study Modals -->
+    <div class="case-study-modal" id="caseStudyModal1">
+        <div class="case-study-content">
+            <button class="close-modal" onclick="closeCaseStudy()">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="case-study-header">
+                <div class="eyebrow">Case Study</div>
+                <h2>E-commerce Brand Launch & Digital Transformation</h2>
+                <p class="lead">Complete digital strategy for a fashion e-commerce startup, resulting in 200% growth in online sales within 6 months.</p>
+                
+                <div class="case-study-meta">
+                    <div class="meta-item">
+                        <div class="meta-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div>
+                            <h4>Timeline</h4>
+                            <p>6 Months</p>
+                        </div>
+                    </div>
+                    
+                    <div class="meta-item">
+                        <div class="meta-icon">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                        <div>
+                            <h4>Services</h4>
+                            <p>Digital Marketing, Brand Strategy</p>
+                        </div>
+                    </div>
+                    
+                    <div class="meta-item">
+                        <div class="meta-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div>
+                            <h4>Industry</h4>
+                            <p>Fashion E-commerce</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="case-study-body">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                     alt="E-commerce Project" class="case-study-image">
+                
+                <h3>The Challenge</h3>
+                <p>A new fashion e-commerce startup approached us to launch their brand in the competitive Tanzanian market. They needed a comprehensive digital strategy that would establish their brand identity, drive traffic to their website, and convert visitors into customers. The challenge was to stand out in a saturated market with limited brand recognition and budget constraints.</p>
+                
+                <div class="case-study-grid">
+                    <div class="case-study-box">
+                        <h4>Our Solution</h4>
+                        <p>We developed a multi-channel digital marketing strategy combining social media marketing, influencer partnerships, SEO, and targeted advertising. Our approach included brand identity development, content strategy, and conversion optimization.</p>
+                    </div>
+                    
+                    <div class="case-study-box">
+                        <h4>Key Strategies</h4>
+                        <ul style="list-style: none; margin: 1rem 0;">
+                            <li><i class="fas fa-check" style="color: var(--accent); margin-right: 0.5rem;"></i> Social Media Influencer Campaign</li>
+                            <li><i class="fas fa-check" style="color: var(--accent); margin-right: 0.5rem;"></i> SEO Content Strategy</li>
+                            <li><i class="fas fa-check" style="color: var(--accent); margin-right: 0.5rem;"></i> Email Marketing Automation</li>
+                            <li><i class="fas fa-check" style="color: var(--accent); margin-right: 0.5rem;"></i> Performance Analytics Dashboard</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="case-study-results">
+                    <h3>The Results</h3>
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <div class="result-number">200%</div>
+                            <div class="result-label">Sales Growth</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number">50K+</div>
+                            <div class="result-label">Monthly Visitors</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number">35%</div>
+                            <div class="result-label">Conversion Rate</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number">25K</div>
+                            <div class="result-label">Social Followers</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3>What We Delivered</h3>
+                <p>Our comprehensive solution included a complete brand identity system, responsive e-commerce website, social media strategy across Instagram and Facebook, influencer marketing campaign, SEO optimization, and email marketing automation. We also implemented a performance tracking dashboard for real-time analytics.</p>
+                
+                <div class="btn-group" style="display: flex; gap: 1rem; margin-top: 3rem;">
+                    <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+                    <button class="btn btn-secondary" onclick="closeCaseStudy()">Close Case Study</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="case-study-modal" id="caseStudyModal2">
+        <div class="case-study-content">
+            <button class="close-modal" onclick="closeCaseStudy()">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="case-study-header">
+                <div class="eyebrow">Case Study</div>
+                <h2>Restaurant Social Media Revamp & Growth Strategy</h2>
+                <p class="lead">Transformed a local restaurant's social media presence, increasing engagement by 300% and foot traffic by 40%.</p>
+                
+                <div class="case-study-meta">
+                    <div class="meta-item">
+                        <div class="meta-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div>
+                            <h4>Timeline</h4>
+                            <p>3 Months</p>
+                        </div>
+                    </div>
+                    
+                    <div class="meta-item">
+                        <div class="meta-icon">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                        <div>
+                            <h4>Services</h4>
+                            <p>Social Media Management</p>
+                        </div>
+                    </div>
+                    
+                    <div class="meta-item">
+                        <div class="meta-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div>
+                            <h4>Industry</h4>
+                            <p>Restaurant & Hospitality</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="case-study-body">
+                <img src="https://images.unsplash.com/photo-1551836026-d5c2c3af8f81?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                     alt="Restaurant Project" class="case-study-image">
+                
+                <h3>The Challenge</h3>
+                <p>A popular local restaurant in Dar es Salaam was struggling with inconsistent social media presence, low engagement rates, and declining foot traffic. They needed a complete social media overhaul to reconnect with their audience and attract new customers.</p>
+                
+                <div class="case-study-grid">
+                    <div class="case-study-box">
+                        <h4>Our Solution</h4>
+                        <p>We developed a complete social media strategy focusing on visual content creation, community engagement, and targeted advertising. This included food photography, video content, user-generated content campaigns, and local influencer partnerships.</p>
+                    </div>
+                    
+                    <div class="case-study-box">
+                        <h4>Key Strategies</h4>
+                        <ul style="list-style: none; margin: 1rem 0;">
+                            <li><i class="fas fa-check" style="color: var(--accent); margin-right: 0.5rem;"></i> Professional Food Photography</li>
+                            <li><i class="fas fa-check" style="color: var(--accent); margin-right: 0.5rem;"></i> Video Content Series</li>
+                            <li><i class="fas fa-check" style="color: var(--accent); margin-right: 0.5rem;"></i> Local Influencer Campaign</li>
+                            <li><i class="fas fa-check" style="color: var(--accent); margin-right: 0.5rem;"></i> Instagram Reels Strategy</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="case-study-results">
+                    <h3>The Results</h3>
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <div class="result-number">300%</div>
+                            <div class="result-label">Engagement Increase</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number">40%</div>
+                            <div class="result-label">More Foot Traffic</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number">15K</div>
+                            <div class="result-label">New Followers</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-number">85%</div>
+                            <div class="result-label">Positive Reviews</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="btn-group" style="display: flex; gap: 1rem; margin-top: 3rem;">
+                    <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+                    <button class="btn btn-secondary" onclick="closeCaseStudy()">Close Case Study</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
     <script>
-        // Language System
-        const translations = {
-            en: {
-                // Navigation
-                "nav.home": "Home",
-                "nav.services": "Services",
-                "nav.portfolio": "Portfolio",
-                "nav.team": "Our Team",
-                "nav.contact": "Contact",
-                "nav.tagline": "Digital Marketing Excellence",
-
-                // Portfolio
-                "portfolio.eyebrow": "Success Stories",
-                "portfolio.title": "Our Masterpieces",
-                "portfolio.subtitle": "Real projects, transformative results. See how we've helped businesses across Tanzania achieve remarkable growth.",
-                
-                "portfolio.filter.all": "All Projects",
-                "portfolio.filter.hospitality": "Hospitality",
-                "portfolio.filter.retail": "Retail",
-                "portfolio.filter.tech": "Technology",
-                "portfolio.filter.healthcare": "Healthcare",
-                
-                "portfolio.category1": "Hospitality",
-                "portfolio.project1.title": "Restaurants Revamp",
-                "portfolio.project1.description": "Complete digital transformation for a chain of local restaurants, increasing online reservations by 300% and social media engagement by 450%.",
-                
-                "portfolio.category2": "Fashion & Retail",
-                "portfolio.project2.title": "Fashion Brand Launch",
-                "portfolio.project2.description": "Strategic brand launch campaign that generated 10,000+ pre-orders and established market leadership within 6 months of operation.",
-                
-                "portfolio.category3": "Technology",
-                "portfolio.project3.title": "Tech Solutions Growth",
-                "portfolio.project3.description": "B2B marketing strategy that increased qualified leads by 220% and reduced customer acquisition cost by 65% for a SaaS company.",
-                
-                "portfolio.category4": "Healthcare",
-                "portfolio.project4.title": "Healthcare Clinic Expansion",
-                "portfolio.project4.description": "Digital marketing campaign that increased patient appointments by 180% and improved brand awareness for a growing healthcare clinic.",
-                
-                "portfolio.stat1": "Reservations",
-                "portfolio.stat2": "Engagement",
-                "portfolio.stat3": "Months",
-                "portfolio.stat4": "Pre-orders",
-                "portfolio.stat5": "Market Rank",
-                "portfolio.stat6": "Leads Growth",
-                "portfolio.stat7": "Cost Reduction",
-                "portfolio.stat8": "Months",
-                "portfolio.stat9": "Appointments",
-                "portfolio.stat10": "Satisfaction",
-
-                // Footer
-                "footer.description": "Transforming businesses through innovative digital marketing solutions since 2016.",
-                "footer.links1.title": "Quick Links",
-                "footer.contact.title": "Contact Info",
-                "footer.copyright": "© 2023 Ad Pollex. All Rights Reserved."
-            },
-            sw: {
-                // Navigation - Kiswahili
-                "nav.home": "Nyumbani",
-                "nav.services": "Huduma",
-                "nav.portfolio": "Portfolio",
-                "nav.team": "Timu Yetu",
-                "nav.contact": "Wasiliana",
-                "nav.tagline": "Ubora wa Uuzaji wa Kidijitali",
-
-                // Portfolio - Kiswahili
-                "portfolio.eyebrow": "Hadithi za Mafanikio",
-                "portfolio.title": "Kazi Zetu Bora",
-                "portfolio.subtitle": "Miradi halisi, matokeo yanayobadilisha. Tazama jinsi tumesaidia biashara nchini Tanzania kufikia ukuaji wa kushangaza.",
-                
-                "portfolio.filter.all": "Miradi Yote",
-                "portfolio.filter.hospitality": "Ukarimu",
-                "portfolio.filter.retail": "Biashara",
-                "portfolio.filter.tech": "Teknolojia",
-                "portfolio.filter.healthcare": "Afya",
-                
-                "portfolio.category1": "Ukarimu",
-                "portfolio.project1.title": "Uboreshaji wa Mikahawa",
-                "portfolio.project1.description": "Mabadiliko kamili ya kidijitali kwa mlolongo wa mikahawa ya ndani, kuongeza uhifadhi wa mtandaoni kwa 300% na ushiriki wa mitandao ya kijamii kwa 450%.",
-                
-                "portfolio.category2": "Mitindo na Biashara",
-                "portfolio.project2.title": "Uzinduzi wa Chapa ya Mitindo",
-                "portfolio.project2.description": "Kampeni ya kimkakati ya uzinduzi wa chapa iliyozalisha maagizo ya awali zaidi ya 10,000 na kuanzisha uongozi wa soko ndani ya miezi 6 ya uendeshaji.",
-                
-                "portfolio.category3": "Teknolojia",
-                "portfolio.project3.title": "Ukuaji wa Suluhisho za Teknolojia",
-                "portfolio.project3.description": "Mkakati wa uuzaji wa B2B ulioongeza wateja wanaofaa kwa 220% na kupunguza gharama ya usajili wa wateja kwa 65% kwa kampuni ya SaaS.",
-                
-                "portfolio.category4": "Afya",
-                "portfolio.project4.title": "Upanuzi wa Kliniki ya Afya",
-                "portfolio.project4.description": "Kampeni ya uuzaji wa kidijitali iliyoongeza miadi ya wagonjwa kwa 180% na kuboresha ufahamu wa chapa kwa kliniki inayokua ya afya.",
-                
-                "portfolio.stat1": "Uhifadhi",
-                "portfolio.stat2": "Ushiriki",
-                "portfolio.stat3": "Miezi",
-                "portfolio.stat4": "Maagizo ya Awali",
-                "portfolio.stat5": "Nafasi ya Soko",
-                "portfolio.stat6": "Ukuaji wa Wateja",
-                "portfolio.stat7": "Kupunguza Gharama",
-                "portfolio.stat8": "Miezi",
-                "portfolio.stat9": "Miadi",
-                "portfolio.stat10": "Uridhishaji",
-
-                // Footer - Kiswahili
-                "footer.description": "Kubadilisha biashara kupitia suluhisho za ubunifu za uuzaji wa kidijitali tangu 2016.",
-                "footer.links1.title": "Viungo vya Haraka",
-                "footer.contact.title": "Maelezo ya Mawasiliano",
-                "footer.copyright": "© 2023 Ad Pollex. Haki zote zimehifadhiwa."
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
             }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileClose = document.getElementById('mobileClose');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileNav.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        mobileClose.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close mobile menu when clicking links
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Portfolio filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all') {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 100);
+                    } else {
+                        if (item.getAttribute('data-category').includes(filterValue)) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    }
+                });
+            });
+        });
+
+        // Case study modals
+        const caseStudyButtons = document.querySelectorAll('.btn[data-project]');
+        const caseStudyModals = {
+            '1': document.getElementById('caseStudyModal1'),
+            '2': document.getElementById('caseStudyModal2'),
+            '3': document.getElementById('caseStudyModal1'), // Reusing modal 1 for demo
+            '4': document.getElementById('caseStudyModal2')  // Reusing modal 2 for demo
         };
 
-        // Language System
-        function updateLanguage(lang) {
-            document.querySelectorAll('[data-translate]').forEach(element => {
-                const key = element.getAttribute('data-translate');
-                if (translations[lang] && translations[lang][key]) {
-                    element.textContent = translations[lang][key];
+        caseStudyButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const projectId = button.getAttribute('data-project');
+                const modal = caseStudyModals[projectId];
+                
+                if (modal) {
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
                 }
             });
+        });
 
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                if (btn.getAttribute('data-lang') === lang) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
+        function closeCaseStudy() {
+            document.querySelectorAll('.case-study-modal').forEach(modal => {
+                modal.classList.remove('active');
             });
-
-            localStorage.setItem('preferred-language', lang);
+            document.body.style.overflow = 'auto';
         }
 
-        // Portfolio Filtering
-        function filterProjects(category) {
-            const projects = document.querySelectorAll('.project-card');
-            const buttons = document.querySelectorAll('.category-btn');
-            
-            buttons.forEach(btn => {
-                if (btn.dataset.category === category) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
+        // Close modal on background click
+        document.querySelectorAll('.case-study-modal').forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeCaseStudy();
                 }
             });
-            
-            projects.forEach(project => {
-                if (category === 'all' || project.dataset.category === category) {
-                    project.style.display = 'block';
-                } else {
-                    project.style.display = 'none';
-                }
-            });
-        }
+        });
 
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        });
+
+        // Observe all animate-slide-up elements
+        document.querySelectorAll('.animate-slide-up').forEach(el => {
+            el.style.opacity = '0';
+            observer.observe(el);
+        });
+
+        // Initialize on load
         document.addEventListener('DOMContentLoaded', () => {
-            // Initialize language
-            const savedLang = localStorage.getItem('preferred-language') || 'en';
-            updateLanguage(savedLang);
-            
-            // Language buttons
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const lang = btn.getAttribute('data-lang');
-                    updateLanguage(lang);
-                });
-            });
-            
-            // Filter buttons
-            document.querySelectorAll('.category-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const category = btn.getAttribute('data-category');
-                    filterProjects(category);
-                });
+            // Set active nav link
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('nav a').forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
             });
         });
     </script>
